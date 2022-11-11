@@ -13,7 +13,7 @@
 ##
 ## _() で囲まれた文字列は翻訳時に生成されるファイルに記載されます。
 
-define config.name = _("Main")
+define config.name = _("Prologue")
 
 
 ## 上で定義したタイトルをメインメニュースクリーン（ゲーム起動後、最初に表示され
@@ -38,7 +38,7 @@ define gui.about = _p("""
 ## 名。簡易名は ASCII 文字（半角英数字）のみで構成され、スペース・コロン・セミコ
 ## ロンなどを含んでは行けません。
 
-define build.name = "Main"
+define build.name = "Prologue"
 
 
 ## サウンドと音楽 #####################################################################
@@ -124,9 +124,8 @@ define config.window_hide_transition = Dissolve(.2)
 ## 限（一瞬で表示）を意味します。
 
 default preferences.text_cps = 0
+
 default preferences.slow_cps = 5
-
-
 ## デフォルトのオート待ち時間。0 から 30 までの数字を取り、数字が大きいほど待ち
 ## 時間が長くなります。
 
@@ -147,7 +146,7 @@ default preferences.afm_time = 15
 ## この値は一般的に変更するべきではありません。もし変更する場合、式や変数ではな
 ## く文字列で直接指定しなければなりません。
 
-define config.save_directory = "Main-1667340530"
+define config.save_directory = "Prologue-1665662419"
 
 
 ## アイコン ########################################################################
@@ -224,7 +223,7 @@ init python:
 define user_directory = "game_data"
 
 # 読み込むファイルのlist
-define objects = ['red', 'blue', 'green', 'Book', 'Door', 'Key','Start']
+define objects = ['red', 'blue', 'green', 'Book', 'Door', 'Key', 'Start']
 
 # 現在いるroom
 default current_room = 'default'
