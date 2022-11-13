@@ -112,12 +112,22 @@ screen say(who, what):
         text what id "what"
 
 
+screen book:
+    imagebutton:
+        xanchor 0
+        yanchor 0
+        xpos 0.2
+        ypos 0
+        idle "book_idle.png"
+        hover "book_hover.png"
+        action Jump("test")
+
+
     ## サイドイメージ（テキストボックス横に表示するイメージ）があれば、テキスト
     ## の上に表示します。ただし variant（画面のタイプ）が phone の場合は、スペー
     ## スが足りないので表示しません。
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
-
 
 ## namebox を Character オブジェクトから使えるスタイルの接頭辞として追加します。
 ## （例：namebox_background)

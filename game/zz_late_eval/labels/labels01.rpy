@@ -19,5 +19,9 @@ label say_about(calllabel, jumplabel=None, **kwargs):
         call expression calllabel pass (**kwargs) # must be returned
         $ say_interact = False
         if jumplabel != None:
-            jump expression jumplabel
+            python:
+                jl = jumplabel
+                # calllabel,jumplabelなどの変数はドロップされる。
+                renpy.pop_call()
+            jump expression jl
     return
