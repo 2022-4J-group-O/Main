@@ -7,9 +7,9 @@ init python:
     def is_hidden_file(fp):
         if renpy.windows:
             return subprocess.run(['attrib', fp], stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout[4] == b'H'[0]
-        elif renpy.macos:
-            if os.isfile(fp):
-                return os.path.basefile(fp)[:1] == '.'
+        elif renpy.macintosh:
+            if os.path.isfile(fp):
+                return os.path.basename(fp)[:1] == '.'
             else:
                 return False
     
