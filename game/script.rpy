@@ -9,3 +9,10 @@ label start:
     jump d05
     
     return
+
+# ロールバックの無効化
+init:
+    $ config.keymap["rollback"] = []
+
+# 各種フラグの初期化
+default f1opening_flg = False
