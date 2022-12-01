@@ -1,6 +1,6 @@
 label e06:
     scene bg room with fade
-    $ move_room('simple room')
+    $ move_room('title')
     show screen e06(read_room())
 
 
