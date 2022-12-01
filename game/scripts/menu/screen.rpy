@@ -1,8 +1,4 @@
-label e08:
-    call screen e08_loadfile(True)
-
-
-screen e08_loadfile(enable):
+screen menu_screen(enable):
     grid 4 2:
         xcenter 0.5
         ycenter 0.5
@@ -10,7 +6,7 @@ screen e08_loadfile(enable):
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable
-            action Jump("f1opening") # ロードファイル1
+            action Jump("f1r1_start") # ロードファイル1
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable
