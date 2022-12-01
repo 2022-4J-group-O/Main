@@ -3,7 +3,6 @@ init python:
     
     # ファイルが隠しファイルかを判定
     # fpは絶対パスで指定
-    # macでの動作は未確認
     def is_hidden_file(fp):
         if renpy.windows:
             info = subprocess.STARTUPINFO()
