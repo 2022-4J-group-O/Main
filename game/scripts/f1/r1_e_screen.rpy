@@ -1,4 +1,4 @@
-screen e10_screen(current):
+screen f1r1_e_screen(current):
     draggroup:
         if 'Door' in current:
             if 'Table' not in current and 'Drawer' not in current and 'Chair' not in current: 
@@ -11,7 +11,7 @@ screen e10_screen(current):
                     yoffset 15
                     draggable False
                     droppable False   
-                    clicked Call("say_about",calllabel="door_is_clickable",jumplabel="d07")      
+                    clicked Call("say_about",calllabel="f1r1_door_clicked",jumplabel="f1r2_d_opening")      
 
             else:
                 drag:

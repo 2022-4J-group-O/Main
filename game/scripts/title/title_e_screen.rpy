@@ -1,4 +1,4 @@
-screen e06(current):
+screen title_e_screen(current):
     draggroup:
         for item in current:
             if item == 'Start':
@@ -12,4 +12,4 @@ screen e06(current):
                     yanchor 0.5
                     draggable False
                     droppable False
-                    clicked Call("say_about", calllabel="e06_clicked_start",jumplabel="e10")
+                    clicked Call("say_about", calllabel="title_e_start_clicked",jumplabel="menu_d_opening")
