@@ -1,4 +1,4 @@
-screen menu_e_screen(enable):
+screen menu_screen(enable):
     grid 4 2:
         xcenter 0.5
         ycenter 0.5
@@ -6,7 +6,7 @@ screen menu_e_screen(enable):
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable
-            action Jump("f1r1_d_opening") # ロードファイル1
+            action Jump("f1r1_start") # ロードファイル1
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable

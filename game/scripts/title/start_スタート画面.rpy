@@ -1,7 +1,7 @@
 """
 会話パート: プログラム起動直後のシーン
 """
-label title_d:
+label title_start:
     # もっとゆっくり出るようにしたい
     # タイトル画面っぽいゆっくりな演出を入れたい
     scene bg title
@@ -69,6 +69,6 @@ label title_d:
     g "エラーを治して、どうにかボタンを表示できないかな......"
 
 
-    jump title_e
+    jump title_show_screen
 
 
