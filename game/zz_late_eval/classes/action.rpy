@@ -4,9 +4,9 @@ init python:
     # screenからセリフを呼び出したいときは必ずこれを使う
     class FromSc(Action):
 
-        def __init__(self, calllabel, jumplabel=None, **kwargs):
-            self.clabel = calllabel
-            self.jlabel = jumplabel
+        def __init__(self, calllabel_0, jumplabel_0=None, **kwargs):
+            self.clabel = calllabel_0
+            self.jlabel = jumplabel_0
             self.kwargs = kwargs
         
         def __call__(self):
