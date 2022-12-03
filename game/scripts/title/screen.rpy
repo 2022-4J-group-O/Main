@@ -12,7 +12,7 @@ screen title_screen(current):
                     yanchor 0.5
                     draggable False
                     droppable False
-                    clicked Call("say_about", calllabel="title_start_clicked",jumplabel="menu_start")
+                    clicked FromSc("title_start_clicked", "menu_start")
 
 # スタートボタンがクリックされたときの処理
 label title_start_clicked:

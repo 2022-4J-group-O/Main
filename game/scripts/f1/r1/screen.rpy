@@ -10,8 +10,8 @@ screen f1r1_screen(current):
                     ypos 0.8
                     yoffset 15
                     draggable False
-                    droppable False   
-                    clicked Call("say_about",calllabel="f1r1_door_clicked",jumplabel="f1r2_start")      
+                    droppable False
+                    clicked FromSc("f1r1_door_clicked", "f1r2_start")
 
             else:
                 drag:
