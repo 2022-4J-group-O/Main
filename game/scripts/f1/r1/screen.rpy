@@ -58,5 +58,5 @@ screen f1r1_screen(current):
 
 # ドアがクリックされたときの処理
 label f1r1_door_clicked:
-    hide screen f1r1_e_screen
+    hide screen f1r1_screen
     return 
