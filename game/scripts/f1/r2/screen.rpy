@@ -17,5 +17,5 @@ screen f1r2_screen(current, rob=True):
                 add SampleImage("Robot", 200, 500, "#000000", xcenter=0.5, ycenter=0.5)
                 draggable False
                 droppable False
-                clicked FromSc("f1r2.check", jlbl="f1r2.robot_clicked")
+                clicked FromSc("f1r2_ev_robot_clicked", "f1r2.scloop")
 
