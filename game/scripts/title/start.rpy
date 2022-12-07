@@ -1,7 +1,7 @@
 """
 会話パート: プログラム起動直後のシーン
 """
-define title_evflg_opening = True  # タイトル画面初回起動時のイベントフラグ
+default title_evflg_opening = True  # タイトル画面初回起動時のイベントフラグ
 
 label title_start:
     $ move_room('title')

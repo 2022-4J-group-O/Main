@@ -62,3 +62,7 @@ label title_ev_opening:
     g "なんかエラー文出てるし"
 
     g "エラーを治して、どうにかボタンを表示できないかな......"
+
+    hide girl
+
+    return
