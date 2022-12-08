@@ -10,6 +10,7 @@ label menu_start:
 
 
 label .scloop:
+    hide window
     show screen menu_screen(True)
     with dissolve
 

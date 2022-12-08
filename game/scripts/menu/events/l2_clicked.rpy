@@ -1,9 +1,29 @@
 default jumped_menu_ev_l2_clicked = False
 
 label menu_ev_l2_clicked:
-    show girl at right
+    # このラベルへの訪問が初めてで、f2にジャンプ可能な時
+    if not jumped_menu_ev_l2_clicked and menu_evflg_canjump_f2:
+        $ menu_jumplabel = "f2r1"
+        
+        show girl at right
 
-    g "l2がクリックされたよ"
+        g "f2を初めて訪れるときのセリフ"
+
+        hide girl
+
+        return
+    
+    # f2へ2回目以降のジャンプ
+    if menu_evflg_canjump_f2:
+
+        $ menu_jumplabel = "f2r1"
+        
+        return
+    
+    # f2へジャンプできないとき->f1へ行くことを促す
+    show girl smile at right
+
+    g "まずはセーブデータ1に行ってみよう"
 
     hide girl
     
