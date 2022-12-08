@@ -12,9 +12,4 @@ screen title_screen(current):
                     yanchor 0.5
                     draggable False
                     droppable False
-                    clicked FromSc("title_start_clicked", "menu_start")
-
-# スタートボタンがクリックされたときの処理
-label title_start_clicked:
-    hide screen title_screen
-    return 
+                    clicked FromSc("title_ev_start_clicked", "menu_start")
