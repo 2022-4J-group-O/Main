@@ -223,7 +223,7 @@ init python:
 define user_directory = "game_data"
 
 # 読み込むファイルのlist
-define objects = ['red', 'blue', 'green', 'Book', 'Door', 'Key', 'Start','Table','Drawer','Chair']
+define objects = ['red', 'blue', 'green', 'Book', 'Door', 'Key', 'Start','Table','Drawer','Chair','Fridge 1','Fridge 2','Fridge 3','Fridge 4','Box']
 
 # 現在いるroom
 default current_room = 'default'

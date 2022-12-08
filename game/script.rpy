@@ -6,7 +6,7 @@ label main_menu:
 label start:
     # TODO: 実行済みであることを記録し、Prologueから検知可能にする処理
 
-    jump title_start
+    jump f1r3_show_screen
     
     return
 
