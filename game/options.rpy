@@ -224,9 +224,6 @@ define user_directory = "game_data"
 
 # 読み込むファイルのlist
 define objects = [
-    'red',
-    'blue',
-    'green',
     'Book',
     'Door',
     'DoorA',
@@ -239,8 +236,22 @@ define objects = [
     'Fridge 2',
     'Fridge 3',
     'Fridge 4',
-    'Box'
+    'Box',
+    'Vase',
+    'Chest'
 ]
+
+# オブジェクトのデフォルトのプロパティー
+# properties <辞書>でスタイルプロパティーを設定できる
+define default_obj_prop = {
+    "Door": {"pos": (0.5, 1.0), "anchor": (0.5, 1.0)},
+    "Start": {"xcenter": 0.5, "ycenter": 0.5},
+    "Table": {"pos": (0.1, 0.8), "offset": (150, 10)},
+    "Drawer": {"pos": (0.2, 0.8), "yoffset": 10},
+    "Chair": {"pos": (0.2, 0.8), "xoffset": 10},
+    "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
+    "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
+}
 
 # 現在いるroom
 default current_room = 'default'

@@ -10,8 +10,8 @@ screen f1r1_screen(current):
                     ypos 0.8
                     yoffset 15
                     draggable False
-                    droppable False   
-                    clicked Call("say_about",calllabel="f1r1_door_clicked",jumplabel="f1r3_show_screen")      
+                    droppable False
+                    clicked FromSc("f1r1_door_clicked", "f1r2")
 
             else:
                 drag:
@@ -58,5 +58,5 @@ screen f1r1_screen(current):
 
 # ドアがクリックされたときの処理
 label f1r1_door_clicked:
-    hide screen f1r1_e_screen
+    hide screen f1r1_screen
     return 

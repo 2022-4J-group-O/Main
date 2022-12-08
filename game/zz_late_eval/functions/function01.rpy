@@ -20,6 +20,7 @@ init python :
     # roomのパスを指定してオブジェクトを読み込む
     # 読み込み可能なオブジェクトはoption.rpyのobjects定数で指定する
     # roomを指定しない場合現在いるroomのオブジェクトを読み込む
+    # TODO! 偽ファイルの検出処理が必要(ファイルの中身にあるハッシュ値を読み取って判定)
     def read_room(roomdir=None, maintain_cwd=False):
         path = ""
         if roomdir == None:
