@@ -223,7 +223,23 @@ init python:
 define user_directory = "game_data"
 
 # 読み込むファイルのlist
-define objects = ["Door", "Start", "Table", "Drawer", "Chair", "Vase", "Chest"]
+define objects = [
+    'Book',
+    'Door',
+    'DoorA',
+    'Key',
+    'Start',
+    'Table',
+    'Drawer',
+    'Chair',
+    'Fridge 1',
+    'Fridge 2',
+    'Fridge 3',
+    'Fridge 4',
+    'Box',
+    'Vase',
+    'Chest'
+]
 
 # オブジェクトのデフォルトのプロパティー
 # properties <辞書>でスタイルプロパティーを設定できる
