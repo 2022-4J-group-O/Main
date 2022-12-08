@@ -42,9 +42,9 @@ screen f1r3_screen(current):
                     yoffset 50
                     draggable False
                     droppable False
-            elif item == 'Door':
+            elif item == 'DoorA':
                 drag:
-                    drag_name "Door"
+                    drag_name "DoorA"
                     child "door_idle.png"
                     xpos 0.2
                     ypos 0.8

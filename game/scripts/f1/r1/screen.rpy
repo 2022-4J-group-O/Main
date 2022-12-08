@@ -11,7 +11,7 @@ screen f1r1_screen(current):
                     yoffset 15
                     draggable False
                     droppable False   
-                    clicked Call("say_about",calllabel="f1r1_door_clicked",jumplabel="f1r2_start")      
+                    clicked Call("say_about",calllabel="f1r1_door_clicked",jumplabel="f1r3_show_screen")      
 
             else:
                 drag:
