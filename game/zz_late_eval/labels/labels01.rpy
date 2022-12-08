@@ -23,3 +23,7 @@ label say_about(calllabel_0, jumplabel_0=None, **kwargs):
                 renpy.pop_call()
             jump expression jl
     return
+
+# 引数を破棄してreturnする
+label nop(*args, **kwargs):
+    return

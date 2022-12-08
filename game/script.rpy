@@ -1,4 +1,5 @@
 ﻿define g = Character('girl', color="#c8ffc8")
+define ro1 = Character("robot1", color="#cdc8ff")
 
 label main_menu:
     return
