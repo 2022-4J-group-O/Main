@@ -1,15 +1,10 @@
 """
-会話パート: プログラム起動直後のシーン
+タイトル画面初回起動時のイベント
 """
-label title_start:
-    # もっとゆっくり出るようにしたい
-    # タイトル画面っぽいゆっくりな演出を入れたい
-    scene bg title
-    with fade
 
+label title_ev_opening:
     show girl
 
-    # いきなり出したい
     g "なにぼーっとしてるの？"
 
     show girl smile
@@ -68,7 +63,6 @@ label title_start:
 
     g "エラーを治して、どうにかボタンを表示できないかな......"
 
+    hide girl
 
-    jump title_show_screen
-
-
+    return
