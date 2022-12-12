@@ -21,17 +21,17 @@ label .scloop:
     if menu_jumplabel == "f1r1":
         $ menu_jumpflg_f1 = None
         hide screen menu_screen with dissolve
-        jump f1r1_start
+        jump f1r1
 
     if menu_jumplabel == "f2r1":
         $ menu_jumpflg_f2 = None
         hide screen menu_screen with dissolve
-        jump f2r1_start
+        jump f2r1
 
     if menu_jumplabel == "f3r1":
         $ menu_jumpflg_f3 = None
         hide screen menu_screen with dissolve
-        jump f3r1_start
+        jump f3r1
 
     pause
 

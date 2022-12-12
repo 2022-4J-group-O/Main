@@ -17,7 +17,7 @@ label menu_ev_opening:
 
     show girl
     
-    g "まずは、ステージ1、セーブデータ1番に行ってみようか"
+    g "まずは、セーブデータ1......ステージ1に行ってみようか"
 
     hide girl
 
