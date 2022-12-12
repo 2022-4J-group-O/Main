@@ -11,8 +11,7 @@ screen f1r1_screen(current):
                     yoffset 15
                     draggable False
                     droppable False
-                    clicked FromSc("f1r1_door_clicked", "f1r2")
-
+                    clicked FromSc("f1r1_ev_door_clicked", "f1r1.scloop")
             else:
                 drag:
                     drag_name "Door"
@@ -23,6 +22,7 @@ screen f1r1_screen(current):
                     yoffset 15
                     draggable False
                     droppable False
+
         for item in current:
             if item == 'Chair':
                 drag:
@@ -55,8 +55,3 @@ screen f1r1_screen(current):
                     yoffset 10
                     draggable False
                     droppable False
-
-# ドアがクリックされたときの処理
-label f1r1_door_clicked:
-    hide screen f1r1_screen
-    return 
