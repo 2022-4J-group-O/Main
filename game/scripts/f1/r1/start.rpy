@@ -7,6 +7,7 @@ label f1r1:
     scene bg f1r1
 
 label .scloop:
+    window hide
     show screen f1r1_screen(read_room()) with dissolve
 
     if f1r1_evflg_opening:  # f1r1初回起動時

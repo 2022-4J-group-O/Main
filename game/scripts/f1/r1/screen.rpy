@@ -11,7 +11,7 @@ screen f1r1_screen(current):
                     yoffset 15
                     draggable False
                     droppable False
-                    clicked FromSc("f1r1_door_clicked", "f1r1.scloop")
+                    clicked FromSc("f1r1_ev_door_clicked", "f1r1.scloop")
             else:
                 drag:
                     drag_name "Door"
