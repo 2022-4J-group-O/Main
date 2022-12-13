@@ -1,8 +1,10 @@
 label f1r1_ev_opening:
-    show girl
+    show girl with ldissolve
 
-    g "ここを編集するよ"
+    g "ここのセリフはできてないよ"
 
-    hide girl
-       
+    $ g("セリフを考えておいてね " + slow("お・ね・が・い"))
+
+    hide girl with ldissolve
+
     return

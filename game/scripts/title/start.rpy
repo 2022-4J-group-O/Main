@@ -1,21 +1,17 @@
-"""
-会話パート: プログラム起動直後のシーン
-"""
 default title_evflg_opening = True  # タイトル画面初回起動時のイベントフラグ
 
-label title_start:
+label title:
     $ move_room('title')
-    scene bg title
-    with fade
-
+    scene bg title with dissolve
 
 label .scloop:
-    show screen title_screen(read_room())
+    window hide
+    show screen title_screen(read_room()) with dissolve
 
     if title_evflg_opening:  # タイトル画面初回起動時
         $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
-        call say_about(calllabel_0="title_ev_opening", jumplabel_0="title_start.scloop")
+        call say_about("title_ev_opening", "title.scloop")
 
-    $ renpy.pause()
+    pause
 
     jump .scloop
