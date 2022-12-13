@@ -2,7 +2,7 @@ label f1r1_ev_door_clicked:
     show girl
 
     g "整理整頓お疲れ様"
-	
+
     show girl smile
     
     g "家具ごと消し去っちゃうなんて、君の整理術もなかなかアクロバティックだね"
@@ -10,7 +10,7 @@ label f1r1_ev_door_clicked:
     g "この部屋を荒らした人も、君も、中庸ってやつを知らないのかな"
 
     show girl
-	
+
     g "とにかく、これでまだ先へ進めるね"
 
     g "もしかしたらこの先で、この部屋を荒らした犯人と出会えるかも"
