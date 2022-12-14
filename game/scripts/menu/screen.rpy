@@ -1,4 +1,5 @@
 screen menu_screen(enable):
+    layer "master"
     grid 4 2:
         xcenter 0.5
         ycenter 0.5
