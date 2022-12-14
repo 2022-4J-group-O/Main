@@ -21,7 +21,7 @@ label f1r2_ev_opening:
 
     show girl look away at right onlayer screens with dissolve
     
-    g "ずいぶん口が悪いロボットね......"
+    g "ずいぶん口の悪いロボットね......"
 
     show girl at right onlayer screens with dissolve
 
@@ -52,7 +52,6 @@ label f1r2_ev_opening:
     show girl look away at right onlayer screens with dissolve
 
     g "私たちそのドアを使いたかったのに......"
-
 
     ro1 "うるさいこのポンコツめ！この部屋は私のものなのだ！"
 
@@ -90,7 +89,7 @@ label f1r2_ev_opening:
 
     g "ねえ君、聞いてる？"
 
-    g "何とかして、この部屋にドアを持ってこられないかな......"
+    g "何とかして、この部屋にドアを設置できないかな......"
 
     show girl look away at center onlayer screens with dissolve
     
