@@ -1,15 +1,15 @@
 label f1r1_ev_opening:
-    show girl with ldissolve
+    show girl onlayer screens with dissolve
 
     g "この部屋は......"
 
     g "ずいぶん荒れてるなぁ"
 
-    show girl smile
+    show girl smile onlayer screens with dissolve
     
     g "整理整頓が下手とか、そういう次元じゃないね"
 
-    show girl
+    show girl onlayer screens with dissolve
 
     g "次の部屋につながるドアは......"
 
@@ -17,13 +17,13 @@ label f1r1_ev_opening:
 
     g "まるでバリケード......事件性を感じるね......"
 
-    show girl smile
+    show girl smile onlayer screens with dissolve
 
     g "ところで、次の部屋に進むためにやるべきこと......もう君には分かるよね？"
 
     g "さっさと次の部屋へ進むことにしよう"
 
-    show girl
+    show girl smile onlayer screens with dissolve
 
     g "ま、そのためにいろいろ行動するのは私じゃなくて、君なんだけどね"
 
@@ -31,10 +31,10 @@ label f1r1_ev_opening:
 
     g "頼りになるのは君だけなんだ"
 
-    show girl smile
+    show girl smile onlayer screens with dissolve
 
     g "だから、よろしく"
 
-    hide girl with ldissolve
+    hide girl with dissolve 
 
     return

@@ -5,7 +5,7 @@ label menu_ev_l1_clicked:
     if not jumped_menu_ev_l1_clicked and menu_evflg_canjump_f1:
         $ jumped_menu_ev_l1_clicked = True  # このラベルを訪問済みに
 
-        show girl smile at right
+        show girl smile at right onlayer screens with dissolve
         
         g "脱出ゲームステージ1の、はじまりはじまり"
 
