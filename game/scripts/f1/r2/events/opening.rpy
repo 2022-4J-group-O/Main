@@ -3,7 +3,7 @@ label f1r2_ev_opening:
 
     g "ずいぶん殺風景な部屋だね......真っ白"
 
-    show ro1 at left onlayer screens with dissolve
+    show robot1 at left onlayer screens with dissolve
 
     ro1_unknown "......む、なんだね君たちは"
 
@@ -81,7 +81,7 @@ label f1r2_ev_opening:
 
     g "ほんとに見えてないみたい......"
 
-    hide ro1 with dissolve
+    hide robot1 with dissolve
 
     hide girl with dissolve
 
