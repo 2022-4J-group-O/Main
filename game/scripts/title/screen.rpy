@@ -1,4 +1,5 @@
 screen title_screen(current):
+    layer "master"
     draggroup:
         for item in current:
             if item == 'Start':

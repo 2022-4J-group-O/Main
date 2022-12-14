@@ -1,4 +1,5 @@
 screen f1r2_screen(current, rob=True):
+    layer "master"
     $ img_col = ["#FF0000", "#808000", "#00FF00", "#008080", "#0000FF", "#800080"]
     draggroup:
         for i, item in enumerate(current):
