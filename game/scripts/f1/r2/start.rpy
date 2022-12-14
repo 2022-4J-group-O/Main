@@ -7,6 +7,7 @@ label f1r2:
     scene bg f1r2
 
 label .scloop:
+    window hide
     show screen f1r2_screen(read_room()) with dissolve
 
     $ nhidden = not_hidden()
