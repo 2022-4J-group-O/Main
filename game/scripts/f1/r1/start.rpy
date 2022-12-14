@@ -16,6 +16,7 @@ label .scloop:
     
     if f1r1_jumplabel == "f1r2":
         $ f1r1_jumplabel = None
+        hide screen f1r1_screen with dissolve
         jump f1r2
     
     pause
