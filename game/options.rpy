@@ -146,7 +146,8 @@ default preferences.afm_time = 15
 ## この値は一般的に変更するべきではありません。もし変更する場合、式や変数ではな
 ## く文字列で直接指定しなければなりません。
 
-define config.save_directory = "Prologue-1665662419"
+## ゲームフォルダ外部にセーブデータを作らない
+# define config.save_directory = "Prologue-1665662419"
 
 
 ## アイコン ########################################################################
@@ -217,7 +218,7 @@ init python:
 
 ## ここから追加プロパティー #########################################################10
 
-## defineで定義したフィールドはreadonly
+## readonly property        ################################################
 
 # プレーヤーが主に操作をするディレクトリー
 define user_directory = "game_data"
@@ -252,6 +253,16 @@ define default_obj_prop = {
     "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
     "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
 }
+
+# プレイヤー用のディレクトリの初期状態を保存しておくためのファイル
+define default_user_dirdata_path = "game/data/default"
+
+## デバッグ用               ########################################
+
+# プレイヤー用のディレクトリの初期状態を示すディレクトリ
+define default_user_dir = "default_game_data"
+
+## mutable property         ################################################
 
 # 現在いるroom
 default current_room = 'default'

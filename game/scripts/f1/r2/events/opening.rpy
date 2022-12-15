@@ -89,7 +89,7 @@ label f1r2_ev_opening:
 
     g "ねえ君、聞いてる？"
 
-    g "何とかして、この部屋にドアを設置できないかな......"
+    g "何とかして、この部屋にドアを持ってこられないかな......"
 
     show girl look away at center onlayer screens with dissolve
     
@@ -99,6 +99,6 @@ label f1r2_ev_opening:
 
     g "次の部屋へ進まなくちゃ、こんなところでは終われないよ"
 
-    hide girl onlayer screens with dissolve
+    hide girl with dissolve
     
     return

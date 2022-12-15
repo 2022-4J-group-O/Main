@@ -1,4 +1,5 @@
 screen f1r3_screen(current):
+    layer "master"
     draggroup:
         for item in current:
             if item == 'Fridge 1':
