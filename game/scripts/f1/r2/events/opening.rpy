@@ -1,9 +1,9 @@
 label f1r2_ev_opening:
-    show girl at right onlayer screens with dissolve
+    show girl at right with dissolve
 
     g "ずいぶん殺風景な部屋だね......真っ白"
 
-    show ro1 at left onlayer screens with dissolve
+    show robot1 at left with dissolve
 
     ro1_unknown "......む、なんだね君たちは"
 
@@ -19,11 +19,11 @@ label f1r2_ev_opening:
 
     ro1 "cG9ua290c3U=だ！！何度も言わせるなこのポンコツめ！"
 
-    show girl look away at right onlayer screens with dissolve
+    show girl look away at right with dissolve
     
-    g "ずいぶん口が悪いロボットね......"
+    g "ずいぶん口の悪いロボットね......"
 
-    show girl at right onlayer screens with dissolve
+    show girl at right with dissolve
 
     ro1 "そちらから私の聖域に踏み入っておいてずいぶん失礼な物言いだな"
 
@@ -39,7 +39,7 @@ label f1r2_ev_opening:
 
     ro1 "それなら撤去した。この空間には必要ないからな"
 
-    show girl surprise at right onlayer screens with dissolve
+    show girl surprise at right with dissolve
 
     g "撤去した！？"
 
@@ -49,10 +49,9 @@ label f1r2_ev_opening:
 
     ro1 "どうにかしてあれを取り除く方法を探しているのだが......"
 
-    show girl look away at right onlayer screens with dissolve
+    show girl look away at right with dissolve
 
     g "私たちそのドアを使いたかったのに......"
-
 
     ro1 "うるさいこのポンコツめ！この部屋は私のものなのだ！"
 
@@ -66,13 +65,13 @@ label f1r2_ev_opening:
 
     ro1 "この完全無欠の、無機質な空間こそ至高！この場所には、一つたりとも不純物があってはならないのだ！"
 
-    show girl at right onlayer screens with dissolve
+    show girl at right with dissolve
 
     g "不純物って......そこにおいてある花瓶とかは例外なの？"
 
     ro1 "花瓶？私をからかっているのかね？そんなものはない！"
 
-    show girl surprise at right onlayer screens with dissolve
+    show girl surprise at right with dissolve
 
     g "え、いや、そこにあるじゃない......花瓶......"
 
@@ -82,21 +81,21 @@ label f1r2_ev_opening:
 
     g "ほんとに見えてないみたい......"
 
-    hide ro1 with dissolve
+    hide robot1 with dissolve
 
     hide girl with dissolve
 
-    show girl at center onlayer screens with dissolve
+    show girl at center with dissolve
 
     g "ねえ君、聞いてる？"
 
     g "何とかして、この部屋にドアを持ってこられないかな......"
 
-    show girl look away at center onlayer screens with dissolve
+    show girl look away at center with dissolve
     
     g "このc......なんとかロボット君には......悪いけど"
 
-    show girl at center onlayer screens with dissolve
+    show girl at center with dissolve
 
     g "次の部屋へ進まなくちゃ、こんなところでは終われないよ"
 
