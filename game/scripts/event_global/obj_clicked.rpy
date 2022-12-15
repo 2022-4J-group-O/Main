@@ -12,3 +12,34 @@ label table_clicked:
     g "机がクリックされたよ"
     hide girl with dissolve
     return
+
+label drawer_clicked:
+    show girl with dissolve
+    g "引き出しがクリックされたよ"
+    hide girl with dissolve
+    return
+
+label chair_clicked:
+    show girl with dissolve
+    g "椅子がクリックされたよ"
+    show girl with dissolve
+    return
+
+label chest_clicked:
+    show girl with dissolve
+    g "チェストがクリックされたよ"
+    show girl with dissolve
+    return
+
+label vase_clicked:
+    show girl with dissolve
+    g "花瓶がクリックされたよ"
+    show girl with dissolve
+    return
+
+label box_clicked:
+    show girl with dissolve
+    g "箱がクリックされたよ"
+    show girl with dissolve
+    return
+
