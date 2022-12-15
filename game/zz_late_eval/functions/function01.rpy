@@ -1,6 +1,8 @@
 define user_dir_path = os.path.join(config.basedir, user_directory)
 
 init python :
+    import hashlib
+
     def cps(sp):
         preferences.text_cps = sp
     
@@ -17,6 +19,12 @@ init python :
     def exists(fp):
         return os.path.exists(os.path.join(user_dir_path, fp))
     
+    # ファイルのハッシュ値をチェック
+    def check_hash(objname):
+        with open(objname, mode="rb") as f:
+            cond = f.read() == hashlib.sha256(objname.encode("utf-8")).digest()
+        return cond
+
     def read_room_raw(roomdir=None):
         path = ""
         if roomdir == None:
@@ -25,10 +33,10 @@ init python :
             path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
-            return [p for p in objects if os.path.isfile(p) or os.path.isfile("." + p)]
+            return [p for p in objects if os.path.isfile(p) and check_hash(p)]
         else:
             return list()
-
+    
     # roomのパスを指定してオブジェクトを読み込む
     # 読み込み可能なオブジェクトはoption.rpyのobjects定数で指定する
     # roomを指定しない場合現在いるroomのオブジェクトを読み込む
