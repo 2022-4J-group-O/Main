@@ -25,11 +25,7 @@ init python :
             cond = f.read() == hashlib.sha256(objname.encode("utf-8")).digest()
         return cond
 
-    # roomのパスを指定してオブジェクトを読み込む
-    # 読み込み可能なオブジェクトはoption.rpyのobjects定数で指定する
-    # roomを指定しない場合現在いるroomのオブジェクトを読み込む
-    # TODO! 偽ファイルの検出処理が必要(ファイルの中身にあるハッシュ値を読み取って判定)
-    def read_room(roomdir=None):
+    def read_room_raw(roomdir=None):
         path = ""
         if roomdir == None:
             path = os.path.join(user_dir_path, current_room)
@@ -41,27 +37,41 @@ init python :
         else:
             return list()
     
-    # roomのパスとオブジェクト名を指定してオブジェクトを作成する
-    # 読み込み可能でなくてもOK
-    # 成功時にTrue、失敗時にFalseを返す(すでにオブジェクトが存在していても成功)
-    def make_obj_room(roomdir, objname):
+    # roomのパスを指定してオブジェクトを読み込む
+    # 読み込み可能なオブジェクトはoption.rpyのobjects定数で指定する
+    # roomを指定しない場合現在いるroomのオブジェクトを読み込む
+    # オブジェクト名の前に.が付いたファイルも読み込む
+    # TODO! 偽ファイルの検出処理が必要(ファイルの中身にあるハッシュ値を読み取って判定)
+    def read_room(roomdir=None):
+        cwd = os.getcwd()
+        l = read_room_raw(roomdir)
+        os.chdir(cwd)
+        return l
+
+    def make_obj_room_raw(roomdir, objname):
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
-            with open(objname, 'wb') as f:
-                f.write(hashlib.sha256(objname.encode("utf-8").digest()))
+            open(objname, 'w').close()
             return True
         else:
             return False
     
+    # roomのパスとオブジェクト名を指定してオブジェクトを作成する
+    # 読み込み可能でなくてもOK
+    # 成功時にTrue、失敗時にFalseを返す(すでにオブジェクトが存在していても成功)
+    def make_obj_room(roomdir, objname):
+        cwd = os.getcwd()
+        cond = make_obj_room_raw(roomdir, objname)
+        os.chdir(cwd)
+        return cond
+
     # 現在いるルームにオブジェクトを作成
     # 対象room以外はmake_obj_room関数と同じ動作
     def make_obj(objname):
         return make_obj_room(current_room, objname)
     
-    # roomのパスとオブジェクト名を指定してオブジェクトを削除する
-    # 成功時は'OK'、オブジェクトが存在しない場合は'NF'、roomが存在しない場合は'NR'が返される
-    def delete_obj_room(roomdir, objname):
+    def delete_obj_room_raw(roomdir, objname):
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
@@ -73,6 +83,14 @@ init python :
         else:
             return 'NR'
     
+    # roomのパスとオブジェクト名を指定してオブジェクトを削除する
+    # 成功時は'OK'、オブジェクトが存在しない場合は'NF'、roomが存在しない場合は'NR'が返される
+    def delete_obj_room(roomdir, objname):
+        cwd = os.getcwd()
+        re = delete_obj_room_raw(roomdir, objname)
+        os.chdir(cwd)
+        return re
+
     # 現在いるroomのオブジェクトを削除
     # その他はdelete_obj_room関数と同じ
     def delete_obj(objname):

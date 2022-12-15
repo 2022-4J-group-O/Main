@@ -1,4 +1,5 @@
 screen f1r1_screen(current):
+    layer "master"
     draggroup:
         if 'Door' in current:
             if 'Table' not in current and 'Drawer' not in current and 'Chair' not in current: 
