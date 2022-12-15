@@ -85,17 +85,17 @@ label f1r2_ev_opening:
 
     hide girl with dissolve
 
-    show girl at center onlayer screens with dissolve
+    show girl at center with dissolve
 
     g "ねえ君、聞いてる？"
 
     g "何とかして、この部屋にドアを持ってこられないかな......"
 
-    show girl look away at center onlayer screens with dissolve
+    show girl look away at center with dissolve
     
     g "このc......なんとかロボット君には......悪いけど"
 
-    show girl at center onlayer screens with dissolve
+    show girl at center with dissolve
 
     g "次の部屋へ進まなくちゃ、こんなところでは終われないよ"
 
