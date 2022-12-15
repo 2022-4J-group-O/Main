@@ -99,4 +99,6 @@ init python :
     # 内部的に部屋を移動
     def move_room(roomdir):
         global current_room
+        global room_prefix
         current_room = roomdir
+        room_prefix = roomdir.replace("loadfile", "f").replace("/room", "r")

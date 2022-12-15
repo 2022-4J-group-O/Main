@@ -1,3 +1,9 @@
+label f1r1_door_clicked:
+    $ renpy.dynamic(current=read_room())
+    if {"Chair", "Drawer", "Table"}.isdisjoint(set(current)):
+        call f1r1_ev_door_clicked
+    return
+
 label f1r1_ev_door_clicked:
     show girl
 

@@ -1,58 +1,15 @@
 screen f1r1_screen(current):
     layer "master"
+    $ img_col = ["#FF0000", "#808000", "#00FF00", "#008080", "#0000FF", "#800080"]
     draggroup:
-        if 'Door' in current:
-            if 'Table' not in current and 'Drawer' not in current and 'Chair' not in current: 
-                drag:
-                    drag_name "Door"
-                    idle_child "door_idle.png"
-                    hover_child "door_hover.png"
-                    xpos 0.2
-                    ypos 0.8
-                    yoffset 15
-                    draggable False
-                    droppable False
-                    clicked FromSc("f1r1_ev_door_clicked", "f1r1.scloop")
-            else:
-                drag:
-                    drag_name "Door"
-                    idle_child "door_idle.png"
-                    hover_child "door_idle.png"
-                    xpos 0.2
-                    ypos 0.8
-                    yoffset 15
-                    draggable False
-                    droppable False
-
-        for item in current:
-            if item == 'Chair':
-                drag:
-                    drag_name "Chair"
-                    idle_child "chair_idle.png"
-                    hover_child "chair_hover.png"
-                    xpos 0.2
-                    xoffset 10
-                    ypos 0.8
-                    draggable False
-                    droppable False
-            elif item=='Drawer':
-                drag:
-                    drag_name "Drawer"
-                    idle_child "drawer_idle.png"
-                    hover_child "drawer_hover.png"
-                    xpos 0.2
-                    ypos 0.8
-                    yoffset 10
-                    draggable False
-                    droppable False
-            elif item=='Table':  
-                drag:
-                    drag_name "Table"
-                    idle_child "table_idle.png"
-                    hover_child "table_hover.png"
-                    xpos 0.1
-                    xoffset 150
-                    ypos 0.8
-                    yoffset 10
-                    draggable False
-                    droppable False
+        for i, item in enumerate(current):
+            drag:
+                drag_name item
+                if renpy.can_show(item.lower()):
+                    add item.lower()
+                else:
+                    add SampleImage(item, 150, 150, img_col[i % 6])
+                draggable False
+                droppable False
+                clicked FromSc("obj_clicked", "f1r1.scloop", objname=item)
+                properties default_obj_prop[item]
