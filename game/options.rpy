@@ -245,7 +245,7 @@ define objects = [
 # オブジェクトのデフォルトのプロパティー
 # properties <辞書>でスタイルプロパティーを設定できる
 define default_obj_prop = {
-    "Door": {"pos": (0.5, 1.0), "anchor": (0.5, 1.0)},
+    "Door": {"pos": (0.2, 0.8), "yoffset": 15},
     "Start": {"xcenter": 0.5, "ycenter": 0.5},
     "Table": {"pos": (0.1, 0.8), "offset": (150, 10)},
     "Drawer": {"pos": (0.2, 0.8), "yoffset": 10},
@@ -266,6 +266,9 @@ define default_user_dir = "default_game_data"
 
 # 現在いるroom
 default current_room = 'default'
+
+# 各roomの接頭辞
+default room_prefix = ""
 
 # 内部変数
 default say_interact = False

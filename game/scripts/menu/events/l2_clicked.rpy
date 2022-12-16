@@ -1,9 +1,9 @@
-default jumped_menu_ev_l2_clicked = False
+default jumped_menu2_ev_l2_clicked = False
 
-label menu_ev_l2_clicked:
+label menu2_ev_l2_clicked:
     # このラベルへの訪問が初めてで、f2にジャンプ可能な時
-    if not jumped_menu_ev_l2_clicked and menu_evflg_canjump_f2:
-        $ menu_jumplabel = "f2r1"
+    if not jumped_menu2_ev_l2_clicked and menu2_evflg_canjump_f2:
+        $ menu2_jumplabel = "f2r1"
         
         show girl at right
 
@@ -14,9 +14,9 @@ label menu_ev_l2_clicked:
         return
     
     # f2へ2回目以降のジャンプ
-    if menu_evflg_canjump_f2:
+    if menu2_evflg_canjump_f2:
 
-        $ menu_jumplabel = "f2r1"
+        $ menu2_jumplabel = "f2r1"
         
         return
     

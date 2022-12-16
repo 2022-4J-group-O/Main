@@ -1,4 +1,4 @@
-label menu_ev_opening:
+label menu2_ev_opening:
     show girl
 
     g "スタート画面が終わったら、メニュー画面が出るのが普通だよね"

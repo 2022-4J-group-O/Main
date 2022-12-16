@@ -1,4 +1,4 @@
-screen menu_screen(enable):
+screen menu2_screen(enable):
     layer "master"
     grid 4 2:
         xcenter 0.5
@@ -7,14 +7,14 @@ screen menu_screen(enable):
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable
-            action FromSc("menu_ev_l1_clicked", "menu_start.scloop") # ロードファイル1
+            action FromSc("menu2_ev_l1_clicked", "menu2.scloop") # ロードファイル1
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable
-            action FromSc("menu_ev_l2_clicked", "menu_start.scloop") # ロードファイル2
+            action FromSc("menu2_ev_l2_clicked", "menu2.scloop") # ロードファイル2
         imagebutton:
             auto "256x192_%s.png"
             sensitive enable
-            action FromSc("menu_ev_l3_clicked", "menu_start.scloop") # ロードファイル3
+            action FromSc("menu2_ev_l3_clicked", "menu2.scloop") # ロードファイル3
         for i in range(0, 5):
             add "256x192_idle"
