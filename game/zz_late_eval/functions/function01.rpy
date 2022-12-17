@@ -72,6 +72,23 @@ init python :
     def make_obj(objname):
         return make_obj_room(current_room, objname)
     
+    # fpで指定したファイルが存在すれば、それを隠しファイルにする
+    # fpはgame_dataをルートとするファイルパス
+    # 成功時True, 失敗時False
+    def make_obj_hidden(fp):
+        path = os.path.join(user_dir_path, fp)
+        if os.path.isfile(path):
+            if renpy.windows:
+                info = subprocess.STARTUPINFO()
+                info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                info.wShowWindow = subprocess.SW_HIDE
+                subprocess.run(["attrib", "+H", path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=info)
+                return True
+            elif os.path.macintosh:
+                return True
+        else:
+            return False
+    
     def delete_obj_room_raw(roomdir, objname):
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
