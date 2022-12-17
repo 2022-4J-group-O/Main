@@ -52,7 +52,8 @@ init python :
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
-            open(objname, 'w').close()
+            with open(objname, "wb") as f:
+                f.write(hashlib.sha256(objname.encode("utf-8")).digest())
             return True
         else:
             return False
