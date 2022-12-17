@@ -16,7 +16,7 @@ label .scloop:
 
     if menu2_evflg_opening:
         $ menu2_evflg_opening = False
-        call say_about(calllabel_0="menu2_ev_opening", jumplabel_0="menu2.scloop")
+        $ Event("menu2_ev_opening")()
     
     if menu2_jumplabel == "f1r1":
         $ menu2_jumpflg_f1 = None

@@ -43,4 +43,4 @@ label f1r2_ev_angry:
 
     hide robot1 angry with dissolve
 
-    return
+    $ event_end("f1r2.scloop")

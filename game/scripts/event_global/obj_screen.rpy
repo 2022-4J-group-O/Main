@@ -1,4 +1,4 @@
-screen obj_screen(current, jlabeldict={}):
+screen obj_screen(current):
     layer "master"
     $ img_col = ["#FF0000", "#808000", "#00FF00", "#008080", "#0000FF", "#800080"]
     draggroup:
@@ -11,8 +11,5 @@ screen obj_screen(current, jlabeldict={}):
                     add SampleImage(item, 150, 150, img_col[i % 6])
                 draggable False
                 droppable False
-                if item in jlabeldict:
-                    clicked FromSc("obj_clicked", jlabeldict[item], objname=item)
-                else:
-                    clicked FromSc("obj_clicked", room_prefix + ".scloop", objname=item)
+                clicked Event("obj_clicked", objname=item)
                 properties default_obj_prop[item]

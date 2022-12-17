@@ -4,7 +4,7 @@
 
 label title_start_clicked:
     call title_ev_start_clicked
-    return
+    $ event_end("menu2")
 
 label title_ev_start_clicked:
     hide screen title_screen
@@ -15,4 +15,4 @@ label title_ev_start_clicked:
 
     hide girl
     
-    return 
+    return

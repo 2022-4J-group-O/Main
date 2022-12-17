@@ -37,4 +37,4 @@ label f1r1_ev_opening:
 
     hide girl with ldissolve
 
-    return
+    $ event_end("f1r1.scloop")

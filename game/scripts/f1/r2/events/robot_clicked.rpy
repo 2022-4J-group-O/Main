@@ -29,4 +29,4 @@ label f1r2_ev_robot_clicked:
         hide robot1 onlayer screens with dissolve
 
     window hide
-    return
+    $ event_end("f1r2.scloop")

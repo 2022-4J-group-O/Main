@@ -18,10 +18,10 @@ label .scloop:
 
         $ f1r2_evflg_opening = False
 
-        call say_about("f1r2_ev_opening", "f1r2.scloop")
+        $ Event("f1r2_ev_opening")()
 
     if f1r2_evflg_angry:
-        call say_about("f1r2_ev_angry", "f1r2.scloop")
+        $ Event("f1r2_ev_angry")()
     
     pause
 

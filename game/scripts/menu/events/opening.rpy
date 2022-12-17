@@ -23,4 +23,4 @@ label menu2_ev_opening:
 
     hide girl
 
-    return
+    $ event_end("menu2.scloop")

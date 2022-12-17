@@ -5,7 +5,7 @@ label obj_clicked(objname):
         call expression pref_lb
     elif renpy.has_label(lb):
         call expression lb
-    return
+    $ event_end(room_prefix + ".scloop")
 
 label table_clicked:
     show girl with dissolve
