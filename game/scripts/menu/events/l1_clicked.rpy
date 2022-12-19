@@ -13,13 +13,9 @@ label menu2_ev_l1_clicked:
 
         hide girl
 
-        return
-    
     # f1へ2回目以降のジャンプ
-    if menu2_evflg_canjump_f1:
+    elif menu2_evflg_canjump_f1:
 
         $ menu2_jumplabel = "f1r1"
 
-        return
-
-    return
+    $ event_end("menu2.scloop")

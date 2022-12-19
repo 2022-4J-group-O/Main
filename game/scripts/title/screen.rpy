@@ -1,3 +1,3 @@
 screen title_screen(current):
     layer "master"
-    use obj_screen(current, {"Start": "menu2"})
+    use obj_screen(current)

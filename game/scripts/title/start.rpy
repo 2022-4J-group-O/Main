@@ -10,7 +10,7 @@ label .scloop:
 
     if title_evflg_opening:  # タイトル画面初回起動時
         $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
-        call say_about("title_ev_opening", "title.scloop")
+        $ Event("title_ev_opening")()
 
     pause
 

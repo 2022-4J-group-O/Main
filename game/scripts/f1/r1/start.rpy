@@ -12,7 +12,7 @@ label .scloop:
 
     if f1r1_evflg_opening:  # f1r1初回起動時
         $ f1r1_evflg_opening = False
-        call say_about("f1r1_ev_opening", "f1r1.scloop")
+        $ Event("f1r1_ev_opening")()
     
     if f1r1_jumplabel == "f1r2":
         $ f1r1_jumplabel = None

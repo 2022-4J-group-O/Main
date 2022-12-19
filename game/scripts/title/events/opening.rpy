@@ -65,4 +65,4 @@ label title_ev_opening:
 
     hide girl
 
-    return
+    $ event_end()

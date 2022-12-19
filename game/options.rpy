@@ -271,4 +271,4 @@ default current_room = 'default'
 default room_prefix = ""
 
 # 内部変数
-default say_interact = False
+default enable_event = True
