@@ -102,4 +102,8 @@ init python :
         global current_room
         global room_prefix
         current_room = roomdir
-        room_prefix = roomdir.replace("loadfile", "f").replace("/room", "r")
+        room_prefix = roomdir.replace("loadfile", "f").replace("/room", "r").replace("\\room", "r")
+    
+    # 現在の部屋に対応する無限ループ用のラベルの名前を返す
+    def loop_label():
+        return room_prefix + ".scloop"

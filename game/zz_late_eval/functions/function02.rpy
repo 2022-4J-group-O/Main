@@ -28,6 +28,16 @@ init python:
             s = f.read()
         return s
     
+    # デコード失敗時Noneを返す
+    def dumpfile(path):
+        s = str()
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                s = f.read()
+        except UnicodeDecodeError:
+            return None
+        return s
+
     # デフォルトのユーザー用ディレクトリ構造をバイナリデータで暗号化してpathで指定されるファイルに保存
     def update_user_dir(path=default_user_dir_abs):
         direc = Directory()
