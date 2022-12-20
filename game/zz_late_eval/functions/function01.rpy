@@ -72,23 +72,60 @@ init python :
     def make_obj(objname):
         return make_obj_room(current_room, objname)
     
-    # fpで指定したファイルが存在すれば、それを隠しファイルにする
-    # fpはgame_dataをルートとするファイルパス
-    # 成功時True, 失敗時False
-    def make_obj_hidden(fp):
-        path = os.path.join(user_dir_path, fp)
-        if os.path.isfile(path):
-            if renpy.windows:
-                info = subprocess.STARTUPINFO()
-                info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                info.wShowWindow = subprocess.SW_HIDE
-                subprocess.run(["attrib", "+H", path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=info)
-                return True
-            elif os.path.macintosh:
-                return True
-        else:
-            return False
+    def give_hidden_raw(roomdir, objname):
+        path = os.path.join(user_dir_path, roomdir)
+        if os.path.isdir(path):
+            os.chdir(path)
+            if os.path.isfile(objname):
+                if renpy.windows:
+                    info = subprocess.STARTUPINFO()
+                    info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                    info.wShowWindow = subprocess.SW_HIDE
+                    result = subprocess.run(["attrib", "+H", objname], startupinfo=info)
+                    return result.returncode == 0
+                elif renpy.macintosh:
+                    os.remove(objname)
+                    with open("." + objname, "wb") as f:
+                        f.write(hashlib.sha256(("." + objname).encode("utf-8")).digest())
+                    return True
+        return False
     
+    # roomdirで指定したフォルダにobjnameのファイルが存在するとき、
+    # そのファイルに隠しファイルの属性を付与する
+    # 成功: True, 失敗時False
+    def give_hidden(roomdir, objname):
+        cwd = os.getcwd()
+        cond = give_hidden_raw(roomdir, objname)
+        os.chdir(cwd)
+        return cond
+
+    def give_nothidden_raw(roomdir, objname):
+        path = os.path.join(user_dir_path, roomdir)
+        if os.path.isdir(path):
+            os.chdir(path)
+            if os.path.isfile(objname):
+                if renpy.windows:
+                    info = subprocess.STARTUPINFO()
+                    info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                    info.wShowWindow = subprocess.SW_HIDE
+                    result = subprocess.run(["attrib", "-H", objname], startupinfo=info)
+                    return result.returncode == 0
+                elif renpy.macintosh:
+                    os.remove(objname)
+                    with open(objname[1:], "wb") as f:
+                        f.write(hashlib.sha256(objname[1:].encode("utf-8")).digest())
+                    return True
+        return False
+    
+    # roomdirで指定したフォルダにobjnameのファイルが存在するとき、
+    # そのファイルから隠しファイルの属性を取り除く
+    # 成功: True, 失敗時False
+    def give_nothidden(roomdir, objname):
+        cwd = os.getcwd()
+        cond = give_nothidden_raw(roomdir, objname)
+        os.chdir(cwd)
+        return cond
+
     def delete_obj_room_raw(roomdir, objname):
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
