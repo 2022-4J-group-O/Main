@@ -1,6 +1,6 @@
 default menu2_evflg_opening = True  # menu2初回起動のイベントフラグ
 default menu2_evflg_canjump_f1 = True  # 現在はf1にジャンプ可能
-default menu2_evflg_canjump_f2 = False  # 現在はf2にジャンプ可能
+default menu2_evflg_canjump_f2 = True  # 現在はf2にジャンプ可能(f2のテスト用)
 default menu2_evflg_canjump_f3 = False  # 現在はf3にジャンプ可能
 default menu2_jumplabel = None  # ジャンプするラベル
 
