@@ -12,3 +12,7 @@ label .scloop:
     if f3r1_evflg_opening:
         $ f3r1_evflg_opening = False
         $ Event("f3r1_ev_opening")()
+    
+    pause
+    
+    jump .scloop
