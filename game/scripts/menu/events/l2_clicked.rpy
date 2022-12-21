@@ -21,10 +21,9 @@ label menu2_ev_l2_clicked:
 
 
     # f2へジャンプできないとき->f1へ行くことを促す
-    show girl smile at right
-
-    g "まずはセーブデータ1に行ってみよう"
-
-    hide girl
+    else :
+        show girl smile at right
+        g "まずはセーブデータ1に行ってみよう"
+        hide girl
 
     $ event_end("menu2.scloop")
