@@ -1,8 +1,8 @@
 define ldissolve = Dissolve(1.0)
 default f2r1_evflg_opening = True# f2r1初回起動時のイベントのフラグ
 default f2r1_jumplabel = None  # この変数にラベル名を入れるとそこへジャンプする
-default exsist_flag = False #
-default first = True
+default f2r1_exsist_flag = False #
+default f2r1_first = True
 
 label f2r1:
     $ move_room("loadfile2/room1")
@@ -27,10 +27,10 @@ label .scloop:
         import os
         import shutil
 
-        exsist_flag = os.path.exists(os.path.join(config.basedir,"game_data/loadfile2/room1/object3/Apple"))
+        f2r1_exsist_flag = os.path.exists(os.path.join(config.basedir,"game_data/loadfile2/room1/object3/Apple"))
         
-        if exsist_flag and first:
-            first = False
+        if f2r1_exsist_flag and f2r1_first:
+            f2r1_first = False
 
             from_path = os.path.join(config.basedir,"game/images")
             to_path = os.path.join(config.basedir,"game_data/loadfile2/room1/box")
