@@ -1,7 +1,8 @@
 define ldissolve = Dissolve(1.0)
 default f2r1_evflg_opening = True# f2r1初回起動時のイベントのフラグ
-default f2r1_success = False #解除
 default f2r1_jumplabel = None  # この変数にラベル名を入れるとそこへジャンプする
+default exsist_flag = False #
+default first = True
 
 label f2r1:
     $ move_room("loadfile2/room1")
@@ -24,13 +25,19 @@ label .scloop:
     #正解のオブジェクトがあるかどうか
     python:
         import os
-        
-        if os.path.exists("loadfile2/room1/object3/Apple"):
+        import shutil
 
-            #from_path = os.path.join(config.basedir,"game/images/box")
-            #to_path = os.path.join(config.basedir,"game_data/loadfile2/room1/box")
-            #os.rename(from_path,to_path)
-            #Event("f2r1_success")()
+        exsist_flag = os.path.exists(os.path.join(config.basedir,"game_data/loadfile2/room1/object3/Apple"))
+        
+        if exsist_flag and first:
+            first = False
+
+            from_path = os.path.join(config.basedir,"game/images")
+            to_path = os.path.join(config.basedir,"game_data/loadfile2/room1/box")
+            if not os.path.exists(to_path):
+                os.mkdir(to_path)
+                shutil.copy(os.path.join(from_path,'box.png'),os.path.join(to_path,'box.png'))
+            Event("f2r1_success")()
 
     
     jump .scloop

@@ -54,6 +54,15 @@ screen f2r1_screen(current):
     use obj_screen_pos_obj(read_room("loadfile2/room1/object1"),0.2,0.5)
     use obj_screen_pos_obj(read_room("loadfile2/room1/object2"),0.5,0.5)
     use obj_screen_pos_obj(read_room("loadfile2/room1/object3"),0.85,0.5)
+    if exsist_flag:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.5
+            idle "f2/shelf.png"
+            hover "f2/shelf.png"
+
 
     
     
