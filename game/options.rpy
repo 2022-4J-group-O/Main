@@ -233,11 +233,7 @@ define objects = [
     'Table',
     'Drawer',
     'Chair',
-    'Fridge 1',
-    'Fridge 2',
-    'Fridge 3',
-    'Fridge 4',
-    'Box',
+    'fridge.zip',
     'Vase',
     'Chest',
     'Anywhere Door',
@@ -254,6 +250,7 @@ define default_obj_prop = {
     "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
     "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
     "Anywhere Door": {"pos": (0.5, 0.5), "anchor": (0.5, 0.5)},
+    'fridge.zip': {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)}
 }
 
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル

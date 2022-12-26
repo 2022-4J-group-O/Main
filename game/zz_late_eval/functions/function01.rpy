@@ -25,6 +25,10 @@ init python :
             cond = f.read() == hashlib.sha256(objname.encode("utf-8")).digest()
         return cond
 
+    def check_hash_binary(filename):
+        # todo
+        return True
+
     def read_room_raw(roomdir=None):
         path = ""
         if roomdir == None:
@@ -33,7 +37,7 @@ init python :
             path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
-            return [p for p in objects if os.path.isfile(p) and check_hash(p)]
+            return [p for p in objects if os.path.isfile(p) and (check_hash(p) or check_hash_binary(p))]
         else:
             return list()
     
