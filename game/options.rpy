@@ -240,7 +240,8 @@ define objects = [
     'Box',
     'Apple',
     'Vase',
-    'Chest'
+    'Chest',
+    'Anywhere Door'
 ]
 
 # オブジェクトのデフォルトのプロパティー
@@ -254,6 +255,7 @@ define default_obj_prop = {
     "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
     "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
     "Apple":{"pos": (0.5,0.5)},
+    "Anywhere Door": {"pos": (0.5, 0.5), "anchor": (0.5, 0.5)}
 }
 
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル
