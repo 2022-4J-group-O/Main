@@ -238,6 +238,7 @@ define objects = [
     'Fridge 3',
     'Fridge 4',
     'Box',
+    'Apple',
     'Vase',
     'Chest',
     'Anywhere Door'
@@ -248,11 +249,12 @@ define objects = [
 define default_obj_prop = {
     "Door": {"pos": (0.2, 0.8), "yoffset": 15},
     "Start": {"xcenter": 0.5, "ycenter": 0.5},
-    "Table": {"pos": (0.1, 0.8), "offset": (150, 10)},
+    "Table": {"pos": (0.5, 0.5), "offset": (150, 10)},
     "Drawer": {"pos": (0.2, 0.8), "yoffset": 10},
     "Chair": {"pos": (0.2, 0.8), "xoffset": 10},
     "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
     "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
+    "Apple":{"pos": (0.5,0.5)},
     "Anywhere Door": {"pos": (0.5, 0.5), "anchor": (0.5, 0.5)}
 }
 
