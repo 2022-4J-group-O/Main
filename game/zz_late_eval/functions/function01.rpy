@@ -25,9 +25,20 @@ init python :
             cond = f.read() == hashlib.sha256(objname.encode("utf-8")).digest()
         return cond
 
+    # バイナリファイル(pngやzip)のハッシュ値をチェック
     def check_hash_binary(filename):
-        # todo
-        return True
+        fp = os.path.join(config.basedir, "game/data/hash_list", filename)
+        if os.path.isfile(fp):
+            with open(fp, "rb") as hf:
+                hf_hash = hf.read()
+        else:
+            return False
+        if os.path.isfile(filename):  # 多分必要ないけど一応
+            with open(filename, "rb") as f:
+                f_hash = hashlib.sha256(f.read()).digest()
+            return hf_hash == f_hash
+        else:
+            return False
 
     def read_room_raw(roomdir=None):
         path = ""
