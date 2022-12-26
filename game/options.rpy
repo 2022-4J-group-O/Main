@@ -40,6 +40,8 @@ define gui.about = _p("""
 
 define build.name = "Prologue"
 
+# ロールバックを無効化
+define config.rollback_enabled = False
 
 ## サウンドと音楽 #####################################################################
 
@@ -260,6 +262,9 @@ define default_obj_prop = {
 define default_user_dirdata_path = "game/data/default"
 
 ## デバッグ用               ########################################
+
+# 自動ロード
+define auto_load = True
 
 # プレイヤー用のディレクトリの初期状態を示すディレクトリ
 define default_user_dir = "default_game_data"
