@@ -233,10 +233,16 @@ define objects = [
     'Table',
     'Drawer',
     'Chair',
-    'fridge.zip',
     'Vase',
     'Chest',
     'Anywhere Door',
+    'fridge.zip',
+    'fridge.7z',
+    'fridge_pass.7z',
+    'fridge_pass.zip',
+    'fridge.tar.gz',
+    'document.docx',
+    'document.zip',
 ]
 
 # オブジェクトのデフォルトのプロパティー
@@ -250,7 +256,13 @@ define default_obj_prop = {
     "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
     "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
     "Anywhere Door": {"pos": (0.5, 0.5), "anchor": (0.5, 0.5)},
-    'fridge.zip': {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)}
+    "fridge.zip": {"anchor": (0.5, 0.5), "pos": (0.3, 0.5)},
+    "fridge.7z": {"anchor": (0.5, 0.5), "pos": (0.4, 0.5)},
+    "fridge_pass.7z": {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)},
+    "fridge_pass.zip": {"anchor": (0.5, 0.5), "pos": (0.6, 0.5)},
+    "fridge.tar.gz": {"anchor": (0.5, 0.5), "pos": (0.7, 0.5)},
+    "document.docx": {"anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
+    "document.zip": {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 }
 
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル
