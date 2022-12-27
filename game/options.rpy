@@ -40,6 +40,8 @@ define gui.about = _p("""
 
 define build.name = "Prologue"
 
+# ロールバックを無効化
+define config.rollback_enabled = False
 
 ## サウンドと音楽 #####################################################################
 
@@ -238,8 +240,10 @@ define objects = [
     'Fridge 3',
     'Fridge 4',
     'Box',
+    'Apple',
     'Vase',
-    'Chest'
+    'Chest',
+    'Anywhere Door'
 ]
 
 # オブジェクトのデフォルトのプロパティー
@@ -247,17 +251,22 @@ define objects = [
 define default_obj_prop = {
     "Door": {"pos": (0.2, 0.8), "yoffset": 15},
     "Start": {"xcenter": 0.5, "ycenter": 0.5},
-    "Table": {"pos": (0.1, 0.8), "offset": (150, 10)},
+    "Table": {"pos": (0.5, 0.5), "offset": (150, 10)},
     "Drawer": {"pos": (0.2, 0.8), "yoffset": 10},
     "Chair": {"pos": (0.2, 0.8), "xoffset": 10},
     "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
     "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
+    "Apple":{"pos": (0.5,0.5)},
+    "Anywhere Door": {"pos": (0.5, 0.5), "anchor": (0.5, 0.5)}
 }
 
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル
 define default_user_dirdata_path = "game/data/default"
 
 ## デバッグ用               ########################################
+
+# 自動ロード
+define auto_load = True
 
 # プレイヤー用のディレクトリの初期状態を示すディレクトリ
 define default_user_dir = "default_game_data"

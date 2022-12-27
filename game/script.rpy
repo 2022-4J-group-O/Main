@@ -5,6 +5,11 @@ define ro1_unknown = Character("???", color="#cdc8ff")
 default global_data = Const()
 
 label main_menu:
+    python:
+        if auto_load:
+            fn = renpy.newest_slot()
+            if fn != None:
+                renpy.load(fn)
     return
 
 label start:
