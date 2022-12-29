@@ -40,8 +40,7 @@ init python:
 
     # デフォルトのユーザー用ディレクトリ構造をバイナリデータで暗号化してpathで指定されるファイルに保存
     def update_user_dir(path=default_user_dir_abs):
-        direc = Directory()
-        direc.load(path)
+        direc = Directory.read(path)
         by = direc.__repr__().encode("utf-8").translate(global_data.crypttable)
         with open(default_user_dirdata_path_abs, "wb") as f:
             f.write(by)
@@ -50,7 +49,7 @@ init python:
     # 戻り値はDirectoryクラス
     def load_user_dirdata():
         by = dumpbfile(default_user_dirdata_path_abs).translate(global_data.decrypttable)
-        return Directory(eval(by.decode("utf-8")))
+        return eval(by.decode("utf-8"))
     
     # 部屋をリセット(相対パスで)
     # ディレクトリが存在しない場合は生成される
@@ -61,13 +60,5 @@ init python:
         if os.path.isdir(room_path):
             shutil.rmtree(room_path)
         # os.makedirs(room_path)
-        for p in global_data.default_dir_data.dirlist[0]:
-            tmp = os.path.commonpath([p, room_path])
-            if tmp != "" and os.path.relpath(tmp, room_path) == ".":
-                os.mkdir(p)
-        for (i, p) in enumerate(global_data.default_dir_data.dirlist[1]):
-            tmp = os.path.commonpath([p, room_path])
-            if tmp != "" and os.path.relpath(tmp, room_path) == ".":
-                with open(p, "wb") as f:
-                    f.write(global_data.default_dir_data.dirlist[2][i])
+        global_data.default_dir_data.make(room_path, room_path)
         os.chdir(cwd)
