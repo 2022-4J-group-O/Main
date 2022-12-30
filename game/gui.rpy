@@ -66,7 +66,7 @@ define gui.text_font = "SourceHanSansLite.ttf"
 define gui.name_text_font = "SourceHanSansLite.ttf"
 
 ## ゲームメニューなどのインターフェースに使われるテキストのフォント。
-define gui.interface_text_font = "SourceHanSansLite.ttf"
+define gui.interface_text_font = "fonts/Kaisotai-Next-UP-B.ttf"
 
 ## 一般的な台詞のテキストサイズ。
 define gui.text_size = 33
