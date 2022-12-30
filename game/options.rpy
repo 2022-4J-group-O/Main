@@ -229,35 +229,43 @@ define user_directory = "game_data"
 define objects = [
     'Book',
     'Door',
-    'DoorA',
     'Key',
     'Start',
     'Table',
     'Drawer',
     'Chair',
-    'Fridge 1',
-    'Fridge 2',
-    'Fridge 3',
-    'Fridge 4',
-    'Box',
-    'Apple',
-    'Vase',
     'Chest',
+    'Vase',
+    'fridge.zip',
+    'fridge.7z',
+    'fridge_pass.7z',
+    'fridge_pass.zip',
+    'archive.tar.gz',
+    'document.docx',
+    'document.zip',
+    'door_to_1-4.png',
     'Anywhere Door'
 ]
 
 # オブジェクトのデフォルトのプロパティー
 # properties <辞書>でスタイルプロパティーを設定できる
 define default_obj_prop = {
-    "Door": {"pos": (0.2, 0.8), "yoffset": 15},
-    "Start": {"xcenter": 0.5, "ycenter": 0.5},
-    "Table": {"pos": (0.5, 0.5), "offset": (150, 10)},
-    "Drawer": {"pos": (0.2, 0.8), "yoffset": 10},
-    "Chair": {"pos": (0.2, 0.8), "xoffset": 10},
-    "Chest": {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
-    "Vase": {"anchor": (0.5, 1.0), "pos": (0.75, 0.8)},
-    "Apple":{"pos": (0.5,0.5)},
-    "Anywhere Door": {"pos": (0.5, 0.5), "anchor": (0.5, 0.5)}
+    "Door"           : {"pos": (0.2, 0.8), "yoffset": 15},
+    "Start"          : {"xcenter": 0.5, "ycenter": 0.5},
+    "Table"          : {"pos": (0.1, 0.8), "offset": (150, 10)},
+    "Drawer"         : {"pos": (0.2, 0.8), "yoffset": 10},
+    "Chair"          : {"pos": (0.2, 0.8), "xoffset": 10},
+    "Chest"          : {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
+    "Vase"           : {"anchor": (0.5, 1.0), "pos": (0.1, 0.8)},
+    "fridge.zip"     : {"anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
+    "fridge.7z"      : {"anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
+    "fridge_pass.7z" : {"anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
+    "fridge_pass.zip": {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
+    "archive.tar.gz" : {"anchor": (0.5, 0.5), "pos": (0.6, 0.6)},
+    "document.docx"  : {"anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
+    "document.zip"   : {"anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
+    "door_to_1-4.png": {"anchor": (0.5, 0.5), "pos": (0.9, 0.6)},
+    "Anywhere Door"  : {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 }
 
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル

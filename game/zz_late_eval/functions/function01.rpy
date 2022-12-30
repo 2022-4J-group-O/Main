@@ -48,7 +48,7 @@ init python :
             path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
-            return [p for p in objects if os.path.isfile(p) and check_hash(p)]
+            return [p for p in objects if os.path.isfile(p) and (check_hash(p) or check_hash_binary(p))]
         else:
             return list()
     
