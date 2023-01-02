@@ -84,9 +84,7 @@ init python :
                     result = subprocess.run(["attrib", "+H", objname], startupinfo=info)
                     return result.returncode == 0
                 elif renpy.macintosh:
-                    os.remove(objname)
-                    with open("." + objname, "wb") as f:
-                        f.write(hashlib.sha256(("." + objname).encode("utf-8")).digest())
+                    os.rename(objname, "." + objname)
                     return True
         return False
     
@@ -103,23 +101,24 @@ init python :
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
             os.chdir(path)
-            if os.path.isfile(objname):
-                if renpy.windows:
+            if renpy.windows:
+                if os.path.isfile(objname):
                     info = subprocess.STARTUPINFO()
                     info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
                     info.wShowWindow = subprocess.SW_HIDE
                     result = subprocess.run(["attrib", "-H", objname], startupinfo=info)
                     return result.returncode == 0
-                elif renpy.macintosh:
-                    os.remove(objname)
-                    with open(objname[1:], "wb") as f:
-                        f.write(hashlib.sha256(objname[1:].encode("utf-8")).digest())
+                    return True
+            elif renpy.macintosh:
+                if os.path.isfile("." + objname):
+                    os.rename("." + objname, objname)
                     return True
         return False
     
     # roomdirで指定したフォルダにobjnameのファイルが存在するとき、
     # そのファイルから隠しファイルの属性を取り除く
     # 成功: True, 失敗時False
+    # macの場合はobjnameは、'.'無しの名前で指定
     def give_nothidden(roomdir, objname):
         cwd = os.getcwd()
         cond = give_nothidden_raw(roomdir, objname)
