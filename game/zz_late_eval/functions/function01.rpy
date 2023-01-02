@@ -87,6 +87,59 @@ init python :
     def make_obj(objname):
         return make_obj_room(current_room, objname)
     
+    def give_hidden_raw(roomdir, objname):
+        path = os.path.join(user_dir_path, roomdir)
+        if os.path.isdir(path):
+            os.chdir(path)
+            if os.path.isfile(objname):
+                if renpy.windows:
+                    info = subprocess.STARTUPINFO()
+                    info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                    info.wShowWindow = subprocess.SW_HIDE
+                    result = subprocess.run(["attrib", "+H", objname], startupinfo=info)
+                    return result.returncode == 0
+                elif renpy.macintosh:
+                    os.rename(objname, "." + objname)
+                    return True
+        return False
+    
+    # roomdirで指定したフォルダにobjnameのファイルが存在するとき、
+    # そのファイルに隠しファイルの属性を付与する
+    # 成功: True, 失敗時False
+    def give_hidden(roomdir, objname):
+        cwd = os.getcwd()
+        cond = give_hidden_raw(roomdir, objname)
+        os.chdir(cwd)
+        return cond
+
+    def give_nothidden_raw(roomdir, objname):
+        path = os.path.join(user_dir_path, roomdir)
+        if os.path.isdir(path):
+            os.chdir(path)
+            if renpy.windows:
+                if os.path.isfile(objname):
+                    info = subprocess.STARTUPINFO()
+                    info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                    info.wShowWindow = subprocess.SW_HIDE
+                    result = subprocess.run(["attrib", "-H", objname], startupinfo=info)
+                    return result.returncode == 0
+                    return True
+            elif renpy.macintosh:
+                if os.path.isfile("." + objname):
+                    os.rename("." + objname, objname)
+                    return True
+        return False
+    
+    # roomdirで指定したフォルダにobjnameのファイルが存在するとき、
+    # そのファイルから隠しファイルの属性を取り除く
+    # 成功: True, 失敗時False
+    # macの場合はobjnameは、'.'無しの名前で指定
+    def give_nothidden(roomdir, objname):
+        cwd = os.getcwd()
+        cond = give_nothidden_raw(roomdir, objname)
+        os.chdir(cwd)
+        return cond
+
     def delete_obj_room_raw(roomdir, objname):
         path = os.path.join(user_dir_path, roomdir)
         if os.path.isdir(path):
