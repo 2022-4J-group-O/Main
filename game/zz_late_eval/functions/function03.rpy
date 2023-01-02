@@ -4,12 +4,12 @@ init python:
     # ファイルが隠しファイルかを判定
     # fpは絶対パスで指定
     def is_hidden_file(fp):
-        if False:
+        if renpy.windows:
             info = subprocess.STARTUPINFO()
             info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             info.wShowWindow = subprocess.SW_HIDE
             return subprocess.run(['attrib', fp], stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=info).stdout[4] == b'H'[0]
-        elif True:
+        elif renpy.macintosh:
             if os.path.isfile(fp):
                 return os.path.basename(fp)[:1] == '.'
             else:
