@@ -3,30 +3,43 @@ default f1r2_jumped_robot_clicked = False
 
 label f1r2_ev_robot_clicked:
     show screen f1r2_screen(read_room(), False)  # ロボットを不可視に
-    show robot1 onlayer screens
-    with dissolve
+    show robot1 at right with dissolve
+    show girl at right with dissolve
 
     if not f1r2_jumped_robot_clicked:
-        $ f1r2_jumped_robot_clicked = True
+        ro1 "む、まだいたのかね、君たち"
 
-        ro1 "これは一回目の会話です"
+        girl "いいじゃない、私たちの勝手でしょ"
 
-        ro1 "ロボットが喋る"
+        ro1 "この部屋いるのは良いが、くれぐれも部屋を汚すなよ"
 
-        ro1 "<自己紹介的なこと> <少女との会話もあってもいい>"
+        girl "わかったよ"
 
-        hide robot1 onlayer screens
-        show girl onlayer screens with dissolve
+        ro1 "しかし、今日は珍しいことばかり起こる"
 
-        g "呼んだ？"
+        ro1 "久しぶりにゲームが起動されたと思ったら、知らぬ客人が来た"
 
-        hide girl onlayer screens with dissolve
+        ro1 "画面の向こうの者も、どうも私の知っている人物ではないようだし......"
+
+        ro1 "いったい何が起こっているんだ"
+
+        ro1 "このゲームが日の目を見るなど、ありえないはずなのに......"
+
+        hide robot1
+        hide girl
+
+        show girl look away with dissolve
+
+        girl "このロボット、一人でごちゃごちゃしゃべるのが好きみたいだね......"
+
+        girl "彼のことはほっといて、次の部屋へ進む方法を考えましょう"
 
     else:
+        ro1 "む、まだいたのかね、君たち"
 
-        ro1 "これは2回目以降の会話です"
+        girl "いいじゃない、私たちの勝手でしょ"
 
-        hide robot1 onlayer screens with dissolve
+        ro1 "くれぐれも私の部屋を汚すでないぞ"
 
     window hide
     $ event_end("f1r2.scloop")

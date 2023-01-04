@@ -35,7 +35,7 @@ label f1r2_ev_angry:
     else:
         show girl look away at right with dissolve
         
-        g "そんなにかっかしないでよ何とかロボット君"
+        g "そんなにかっかしないでよ。何とかロボット君"
 
         ro1 "がらくたはひとつ前の部屋へ放っておいたからな"
     
