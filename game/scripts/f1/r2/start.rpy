@@ -1,6 +1,7 @@
 default f1r2_evflg_opening = True
 default f1r2_evflg_angry = False
 default nhidden = []
+default f1r2_hidden_clicked = False  # VaseまたはChestがクリックされたか
 
 label f1r2:
     $ move_room("loadfile1/room2")
