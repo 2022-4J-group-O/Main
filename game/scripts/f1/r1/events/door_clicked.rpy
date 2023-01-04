@@ -1,30 +1,37 @@
 label f1r1_door_clicked:
     $ renpy.dynamic(current=read_room())
+
+    # クリア条件が満たされているとき
     if {"Chair", "Drawer", "Table"}.isdisjoint(set(current)):
-        call f1r1_ev_door_clicked
-    return
+        show girl with dissolve
 
-label f1r1_ev_door_clicked:
-    show girl
+        g "整理整頓お疲れ様"
 
-    g "整理整頓お疲れ様"
+        show girl smile
+        
+        g "家具ごと消し去っちゃうなんて、君の整理術もなかなかアクロバティックだね"
 
-    show girl smile
+        g "この部屋を荒らした人も、君も、中庸ってやつを知らないのかな"
+
+        show girl
+
+        g "とにかく、これでまだ先へ進めるね"
+
+        g "もしかしたらこの先で、この部屋を荒らした犯人と出会えるかも"
+
+        g "整理整頓に関して極端な思想を持つ者同士、仲良くできるかもよ？"
+
+        hide girl
+
+        $ event_end("f1r2")  # f1r2へ
     
-    g "家具ごと消し去っちゃうなんて、君の整理術もなかなかアクロバティックだね"
+    else:
+        show girl with dissolve
 
-    g "この部屋を荒らした人も、君も、中庸ってやつを知らないのかな"
+        g "このドアの向こうに行きたいけど......"
 
-    show girl
+        g "家具が邪魔だね"
 
-    g "とにかく、これでまだ先へ進めるね"
-
-    g "もしかしたらこの先で、この部屋を荒らした犯人と出会えるかも"
-
-    g "整理整頓に関して極端な思想を持つ者同士、仲良くできるかもよ？"
-
-    $ f1r1_jumplabel = "f1r2"  # 次のループでf1r2にループ
-
-    hide girl
-    
-    return
+        hide girl
+        
+        $ event_end()
