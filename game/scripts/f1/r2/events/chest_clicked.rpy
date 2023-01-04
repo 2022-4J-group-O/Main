@@ -8,10 +8,10 @@ label f1r2_chest_clicked:
     else:
         show girl with dissolve
 
-        girl "この家具、あのロボットには見えていないみたい"
+        g "この家具、あのロボットには見えていないみたい"
 
-        girl "何か理由があるのかな"
+        g "何か理由があるのかな"
 
         hide girl
     
-    $ event_end("f1r2")
+    $ event_end("f1r2.scloop")

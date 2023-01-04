@@ -3,17 +3,19 @@ default f1r2_jumped_robot_clicked = False
 
 label f1r2_ev_robot_clicked:
     show screen f1r2_screen(read_room(), False)  # ロボットを不可視に
-    show robot1 at right with dissolve
+    show robot1 at left with dissolve
     show girl at right with dissolve
 
     if not f1r2_jumped_robot_clicked:
+        $ f1r2_jumped_robot_clicked = True
+        
         ro1 "む、まだいたのかね、君たち"
 
-        girl "いいじゃない、私たちの勝手でしょ"
+        g "いいじゃない、私たちの勝手でしょ"
 
         ro1 "この部屋いるのは良いが、くれぐれも部屋を汚すなよ"
 
-        girl "わかったよ"
+        g "わかったよ"
 
         ro1 "しかし、今日は珍しいことばかり起こる"
 
@@ -30,16 +32,23 @@ label f1r2_ev_robot_clicked:
 
         show girl look away with dissolve
 
-        girl "このロボット、一人でごちゃごちゃしゃべるのが好きみたいだね......"
+        g "このロボット、一人でごちゃごちゃしゃべるのが好きみたいだね......"
 
-        girl "彼のことはほっといて、次の部屋へ進む方法を考えましょう"
+        g "彼のことはほっといて、次の部屋へ進む方法を考えましょう"
+
+        hide girl
 
     else:
+        show girl at right with dissolve
+        show robot1 at left with dissolve
+
         ro1 "む、まだいたのかね、君たち"
 
-        girl "いいじゃない、私たちの勝手でしょ"
+        g "いいじゃない、私たちの勝手でしょ"
 
         ro1 "くれぐれも私の部屋を汚すでないぞ"
 
-    window hide
+        hide girl
+        hide robot1
+
     $ event_end("f1r2.scloop")

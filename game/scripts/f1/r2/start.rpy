@@ -5,6 +5,9 @@ default f1r2_hidden_clicked = False  # VaseまたはChestがクリックされ�
 
 label f1r2:
     $ move_room("loadfile1/room2")
+    # 応急処置的な処理。部屋のディレクトリ生成時に実行するべき
+    $ give_hidden("loadfile1/room2", "Vase")
+    $ give_hidden("loadfile1/room2", "Chest")
     scene bg f1r2
 
 label .scloop:

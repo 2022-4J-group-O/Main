@@ -23,6 +23,8 @@ label f1r1_door_clicked:
 
         hide girl
 
+        hide screen f1r1_screen
+
         $ event_end("f1r2")  # f1r2へ
     
     else:
