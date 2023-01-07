@@ -22,24 +22,24 @@ label drawer_clicked:
 label chair_clicked:
     show girl with dissolve
     g "椅子がクリックされたよ"
-    show girl with dissolve
+    hide girl with dissolve
     $ event_end(loop_label())
 
 label chest_clicked:
     show girl with dissolve
     g "チェストがクリックされたよ"
-    show girl with dissolve
+    hide girl with dissolve
     $ event_end(loop_label())
 
 label vase_clicked:
     show girl with dissolve
     g "花瓶がクリックされたよ"
-    show girl with dissolve
+    hide girl with dissolve
     $ event_end(loop_label())
 
 label box_clicked:
     show girl with dissolve
     g "箱がクリックされたよ"
-    show girl with dissolve
+    hide girl with dissolve
     $ event_end(loop_label())
 
