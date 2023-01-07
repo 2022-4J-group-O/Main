@@ -38,8 +38,6 @@ label vase_clicked:
     $ event_end(loop_label())
 
 label box_clicked:
-    show girl with dissolve
-    g "箱がクリックされたよ"
-    hide girl with dissolve
-    $ event_end(loop_label())
+    $ call f1r3_box_clicked
+    $ event_end()
 
