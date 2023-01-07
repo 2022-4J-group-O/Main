@@ -37,5 +37,4 @@ label vase_clicked:
     hide girl with dissolve
     $ event_end(loop_label())
 
-label box_clicked:
-    call f1r3_box_clicked
+# label box_clicked: (box_clicked.rpyに定義)

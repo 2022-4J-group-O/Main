@@ -1,12 +1,10 @@
-define f1r3_count_box_cliecked = 0  # このラベルの訪問回数
+define count_box_clicked = 0  # このラベルの訪問回数
 
-label f1r3_box_clicked:
-    $ f1r3_count_box_cliecked += 1 
+label box_clicked:
+    $ count_box_clicked += 1 
 
-    if f1r3_count_box_cliecked == 1:  # このラベルを初めて訪れた時
+    if count_box_clicked == 1:  # このラベルを初めて訪れた時
 
-        $ f1r3_jumped_box_clicked = True
-    
         show girl at right with dissolve
 
         g "この箱......気になるね"
@@ -65,7 +63,7 @@ label f1r3_box_clicked:
     
         $ event_end()
         
-    if f1r3_count_box_cliecked == 2:  # 訪問回数が2回のとき
+    if count_box_clicked == 2:  # 訪問回数が2回のとき
 
         show girl at right with dissolve
 
@@ -77,7 +75,7 @@ label f1r3_box_clicked:
 
         $ event_end()
     
-    if f1r3_count_box_cliecked == 3:  # 訪問回数が3回のとき
+    if count_box_clicked == 3:  # 訪問回数が3回のとき
 
         show girl at right with dissolve
 
@@ -95,7 +93,7 @@ label f1r3_box_clicked:
 
         $ event_end()
     
-    if f1r3_count_box_cliecked >= 4:  # 訪問回数が4回以上のとき
+    if count_box_clicked >= 4:  # 訪問回数が4回以上のとき
 
         show girl at right with dissolve
 
