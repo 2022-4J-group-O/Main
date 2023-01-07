@@ -1,8 +1,9 @@
-define f1r3_jumped_box_clicked = False  # このラベルを訪問済みか
+define f1r3_count_box_cliecked = 0  # このラベルの訪問回数
 
 label f1r3_box_clicked:
+    $ f1r3_count_box_cliecked += 1 
 
-    if not f1r3_jumped_box_clicked:  # このラベルを初めて訪れた時
+    if f1r3_count_box_cliecked == 1:  # このラベルを初めて訪れた時
 
         $ f1r3_jumped_box_clicked = True
     
@@ -62,10 +63,57 @@ label f1r3_box_clicked:
 
         hide girl with dissolve
     
-    else:
+        $ event_end()
         
-        g "この箱を開けるためには、どうすればいいかな"
+    if f1r3_count_box_cliecked == 2:  # 訪問回数が2回のとき
 
-        g "「そちら」から見て、この箱に違和感とかはない？"
+        show girl at right with dissolve
+
+        g "閉じた箱の画像が表示されてるってことは、開いた箱の画像もどこかに用意されてる......ってことだよね"
+
+        g "どこかに画像ファイルはないかな"
+
+        hide girl with dissolve
+
+        $ event_end()
     
-    $ event_end()
+    if f1r3_count_box_cliecked == 3:  # 訪問回数が3回のとき
+
+        show girl at right with dissolve
+
+        g "この箱の中身が描かれた画像......"
+
+        g "もしかしたら、それは巧妙に隠されているのかも"
+
+        g "そして、それは案外君の近くに......"
+
+        show girl smile at right with dissolve
+
+        g "なんてね"
+
+        hide girl with dissolve
+
+        $ event_end()
+    
+    if f1r3_count_box_cliecked >= 4:  # 訪問回数が4回以上のとき
+
+        show girl at right with dissolve
+
+        g "君さ、ファイル拡張子ってどんなものか知ってる？"
+
+        g "ファイル拡張子って、「.png」とか「.txt」みたいに、ファイルの末尾にくっついている文字列のことなんだけど......"
+        
+        g "これって、ファイルの種類をわかりやすくするためにくっつけてるだけなんだよね"
+
+        g "だから、「.png」がくっついているファイルを画像だと思って実行したら、実はそれが実行ファイルでマルウェアに感染！"
+
+        g "......なんてこともあるみたい"
+
+        show girl smile at right with dissolve
+
+        g "君がただの何でもないファイルだと思っているものも、実は画像ファイルだったりするかもしれないよ？"
+
+        hide girl with dissolve
+
+        $ event_end()
+    

@@ -38,6 +38,4 @@ label vase_clicked:
     $ event_end(loop_label())
 
 label box_clicked:
-    $ call f1r3_box_clicked
-    $ event_end()
-
+    call f1r3_box_clicked

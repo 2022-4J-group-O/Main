@@ -19,4 +19,4 @@ label f1r3_ev_opening:
 
     hide girl
 
-    $ event_end("f1r3.scloop")
+    $ event_end()
