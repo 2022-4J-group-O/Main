@@ -6,4 +6,5 @@
 *.DS_Store
 *.rpyc
 *.txt
+!text.txt
 !.gitkeep

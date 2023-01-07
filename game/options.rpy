@@ -51,7 +51,7 @@ define config.rollback_enabled = False
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## サウンドやボイスの設定画面で、ユーザーがテストサウンドを再生可能にする場合、

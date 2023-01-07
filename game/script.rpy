@@ -1,4 +1,4 @@
-define g = Character('girl', color="#c8ffc8")
+define g = Character('少女', color="#c8ffc8")
 define ro1 = Character("cG9ua290c3U=", color="#cdc8ff")
 define ro1_unknown = Character("???", color="#cdc8ff")
 
