@@ -237,12 +237,12 @@ define default_obj_prop = {
     # menu
 
     # f1r1
-    "Books"          : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
-    "BookShelf"      : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
-    "Calendar"       : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
-    "Door"           : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
-    "Sofa"           : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
-    "Table"          : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
+    "Books"          : {"anchor": (0.0, 0.0), "pos": ( 295,  936)},
+    "BookShelf"      : {"anchor": (0.0, 0.0), "pos": (  94,  586)},
+    "Calendar"       : {"anchor": (0.0, 0.0), "pos": ( 163,   33)},
+    "Door"           : {"anchor": (0.0, 0.0), "pos": (1045,  149)},
+    "Sofa"           : {"anchor": (0.0, 0.0), "pos": ( 692,  523)},
+    "Table"          : {"anchor": (0.0, 0.0), "pos": ( 875,  490)},
 
     # f1r2
     "Chest"          : {"anchor": (0.5, 0.0), "pos": (0.75, 0.8)},
