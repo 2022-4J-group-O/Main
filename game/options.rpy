@@ -252,9 +252,9 @@ define objects = [
 # オブジェクトのデフォルトのプロパティー
 # properties <辞書>でスタイルプロパティーを設定できる
 define default_obj_prop = {
-    "Door"           : {"pos": (0.2, 0.8), "yoffset": 15},
-    "Start"          : {"xcenter": 0.5, "ycenter": 0.5},
-    "Table"          : {"pos": (0.1, 0.8), "offset": (150, 10)},
+    "Door"           : {"anchor": (0.0, 0.0), "pos": (1045, 149)},
+    "Start"          : {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)},
+    "Table"          : {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
     "Drawer"         : {"pos": (0.2, 0.8), "yoffset": 10},
     "Chair"          : {"pos": (0.2, 0.8), "xoffset": 10},
     "Chest"          : {"anchor": (0.5, 0), "pos": (0.75, 0.8)},

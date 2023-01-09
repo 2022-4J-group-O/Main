@@ -5,16 +5,16 @@ screen menu2_screen(enable):
         ycenter 0.5
         spacing 30
         imagebutton:
-            auto "256x192_%s.png"
+            auto "menu/256x192_%s.png"
             sensitive enable
             action Event("menu2_ev_l1_clicked") # ロードファイル1
         imagebutton:
-            auto "256x192_%s.png"
+            auto "menu/256x192_%s.png"
             sensitive enable
             action Event("menu2_ev_l2_clicked") # ロードファイル2
         imagebutton:
-            auto "256x192_%s.png"
+            auto "menu/256x192_%s.png"
             sensitive enable
             action Event("menu2_ev_l3_clicked") # ロードファイル3
         for i in range(0, 5):
-            add "256x192_idle"
+            add "menu/256x192_idle"
