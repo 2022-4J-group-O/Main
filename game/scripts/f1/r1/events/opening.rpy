@@ -5,11 +5,11 @@ label f1r1_ev_opening:
 
     g "ずいぶん荒れてるなぁ"
 
-    show girl smile
+    show girl smile with dissolve
     
     g "整理整頓が下手とか、そういう次元じゃないね"
 
-    show girl
+    show girl with dissolve
 
     g "次の部屋につながるドアは......"
 
@@ -17,13 +17,13 @@ label f1r1_ev_opening:
 
     g "まるでバリケード......事件性を感じるね......"
 
-    show girl smile
+    show girl smile with dissolve
 
     g "ところで、次の部屋に進むためにやるべきこと......もう君には分かるよね？"
 
     g "さっさと次の部屋へ進むことにしよう"
 
-    show girl
+    show girl with dissolve
 
     g "ま、そのためにいろいろ行動するのは私じゃなくて、君なんだけどね"
 
@@ -31,10 +31,10 @@ label f1r1_ev_opening:
 
     g "頼りになるのは君だけなんだ"
 
-    show girl smile
+    show girl smile with dissolve
 
     g "だから、よろしく"
 
-    hide girl with ldissolve
+    hide girl with dissolve
 
     $ event_end("f1r1.scloop")

@@ -5,13 +5,13 @@ label menu2_ev_l1_clicked:
     if not jumped_menu2_ev_l1_clicked and menu2_evflg_canjump_f1:
         $ jumped_menu2_ev_l1_clicked = True  # このラベルを訪問済みに
 
-        show girl smile at right
+        show girl at right with dissolve
         
         g "脱出ゲームステージ1の、はじまりはじまり"
 
         $ menu2_jumplabel = "f1r1"
 
-        hide girl
+        hide girl with dissolve
 
     # f1へ2回目以降のジャンプ
     elif menu2_evflg_canjump_f1:

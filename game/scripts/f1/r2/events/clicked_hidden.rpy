@@ -8,7 +8,7 @@ label f1r2_ev_hidden_clicked:
 
     g "あの何とかロボット君、この家具は見えていないようだったけど......どうしてだろう"
 
-    hide girl
+    hide girl with dissolve
 
     show girl at right with dissolve
     show robot1 at left with dissolve
@@ -30,7 +30,7 @@ label f1r2_ev_hidden_clicked:
     g "わかったよ。ごめん"
 
     hide robot1
-    hide girl
+    hide girl with dissolve
 
     show girl with dissolve
 
@@ -38,6 +38,6 @@ label f1r2_ev_hidden_clicked:
 
     g "ほかのドアや、家具は見えていたみたいだし......どうしてなんだろう"
 
-    hide girl
+    hide girl with dissolve
     
     return
