@@ -17,4 +17,4 @@ screen menu2_screen(enable):
             sensitive enable
             action Event("menu2_ev_l3_clicked") # ロードファイル3
         for i in range(0, 5):
-            add "menu/256x192_idle"
+            add "menu/256x192_idle.png"
