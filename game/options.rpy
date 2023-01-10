@@ -245,8 +245,8 @@ define default_obj_prop = {
     "Table"          : {"anchor": (0.0, 0.0), "pos": ( 875,  490)},
 
     # f1r2
-    "Chest"          : {"anchor": (0.5, 0.0), "pos": (0.75, 0.8)},
-    "Vase"           : {"anchor": (0.5, 1.0), "pos": (0.1, 0.8)},
+    "Chest"          : {"anchor": (0.5, 0.0), "pos": (1113,  628)},
+    "Vase"           : {"anchor": (0.0, 0.0), "pos": (1124,  491)},
 
     # f1r3
     "Box"            : {"anchor": (0.5, 0.5), "pos": (0.1, 0.1)},
