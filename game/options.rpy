@@ -250,18 +250,17 @@ define default_obj_prop = {
 
     # f1r3
     "archive.tar.gz" : {"anchor": (0.5, 0.5), "pos": (0.6, 0.6)},
-    "Box"            : {"anchor": (0.5, 0.5), "pos": (0.1, 0.1)},
-    "Box.png"        : {"anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
     "Cupboard"       : {"anchor": (0.0, 0.0), "pos": (  35,   78)},
     "document.docx"  : {"anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
     "document.zip"   : {"anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
     "Door B"         : {"anchor": (0.0, 0.0), "pos": (1539,  106)},
-    "door_to_1-4.png": {"anchor": (0.5, 0.5), "pos": (0.9, 0.6)},
     "fridge.7z"      : {"anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
     "fridge.zip"     : {"anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
     "fridge_pass.7z" : {"anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
     "fridge_pass.zip": {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
     "Kitchen table"  : {"anchor": (0.0, 0.0), "pos": (  35,  518)},
+    "Box"            : {"anchor": (0.0, 0.0), "pos": (400, 340)},
+    "Box.png"        : {"anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
     "Mat"            : {"anchor": (0.0, 0.0), "pos": (  46,  855)},
 
     # f3r1
