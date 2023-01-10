@@ -9,10 +9,10 @@ label title_start_clicked:
 label title_ev_start_clicked:
     hide screen title_screen
 
-    show girl
+    show girl with dissolve
 
     g "さて、今度こそゲームスタートだね。"
 
-    hide girl
+    hide girl with dissolve
     
     return
