@@ -2,7 +2,7 @@ label f1r1_door_clicked:
     $ renpy.dynamic(current=read_room())
 
     # クリア条件が満たされているとき
-    if {"Chair", "Drawer", "Table"}.isdisjoint(set(current)):
+    if {"Table", "Sofa"}.isdisjoint(set(current)):
         show girl with dissolve
 
         g "整理整頓お疲れ様"
