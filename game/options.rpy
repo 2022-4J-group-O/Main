@@ -231,6 +231,7 @@ define objects = [
     'Door',
     'Key',
     'Start',
+    'Config',
     'Table',
     'Drawer',
     'Chair',
@@ -254,6 +255,7 @@ define objects = [
 define default_obj_prop = {
     "Door"           : {"pos": (0.2, 0.8), "yoffset": 15},
     "Start"          : {"xcenter": 0.5, "ycenter": 0.5},
+    "Config"         : {"xcenter": 0.5, "ycenter": 0.65},
     "Table"          : {"pos": (0.1, 0.8), "offset": (150, 10)},
     "Drawer"         : {"pos": (0.2, 0.8), "yoffset": 10},
     "Chair"          : {"pos": (0.2, 0.8), "xoffset": 10},
