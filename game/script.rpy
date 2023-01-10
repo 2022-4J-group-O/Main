@@ -19,7 +19,7 @@ label start:
         # update_user_dir()
         global_data.lazy()
 
-    jump title
+    jump title 
     
     return
 

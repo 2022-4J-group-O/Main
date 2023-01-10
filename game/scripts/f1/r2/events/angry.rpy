@@ -39,7 +39,7 @@ label f1r2_ev_angry:
 
         ro1 "がらくたはひとつ前の部屋へ放っておいたからな"
     
-    hide girl look away
+    hide girl with dissolve
 
     hide robot1 angry with dissolve
 

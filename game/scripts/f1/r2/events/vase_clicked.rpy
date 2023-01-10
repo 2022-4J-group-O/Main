@@ -12,6 +12,6 @@ label f1r2_vase_clicked:
 
         g "何か理由があるのかな"
 
-        hide girl
+        hide girl with dissolve
     
     $ event_end("f1r2.scloop")
