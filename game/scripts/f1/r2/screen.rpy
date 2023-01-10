@@ -1,6 +1,6 @@
 # この部屋のプロパティ
 define f1r2_obj_prop = {
-    "Door": {"anchor": (0.0, 0.0), "pos": (1404, 179)},
+    "Door A": {"anchor": (0.0, 0.0), "pos": (1404, 179)},
 }
 
 screen f1r2_screen(current, rob=True):
