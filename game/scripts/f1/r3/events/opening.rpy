@@ -17,6 +17,6 @@ label f1r3_ev_opening:
 
     g "それじゃあ、よろしくね"
 
-    hide girl
+    hide girl with dissolve
 
     $ event_end()

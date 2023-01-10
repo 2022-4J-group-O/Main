@@ -35,7 +35,7 @@ label f1r2_door_clicked:
 
         g "からかってなんかないよ。いつも本気。それじゃあね"
 
-        hide girl
+        hide girl with dissolve
 
         ro1 "消えた！？"
 
