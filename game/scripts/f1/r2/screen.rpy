@@ -1,6 +1,11 @@
+# この部屋のプロパティ
+define f1r2_obj_prop = {
+    "Door": {"anchor": (0.0, 0.0), "pos": (0.0, 0.0)},
+}
+
 screen f1r2_screen(current, rob=True):
     layer "master"
-    use obj_screen(current)
+    use obj_screen(current, f1r2_obj_prop)
     if rob:
         draggroup:
             drag:
