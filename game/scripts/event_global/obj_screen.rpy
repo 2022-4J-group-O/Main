@@ -11,7 +11,8 @@ screen obj_screen(current):
                     add SampleImage(item, 150, 150, img_col[i % 6])
                 draggable False
                 droppable False
-                clicked Event("obj_clicked", objname=item)
+                if enable_event:
+                    clicked Event("obj_clicked", objname=item)
                 properties default_obj_prop[item]
 
 screen obj_screen_pos_obj(current,x_pos,y_pos):
@@ -27,7 +28,8 @@ screen obj_screen_pos_obj(current,x_pos,y_pos):
                     add SampleImage(item, 150, 150, img_col[i % 6])
                 draggable False
                 droppable False
-                clicked Event("obj_clicked", objname=item)
+                if enable_event:
+                    clicked Event("obj_clicked", objname=item)
                 anchor (0.5,0.5)
                 pos (x_pos,y_pos)
                 

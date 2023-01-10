@@ -2,6 +2,9 @@ default jumped_menu2_ev_l2_clicked = False
 #testのためf2に直接いけるようにしてある
 
 label menu2_ev_l2_clicked:
+
+    show screen menu2_screen(False)
+
     # このラベルへの訪問が初めてで、f2にジャンプ可能な時
     if not jumped_menu2_ev_l2_clicked and menu2_evflg_canjump_f2:
         $ menu2_jumplabel = "f2r1"
@@ -9,10 +12,10 @@ label menu2_ev_l2_clicked:
         show girl at right with dissolve
 
         g "f2を初めて訪れるときのセリフ"
+
         $ menu2_jumplabel = "f2r1"
 
         hide girl with dissolve
-      
 
     # f2へ2回目以降のジャンプ
     elif menu2_evflg_canjump_f2:
