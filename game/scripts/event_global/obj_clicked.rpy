@@ -37,9 +37,4 @@ label vase_clicked:
     hide girl with dissolve
     $ event_end(loop_label())
 
-label box_clicked:
-    show girl at right with dissolve
-    g "箱がクリックされたよ"
-    hide girl with dissolve
-    $ event_end(loop_label())
-
+# label box_clicked: (box_clicked.rpyに定義)

@@ -6,7 +6,7 @@ default f2r1_first = True
 
 label f2r1:
     $ move_room("loadfile2/room1")
-    scene bg room
+    scene bg f2r1 
 
 label .scloop:
     window hide
