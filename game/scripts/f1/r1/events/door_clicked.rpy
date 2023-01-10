@@ -3,17 +3,17 @@ label f1r1_door_clicked:
 
     # クリア条件が満たされているとき
     if {"Table", "Sofa"}.isdisjoint(set(current)):
-        show girl with dissolve
+        show girl at right with dissolve
 
         g "整理整頓お疲れ様"
 
-        show girl smile with dissolve
+        show girl smile at right with dissolve
         
         g "家具ごと消し去っちゃうなんて、君の整理術もなかなかアクロバティックだね"
 
         g "この部屋を荒らした人も、君も、中庸ってやつを知らないのかな"
 
-        show girl with dissolve
+        show girl at right with dissolve
 
         g "とにかく、これでまだ先へ進めるね"
 
@@ -28,7 +28,7 @@ label f1r1_door_clicked:
         $ event_end("f1r2")  # f1r2へ
     
     else:
-        show girl with dissolve
+        show girl at right with dissolve
 
         g "このドアの向こうに行きたいけど......"
 
