@@ -38,3 +38,10 @@ label vase_clicked:
     $ event_end(loop_label())
 
 # label box_clicked: (box_clicked.rpyに定義)
+
+label config_clicked:
+    python:
+
+        ShowMenu("preferences")() # 設定画面を呼び出す
+
+        event_end(loop_label())
