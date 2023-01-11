@@ -8,40 +8,36 @@ label obj_clicked(objname):
     $ event_end(loop_label())
 
 label table_clicked:
-    show girl with dissolve
+    show girl at right with dissolve
     g "机がクリックされたよ"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label drawer_clicked:
-    show girl with dissolve
+    show girl at right with dissolve
     g "引き出しがクリックされたよ"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label chair_clicked:
-    show girl with dissolve
+    show girl at right with dissolve
     g "椅子がクリックされたよ"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label chest_clicked:
-    show girl with dissolve
+    show girl at right with dissolve
     g "チェストがクリックされたよ"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label vase_clicked:
-    show girl with dissolve
+    show girl at right with dissolve
     g "花瓶がクリックされたよ"
     hide girl with dissolve
     $ event_end(loop_label())
 
-label box_clicked:
-    show girl with dissolve
-    g "箱がクリックされたよ"
-    hide girl with dissolve
-    $ event_end(loop_label())
+# label box_clicked: (box_clicked.rpyに定義)
 
 label config_clicked:
     python:

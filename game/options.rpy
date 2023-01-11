@@ -225,42 +225,30 @@ init python:
 # プレーヤーが主に操作をするディレクトリー
 define user_directory = "game_data"
 
-# 読み込むファイルのlist
-define objects = [
-    'Book',
-    'Door',
-    'Key',
-    'Start',
-    'Config',
-    'Table',
-    'Drawer',
-    'Chair',
-    'Chest',
-    'Vase',
-    'Box',
-    'Box.png',
-    'fridge.zip',
-    'fridge.7z',
-    'fridge_pass.7z',
-    'fridge_pass.zip',
-    'archive.tar.gz',
-    'document.docx',
-    'document.zip',
-    'door_to_1-4.png',
-    'Anywhere Door'
-]
-
 # オブジェクトのデフォルトのプロパティー
 # properties <辞書>でスタイルプロパティーを設定できる
 define default_obj_prop = {
-    "Door"           : {"pos": (0.2, 0.8), "yoffset": 15},
-    "Start"          : {"xcenter": 0.5, "ycenter": 0.5},
-    "Config"         : {"xcenter": 0.5, "ycenter": 0.65},
-    "Table"          : {"pos": (0.1, 0.8), "offset": (150, 10)},
-    "Drawer"         : {"pos": (0.2, 0.8), "yoffset": 10},
-    "Chair"          : {"pos": (0.2, 0.8), "xoffset": 10},
-    "Chest"          : {"anchor": (0.5, 0), "pos": (0.75, 0.8)},
+    # prologue
+    "Key"            : {"anchor": (0.5, 0.5), "pos": (0.5, 0.8)},
+
+    # title
+    "Start"          : {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)},
+
+    # menu
+
+    # f1r1
+    "Books"          : {"anchor": (0.0, 0.0), "pos": ( 295,  936)},
+    "BookShelf"      : {"anchor": (0.0, 0.0), "pos": (  94,  586)},
+    "Calendar"       : {"anchor": (0.0, 0.0), "pos": ( 163,   33)},
+    "Door"           : {"anchor": (0.0, 0.0), "pos": (1045,  149)},
+    "Sofa"           : {"anchor": (0.0, 0.0), "pos": ( 692,  523)},
+    "Table"          : {"anchor": (0.0, 0.0), "pos": ( 875,  490)},
+
+    # f1r2
+    "Chest"          : {"anchor": (0.5, 0.0), "pos": (0.75, 0.8)},
     "Vase"           : {"anchor": (0.5, 1.0), "pos": (0.1, 0.8)},
+
+    # f1r3
     "Box"            : {"anchor": (0.5, 0.5), "pos": (0.1, 0.1)},
     "Box.png"        : {"anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
     "fridge.zip"     : {"anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
@@ -271,8 +259,13 @@ define default_obj_prop = {
     "document.docx"  : {"anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
     "document.zip"   : {"anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
     "door_to_1-4.png": {"anchor": (0.5, 0.5), "pos": (0.9, 0.6)},
+
+    # f3r1
     "Anywhere Door"  : {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 }
+
+# 読み込むファイルのlist
+define objects = default_obj_prop.keys()
 
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル
 define default_user_dirdata_path = "game/data/default"

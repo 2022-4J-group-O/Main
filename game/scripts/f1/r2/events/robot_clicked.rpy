@@ -28,7 +28,7 @@ label f1r2_ev_robot_clicked:
         ro1 "このゲームが日の目を見るなど、ありえないはずなのに......"
 
         hide robot1
-        hide girl
+        hide girl with dissolve
 
         show girl look away with dissolve
 
@@ -36,7 +36,7 @@ label f1r2_ev_robot_clicked:
 
         g "彼のことはほっといて、次の部屋へ進む方法を考えましょう"
 
-        hide girl
+        hide girl with dissolve
 
     else:
         show girl at right with dissolve
@@ -48,7 +48,7 @@ label f1r2_ev_robot_clicked:
 
         ro1 "くれぐれも私の部屋を汚すでないぞ"
 
-        hide girl
+        hide girl with dissolve
         hide robot1
 
     $ event_end("f1r2.scloop")

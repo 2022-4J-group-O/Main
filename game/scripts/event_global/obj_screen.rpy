@@ -1,4 +1,4 @@
-screen obj_screen(current):
+screen obj_screen(current, obj_prop={}):
     layer "master"
     $ img_col = ["#FF0000", "#808000", "#00FF00", "#008080", "#0000FF", "#800080"]
     draggroup:
@@ -12,7 +12,10 @@ screen obj_screen(current):
                 draggable False
                 droppable False
                 clicked Event("obj_clicked", objname=item)
-                properties default_obj_prop[item]
+                if item in obj_prop:
+                    properties obj_prop[item]
+                else:
+                    properties default_obj_prop[item]
 
 screen obj_screen_pos_obj(current,x_pos,y_pos):
     layer "master"

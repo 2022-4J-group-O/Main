@@ -3,6 +3,6 @@ label f3r1_ev_opening:
 
     g "オープニングだよ"
 
-    hide girl with ldissolve
+    hide girl with dissolve
 
     $ event_end("f3r1.scloop")
