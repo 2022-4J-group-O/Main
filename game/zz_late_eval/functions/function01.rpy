@@ -56,7 +56,6 @@ init python :
     # 読み込み可能なオブジェクトはoption.rpyのobjects定数で指定する
     # roomを指定しない場合現在いるroomのオブジェクトを読み込む
     # オブジェクト名の前に.が付いたファイルも読み込む
-    # TODO! 偽ファイルの検出処理が必要(ファイルの中身にあるハッシュ値を読み取って判定)
     def read_room(roomdir=None):
         cwd = os.getcwd()
         l = read_room_raw(roomdir)
@@ -172,6 +171,22 @@ init python :
         current_room = roomdir
         room_prefix = roomdir.replace("loadfile", "f").replace("/room", "r").replace("\\room", "r")
     
+    from pathlib import Path
+
+    # フォルダの存在を確認し、存在しない場合は新しく作る
+    # baseが指すフォルダは存在していなければならない
+    def check_folder_new(base, rel):
+        cwd = os.getcwd()
+        os.chdir(base)
+        relpath = Path(os.path.normpath(rel))
+        for part in relpath.parts:
+            if os.path.isfile(part):
+                os.remove(part)
+                os.mkdir(part)
+            elif not os.path.isdir(part):
+                os.mkdir(part)
+            os.chdir(part)
+
     # 現在の部屋に対応する無限ループ用のラベルの名前を返す
     def loop_label():
         return room_prefix + ".scloop"

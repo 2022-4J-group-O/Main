@@ -9,8 +9,12 @@ label .scloop:
     show screen title_screen(read_room()) with dissolve
 
     if title_evflg_opening:  # タイトル画面初回起動時
-        $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
-        $ Event("title_ev_opening")()
+        python:
+            init_room("title")
+
+            title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
+
+            Event("title_ev_opening")()
 
     pause
 
