@@ -56,9 +56,40 @@ init python:
     # 親ディレクトリが存在しないとエラー(要修正)
     def reset_room(room_path: str):
         cwd = os.getcwd()
+        check_folder_new(config.basedir, user_directory)
         os.chdir(user_dir_path)
         if os.path.isdir(room_path):
             shutil.rmtree(room_path)
         # os.makedirs(room_path)
         global_data.default_dir_data.make(room_path, room_path)
+        os.chdir(cwd)
+    
+    def init_room(room_path):
+        cwd = os.getcwd()
+        check_folder_new(config.basedir, user_directory)
+        os.chdir(user_dir_path)
+        pathparts = os.path.split(room_path)
+        if os.path.isdir(room_path):
+            shutil.rmtree(room_path)
+        elif os.path.isfile(room_path):
+            os.remove(room_path)
+        # loadfile1/room2
+        if pathparts == ("loadfile1", "room2"):
+            global_data.default_dir_data.make(room_path, room_path)
+            # 隠しファイル化
+            if not (give_hidden(room_path, "Chest") and give_hidden(room_path, "Vase")):
+                raise Exception('Giving "Chest" and "Vase" hidden attribute failed')
+        # loadfile2/room1
+        elif pathparts == ("loadfile2", "room1"):
+            global_data.default_dir_data.make(room_path, room_path)
+            shutil.rmtree(os.path.join(room_path, "box")) # 後から生成されるファイルを削除
+        # loadfile2/room2
+        elif pathparts == ("loadfile2", "room2"):
+            os.makedirs(room_path)
+            os.chdir(room_path)
+            # picture frameのみでOK
+            for p in ["picture frame1", "picture frame2", "picture frame3"]:
+                global_data.default_dir_data.make(p, os.path.join(room_path, p))
+        else:
+            global_data.default_dir_data.make(room_path, room_path)
         os.chdir(cwd)

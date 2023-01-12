@@ -9,8 +9,12 @@ label .scloop:
     show screen f1r3_screen(read_room()) with dissolve
 
     if f1r3_evflg_opening:
-        $ f1r3_evflg_opening = False
-        $ Event("f1r3_ev_opening")()
+        python:
+            init_room("loadfile1/room3")
+
+            f1r3_evflg_opening = False
+
+            Event("f1r3_ev_opening")()
 
     pause
     
