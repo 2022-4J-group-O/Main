@@ -16,7 +16,7 @@ label start:
     # TODO: 実行済みであることを記録し、Prologueから検知可能にする処理
     python:
         # 一回実行すれば十分
-        # update_user_dir()
+        update_user_dir()
         global_data.lazy()
 
     jump title 
