@@ -239,7 +239,7 @@ define default_obj_prop = {
 
     # f1r1
     "Books"          : {"anchor": (0.0, 0.0), "pos": ( 295,  936)},
-    "BookShelf"      : {"anchor": (0.0, 0.0), "pos": (  94,  586)},
+    "Bookshelf"      : {"anchor": (0.0, 0.0), "pos": (  94,  586)},
     "Calendar"       : {"anchor": (0.0, 0.0), "pos": ( 163,   33)},
     "Door A"         : {"anchor": (0.0, 0.0), "pos": (1045,  149)},
     "Sofa"           : {"anchor": (0.0, 0.0), "pos": ( 692,  523)},

@@ -1,6 +1,6 @@
 default f1r2_jumped_door_clicked = False  # このラベルに訪問済みか
 
-label f1r2_door_clicked:
+label f1r2_door_a_clicked:
     # このラベルを初めて訪れた時
     if not f1r2_jumped_door_clicked:
         $ f1r2_jumped_door_clicked = True
