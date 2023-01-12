@@ -233,6 +233,7 @@ define default_obj_prop = {
 
     # title
     "Start"          : {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)},
+    "Config"         : {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 
     # menu
 
