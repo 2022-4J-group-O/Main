@@ -22,7 +22,7 @@ init python :
     # ファイルのハッシュ値をチェック
     def check_hash(objname):
         with open(objname, mode="rb") as f:
-            cond = f.read() == hashlib.sha256(objname.encode("utf-8")).digest()
+            cond = f.read() == hashlib.sha256(os.path.basename(objname).encode("utf-8")).digest()
         return cond
 
     # バイナリファイル(pngやzip)のハッシュ値をチェック
@@ -61,6 +61,15 @@ init python :
         l = read_room_raw(roomdir)
         os.chdir(cwd)
         return l
+
+    # objectが存在するか確認
+    def check_obj(objname, roomdir=None):
+        if roomdir == None:
+            path = os.path.join(user_dir_path, current_room, objname)
+        else:
+            path = os.path.join(user_dir_path, roomdir, objname)
+        print(path)
+        return os.path.isfile(path) and (check_hash(path) or check_hash_binary(path))
 
     def make_obj_room_raw(roomdir, objname):
         path = os.path.join(user_dir_path, roomdir)
