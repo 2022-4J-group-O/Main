@@ -1,4 +1,7 @@
 label menu2_ev_opening:
+
+    show screen menu2_screen(False)
+
     show girl with dissolve
 
     g "スタート画面が終わったら、メニュー画面が出るのが普通だよね"
