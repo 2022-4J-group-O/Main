@@ -16,7 +16,10 @@ def bintohash(fp: str, name: str) -> None:
 		df.write(sf_hash)
 
 def __main__():
-    bintohash(sys.argv[1], sys.argv[2])
+	if len(sys.argv) >= 3:
+		bintohash(sys.argv[1], sys.argv[2])
+	elif len(sys.argv) >= 2:
+		bintohash(sys.argv[1], os.path.basename(sys.argv[1]))
 
 if __name__ == "__main__":
     __main__()
