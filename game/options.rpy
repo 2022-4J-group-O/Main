@@ -240,25 +240,28 @@ define default_obj_prop = {
     "Books"          : {"anchor": (0.0, 0.0), "pos": ( 295,  936)},
     "BookShelf"      : {"anchor": (0.0, 0.0), "pos": (  94,  586)},
     "Calendar"       : {"anchor": (0.0, 0.0), "pos": ( 163,   33)},
-    "Door"           : {"anchor": (0.0, 0.0), "pos": (1045,  149)},
+    "Door A"         : {"anchor": (0.0, 0.0), "pos": (1045,  149)},
     "Sofa"           : {"anchor": (0.0, 0.0), "pos": ( 692,  523)},
     "Table"          : {"anchor": (0.0, 0.0), "pos": ( 875,  490)},
 
     # f1r2
-    "Chest"          : {"anchor": (0.5, 0.0), "pos": (0.75, 0.8)},
-    "Vase"           : {"anchor": (0.5, 1.0), "pos": (0.1, 0.8)},
+    "Chest"          : {"anchor": (0.5, 0.0), "pos": (1113,  628)},
+    "Vase"           : {"anchor": (0.0, 0.0), "pos": (1124,  491)},
 
     # f1r3
-    "Box"            : {"anchor": (0.5, 0.5), "pos": (0.1, 0.1)},
-    "Box.png"        : {"anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
-    "fridge.zip"     : {"anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
-    "fridge.7z"      : {"anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
-    "fridge_pass.7z" : {"anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
-    "fridge_pass.zip": {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
     "archive.tar.gz" : {"anchor": (0.5, 0.5), "pos": (0.6, 0.6)},
+    "Cupboard"       : {"anchor": (0.0, 0.0), "pos": (  35,   78)},
     "document.docx"  : {"anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
     "document.zip"   : {"anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
-    "door_to_1-4.png": {"anchor": (0.5, 0.5), "pos": (0.9, 0.6)},
+    "Door B"         : {"anchor": (0.0, 0.0), "pos": (1539,  106)},
+    "fridge.7z"      : {"anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
+    "fridge.zip"     : {"anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
+    "fridge_pass.7z" : {"anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
+    "fridge_pass.zip": {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
+    "Kitchen table"  : {"anchor": (0.0, 0.0), "pos": (  35,  518)},
+    "Box"            : {"anchor": (0.0, 0.0), "pos": (400, 340)},
+    "Box.png"        : {"anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
+    "Mat"            : {"anchor": (0.0, 0.0), "pos": (  46,  855)},
 
     # f3r1
     "Anywhere Door"  : {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
