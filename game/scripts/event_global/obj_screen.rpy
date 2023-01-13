@@ -31,7 +31,7 @@ screen obj_screen_pos_obj(current,x_pos,y_pos):
                 draggable False
                 droppable False
                 clicked Event("obj_clicked", objname=item)
-                anchor (0.5,0.5)
+                anchor (0.0,1.0)
                 pos (x_pos,y_pos)
                 
                 

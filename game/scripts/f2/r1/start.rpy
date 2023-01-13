@@ -27,16 +27,17 @@ label .scloop:
         import os
         import shutil
 
-        f2r1_exist_flag = os.path.exists(os.path.join(config.basedir,"game_data/loadfile2/room1/object3/Apple"))
+        f2r1_exist_flag = os.path.exists(os.path.join(config.basedir,"game_data/loadfile2/room1/objectC/Cup"))
         
         if f2r1_exist_flag and f2r1_first:
             f2r1_first = False
 
-            from_path = os.path.join(config.basedir,"game/images")
-            to_path = os.path.join(config.basedir,"game_data/loadfile2/room1/box")
+            from_path = os.path.join(config.basedir,"game\images\door_noise_img")
+            to_path = os.path.join(config.basedir,"game_data/loadfile2/room1/box") #出現する箱
             if not os.path.exists(to_path):
                 os.mkdir(to_path)
-                shutil.copy(os.path.join(from_path,'box.png'),os.path.join(to_path,'box.png'))
+                shutil.copy(os.path.join(from_path,'e.png'),os.path.join(to_path,'e.png'))
+                shutil.copy(os.path.join(from_path,'f.png'),os.path.join(to_path,'f.png'))
             Event("f2r1_success")()
 
     
