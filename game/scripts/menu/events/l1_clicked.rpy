@@ -1,12 +1,15 @@
 default jumped_menu2_ev_l1_clicked = False
 
 label menu2_ev_l1_clicked:
+
+    show screen menu2_screen(False)
+
     # このラベルの訪問が初めてで、かつf1にジャンプ可能な時
     if not jumped_menu2_ev_l1_clicked and menu2_evflg_canjump_f1:
         $ jumped_menu2_ev_l1_clicked = True  # このラベルを訪問済みに
 
         show girl at right with dissolve
-        
+
         g "脱出ゲームステージ1の、はじまりはじまり"
 
         $ menu2_jumplabel = "f1r1"
