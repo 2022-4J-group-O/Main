@@ -13,7 +13,7 @@ init python:
         os.chdir(room2path)
         path = "../room1"
         for o in objlist:
-            shutil.move(o, path)
+            shutil.move(o, os.path.join(path, o))
         os.chdir(cwd)
 
     # 隠しファイルでないファイルを取得
