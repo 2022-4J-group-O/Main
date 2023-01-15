@@ -68,7 +68,6 @@ init python :
             path = os.path.join(user_dir_path, current_room, objname)
         else:
             path = os.path.join(user_dir_path, roomdir, objname)
-        print(path)
         return os.path.isfile(path) and (check_hash(path) or check_hash_binary(path))
 
     def make_obj_room_raw(roomdir, objname):
