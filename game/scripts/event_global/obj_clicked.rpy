@@ -1,7 +1,7 @@
-label obj_clicked(objname):
+label obj_clicked(objname, obj_prop={}):
     $ renpy.dynamic(lb=objname.lower().replace(" ", "_") + "_clicked")
     $ renpy.dynamic(pref_lb=room_prefix + "_" + lb)
-    $ renpy.show_screen("obj_screen", current=read_room())
+    $ renpy.show_screen("obj_screen", current=read_room(), obj_prop=obj_prop)
     if renpy.has_label(pref_lb):
         jump expression pref_lb
     elif renpy.has_label(lb):

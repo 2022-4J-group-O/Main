@@ -12,7 +12,7 @@ screen obj_screen(current, obj_prop={}):
                 draggable False
                 droppable False
                 if enable_event:
-                    clicked Event("obj_clicked", objname=item)
+                    clicked Event("obj_clicked", objname=item, obj_prop=obj_prop)
                 if item in obj_prop:
                     properties obj_prop[item]
                 else:
