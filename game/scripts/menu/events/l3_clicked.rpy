@@ -1,6 +1,9 @@
 default jumped_menu2_ev_l3_clicked = False
 
 label menu2_ev_l3_clicked:
+
+    show screen menu2_screen(False)
+
     # このラベルへの訪問が初めてで、f3にジャンプ可能な時
     if not jumped_menu2_ev_l3_clicked and menu2_evflg_canjump_f2:
         $ menu2_jumplabel = "f3r1"
