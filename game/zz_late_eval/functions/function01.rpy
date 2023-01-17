@@ -27,7 +27,7 @@ init python :
 
     # バイナリファイル(pngやzip)のハッシュ値をチェック
     def check_hash_binary(filename):
-        fp = os.path.join(config.basedir, "game/data/hash_list", filename)
+        fp = os.path.join(config.basedir, "game/data/hash_list", os.path.basename(filename))
         if os.path.isfile(fp):
             with open(fp, "rb") as hf:
                 hf_hash = hf.read()
