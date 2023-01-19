@@ -227,45 +227,48 @@ define user_directory = "game_data"
 
 # オブジェクトのデフォルトのプロパティー
 # properties <辞書>でスタイルプロパティーを設定できる
+# indexは画面表示の優先順位を表す。indexが小さいオブジェクトから順に描画される。
+# index=0 => 壁と同じ階層, index=1 => 壁に接している家具,
+# index=2 => 壁の手前の家具, index=3 => Config等のボタン
 define default_obj_prop = {
     # prologue
-    "Key"            : {"anchor": (0.5, 0.5), "pos": (0.5, 0.8)},
+    "Key"            : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.5, 0.8)},
 
     # title
-    "Start"          : {"anchor": (0.5, 0.5), "pos": (0.5, 0.5)},
-    "Config"         : {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
+    "Start"          : {"index": 3, "anchor": (0.5, 0.5), "pos": (0.5, 0.5)},
+    "Config"         : {"index": 3, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 
     # menu
 
     # f1r1
-    "Books"          : {"anchor": (0.0, 0.0), "pos": ( 295,  936)},
-    "Bookshelf"      : {"anchor": (0.0, 0.0), "pos": (  94,  586)},
-    "Calendar"       : {"anchor": (0.0, 0.0), "pos": ( 163,   33)},
-    "Door A"         : {"anchor": (0.0, 0.0), "pos": (1045,  149)},
-    "Sofa"           : {"anchor": (0.0, 0.0), "pos": ( 692,  523)},
-    "Table"          : {"anchor": (0.0, 0.0), "pos": ( 875,  490)},
+    "Books"          : {"index": 2, "anchor": (0.0, 0.0), "pos": ( 295,  936)},
+    "Bookshelf"      : {"index": 1, "anchor": (0.0, 0.0), "pos": (  94,  586)},
+    "Calendar"       : {"index": 1, "anchor": (0.0, 0.0), "pos": ( 163,   33)},
+    "Door A"         : {"index": 0, "anchor": (0.0, 0.0), "pos": (1045,  149)},
+    "Sofa"           : {"index": 1, "anchor": (0.0, 0.0), "pos": ( 692,  523)},
+    "Table"          : {"index": 2, "anchor": (0.0, 0.0), "pos": ( 875,  490)},
 
     # f1r2
-    "Chest"          : {"anchor": (0.5, 0.0), "pos": (1113,  628)},
-    "Vase"           : {"anchor": (0.0, 0.0), "pos": (1124,  491)},
+    "Chest"          : {"index": 1, "anchor": (0.5, 0.0), "pos": (1113,  628)},
+    "Vase"           : {"index": 1, "anchor": (0.0, 0.0), "pos": (1124,  491)},
 
     # f1r3
-    "archive.tar.gz" : {"anchor": (0.5, 0.5), "pos": (0.6, 0.6)},
-    "Cupboard"       : {"anchor": (0.0, 0.0), "pos": (  35,   78)},
-    "document.docx"  : {"anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
-    "document.zip"   : {"anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
-    "Door B"         : {"anchor": (0.0, 0.0), "pos": (1539,  106)},
-    "fridge.7z"      : {"anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
-    "fridge.zip"     : {"anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
-    "fridge_pass.7z" : {"anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
-    "fridge_pass.zip": {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
-    "Kitchen table"  : {"anchor": (0.0, 0.0), "pos": (  35,  518)},
-    "Box"            : {"anchor": (0.0, 0.0), "pos": (400, 340)},
-    "Box.png"        : {"anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
-    "Mat"            : {"anchor": (0.0, 0.0), "pos": (  46,  855)},
+    "archive.tar.gz" : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.6, 0.6)},
+    "Cupboard"       : {"index": 1, "anchor": (0.0, 0.0), "pos": (  35,   78)},
+    "document.docx"  : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
+    "document.zip"   : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
+    "Door B"         : {"index": 0, "anchor": (0.0, 0.0), "pos": (1539,  106)},
+    "fridge.7z"      : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
+    "fridge.zip"     : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
+    "fridge_pass.7z" : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
+    "fridge_pass.zip": {"index": 1, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
+    "Kitchen table"  : {"index": 1, "anchor": (0.0, 0.0), "pos": (  35,  518)},
+    "Box"            : {"index": 2, "anchor": (0.0, 0.0), "pos": (400, 340)},
+    "Box.png"        : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
+    "Mat"            : {"index": 2, "anchor": (0.0, 0.0), "pos": (  46,  855)},
 
     # f3r1
-    "Anywhere Door"  : {"anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
+    "Anywhere Door"  : {"index": 0, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 }
 
 # 読み込むファイルのlist
