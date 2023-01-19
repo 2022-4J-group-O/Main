@@ -13,11 +13,12 @@ screen obj_screen(current, obj_prop={}):
         prop = dict(sorted(prop, key=lambda x: x[1]["index"]))
     
     draggroup:
-        for i, item in enumerate(prop.keys()):
+        for i, item in enumerate(prop.keys):
+            $ imagetag = item.lower().replace(".", " ")
             drag:
                 drag_name item
-                if renpy.can_show(item.lower()):
-                    add item.lower()
+                if renpy.can_show(imagetag):
+                    add imagetag
                 else:
                     add SampleImage(item, 150, 150, img_col[i % 6])
                 draggable False
@@ -31,10 +32,11 @@ screen obj_screen_pos_obj(current,x_pos,y_pos):
     $ img_col = ["#FF0000", "#808000", "#00FF00", "#008080", "#0000FF", "#800080"]
     draggroup:
         for i, item in enumerate(current):
+            $ imagetag = item.lower().replace(".", " ")
             drag:
                 drag_name item
-                if renpy.can_show(item.lower()):
-                    add item.lower()
+                if renpy.can_show(imagetag):
+                    add imagetag
                 else:
                     add SampleImage(item, 150, 150, img_col[i % 6])
                 draggable False
@@ -43,5 +45,3 @@ screen obj_screen_pos_obj(current,x_pos,y_pos):
                     clicked Event("obj_clicked", objname=item)
                 anchor (0.0,1.0)
                 pos (x_pos,y_pos)
-                
-                
