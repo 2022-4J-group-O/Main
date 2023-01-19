@@ -19,7 +19,6 @@ label start:
         # update_user_dir()
         global_data.lazy()
 
-    show screen backbutton_screen
     jump title 
     
     return
