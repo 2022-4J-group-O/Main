@@ -10,7 +10,6 @@ screen f2r1_screen(current):
         idle "f2r1/frame_A.png"
         hover "f2r1/frame_A.png"
 
-
     imagebutton:
         xanchor 0.0
         yanchor 0.0
@@ -42,7 +41,7 @@ screen f2r1_screen(current):
         ypos 194    
         idle "f2r1/pic_B.png"
         hover "f2r1/pic_B.png"
-        
+
     imagebutton:
         xanchor 0.0
         yanchor 0.0
@@ -50,7 +49,7 @@ screen f2r1_screen(current):
         ypos 195    
         idle "f2r1/error.png"
         hover "f2r1/error.png"
-        
+
     imagebutton:
         xanchor 0.0
         yanchor 0.0
@@ -75,7 +74,7 @@ screen f2r1_screen(current):
         idle "f2r1/stand_A.png"
         hover "f2r1/stand_A.png"
 
-    
+
 
 
     use obj_screen(current)
@@ -92,10 +91,3 @@ screen f2r1_screen(current):
             ypos 1.0
             idle "f2r1/box.png"
             hover "f2r1/box.png"
-
-
-    
-    
-
-
-

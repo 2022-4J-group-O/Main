@@ -268,9 +268,9 @@ define default_obj_prop = {
     "Mat"            : {"index": 2, "anchor": (0.0, 0.0), "pos": (  46,  855)},
 
     # f2r1
-    "Apple"          : {"anchor": (0.0, 1.0), "pos": (0,0)},
-    "Dog"            : {"anchor": (0.0, 1.0)},
-    "Cup"            : {"pos":(0,0)}, #f1r3ができるまでの仮
+    "Apple"          : {"index": 2, "anchor": (0.0, 1.0), "pos": (0,0)},
+    "Dog"            : {"index": 2, "anchor": (0.0, 1.0)},
+    "Cup"            : {"index": 2, "pos":(0,0)}, #f1r3ができるまでの仮
     
 
     # f3r1
