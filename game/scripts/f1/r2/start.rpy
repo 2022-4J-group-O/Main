@@ -4,6 +4,8 @@ default nhidden = []
 default f1r2_hidden_clicked = False  # VaseまたはChestがクリックされたか
 
 label f1r2:
+    if f1r2_evflg_opening:
+        $ init_room("loadfile1/room2")
     $ move_room("loadfile1/room2")
     scene bg f1r2
 
@@ -16,12 +18,8 @@ label .scloop:
     
 
     if f1r2_evflg_opening:
-        python:
-            init_room("loadfile1/room2")
-
-            f1r2_evflg_opening = False
-
-            Event("f1r2_ev_opening")()
+        $ f1r2_evflg_opening = False
+        $ Event("f1r2_ev_opening")()
 
     if f1r2_evflg_angry:
         $ Event("f1r2_ev_angry")()
