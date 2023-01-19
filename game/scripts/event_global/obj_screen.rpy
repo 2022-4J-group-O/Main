@@ -11,7 +11,6 @@ screen obj_screen(current, obj_prop={}):
         ]
         # indexの値でソート
         prop = dict(sorted(prop, key=lambda x: x[1]["index"]))
-        print(prop)
     
     draggroup:
         for i, item in enumerate(prop.keys()):
