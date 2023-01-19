@@ -1,6 +1,6 @@
 define ldissolve = Dissolve(1.0)
 default f2r1_evflg_opening = True# f2r1初回起動時のイベントのフラグ
-default f2r1_jumplabel = None  # この変数にラベル名を入れるとそこへジャンプする
+# default f2r1_jumplabel = None  # この変数にラベル名を入れるとそこへジャンプする
 default f2r1_exist_flag = False #
 default f2r1_first = True
 
@@ -15,14 +15,9 @@ label .scloop:
     if f2r1_evflg_opening:  # f2r1初回起動時
         $ f2r1_evflg_opening = False
         $ Event("f2r1_ev_opening")()
-    
-    if f2r1_jumplabel == "f2r2":
-        $ f2r1_jumplabel = None
-        hide screen f2r1_screen with dissolve
-        jump f2r2
 
     pause
-    #正解のオブジェクトがあるかどうか
+    # 正解のオブジェクトがあるかどうか
     python:
         # import os
         # import shutil
