@@ -1,4 +1,4 @@
-label f1r1_door_clicked:
+label f1r1_door_a_clicked:
     $ renpy.dynamic(current=read_room())
 
     # クリア条件が満たされているとき
