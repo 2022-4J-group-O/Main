@@ -267,6 +267,12 @@ define default_obj_prop = {
     "Box.png"        : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
     "Mat"            : {"index": 2, "anchor": (0.0, 0.0), "pos": (  46,  855)},
 
+    # f2r1
+    "Apple"          : {"index": 2, "anchor": (0.0, 1.0), "pos": (0,0)},
+    "Dog"            : {"index": 2, "anchor": (0.0, 1.0)},
+    "Cup"            : {"index": 2, "pos":(0,0)}, #f1r3ができるまでの仮
+    
+
     # f3r1
     "Anywhere Door"  : {"index": 0, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 }

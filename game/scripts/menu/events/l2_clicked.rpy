@@ -11,8 +11,7 @@ label menu2_ev_l2_clicked:
 
         show girl at right with dissolve
 
-        g "f2を初めて訪れるときのセリフ"
-
+        g "2番目のセーブデータへGo!"
         $ menu2_jumplabel = "f2r1"
 
         hide girl with dissolve
