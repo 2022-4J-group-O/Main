@@ -277,6 +277,17 @@ define default_obj_prop = {
     "Anywhere Door"  : {"index": 0, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
 }
 
+define previous_room = {
+    "f1r1": "menu2",
+    "f1r2": "f1r1",
+    "f1r3": "f1r2",
+    "f2r1": "menu2",
+    "f2r2": "f2r1",
+    "f3r1": "menu2",
+    "f3r2": "f3r1",
+    "f3r3": "f3r2",
+}
+
 # 読み込むファイルのlist
 define objects = default_obj_prop.keys()
 
