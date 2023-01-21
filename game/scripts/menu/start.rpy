@@ -19,17 +19,17 @@ label .scloop:
         $ Event("menu2_ev_opening")()
     
     if menu2_jumplabel == "f1r1":
-        $ menu2_jumpflg_f1 = None
+        $ menu2_jumplabel = None
         hide screen menu2_screen with dissolve
         jump f1r1
 
     if menu2_jumplabel == "f2r1":
-        $ menu2_jumpflg_f2 = None
+        $ menu2_jumplabel = None
         hide screen menu2_screen with dissolve
         jump f2r1
 
     if menu2_jumplabel == "f3r1":
-        $ menu2_jumpflg_f3 = None
+        $ menu2_jumplabel = None
         hide screen menu2_screen with dissolve
         jump f3r1
 
