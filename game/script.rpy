@@ -20,6 +20,7 @@ label start:
         global_data.lazy()
 
     show screen backbutton_screen
+    show screen move_map_ui
     jump title 
     
     return

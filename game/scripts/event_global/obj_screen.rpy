@@ -27,7 +27,7 @@ screen obj_screen(current, obj_prop={}):
                     clicked Event("obj_clicked", objname=item)
                 properties prop[item]
 
-screen obj_screen_pos_obj(current,x_pos,y_pos):
+screen obj_screen_pos_obj(current, **properties):
     layer "master"
     $ img_col = ["#FF0000", "#808000", "#00FF00", "#008080", "#0000FF", "#800080"]
     draggroup:
@@ -43,5 +43,5 @@ screen obj_screen_pos_obj(current,x_pos,y_pos):
                 droppable False
                 if enable_event:
                     clicked Event("obj_clicked", objname=item)
-                anchor (0.0,1.0)
-                pos (x_pos,y_pos)
+                anchor (0.0, 1.0)
+                properties properties

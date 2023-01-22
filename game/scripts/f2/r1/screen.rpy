@@ -2,92 +2,85 @@ screen f2r1_screen(current):
     layer "master"
     #固定表示のやつ
 
-    imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 68
-        ypos 178
-        idle "f2r1/frame_A.png"
-        hover "f2r1/frame_A.png"
+    fixed:
+        add "bg f2r1"
+        xpos 1.0
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 735
-        ypos 178
-        idle "f2r1/frame_B.png"
-        hover "f2r1/frame_B.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (68, 178)
+        idle "frame_a"
+        hover "frame_a"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 1399
-        ypos 178
-        idle "f2r1/frame_C.png"
-        hover "f2r1/frame_C.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (735, 178)
+        idle "frame_b"
+        hover "frame_b"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 82
-        ypos 194   
-        idle "f2r1/pic_A.png"
-        hover "f2r1/pic_A.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (1399, 178)
+        idle "frame_c"
+        hover "frame_c"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 747
-        ypos 194    
-        idle "f2r1/pic_B.png"
-        hover "f2r1/pic_B.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (82, 194)
+        idle "pic_a"
+        hover "pic_a"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 1412
-        ypos 195    
-        idle "f2r1/error.png"
-        hover "f2r1/error.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (747, 194)
+        idle "pic_b"
+        hover "pic_b"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 127
-        ypos 700   
-        idle "f2r1/stand_C.png"
-        hover "f2r1/stand_C.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (1412, 195)
+        idle "error"
+        hover "error"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 793
-        ypos 700  
-        idle "f2r1/stand_B.png"
-        hover "f2r1/stand_B.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (127, 700)
+        idle "stand_c"
+        hover "stand_c"
 
     imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 1460
-        ypos 700 
-        idle "f2r1/stand_A.png"
-        hover "f2r1/stand_A.png"
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (793, 700)
+        idle "stand_b"
+        hover "stand_b"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (1460, 700)
+        idle "stand_a"
+        hover "stand_a"
 
 
 
 
     use obj_screen(current)
     #各objectを部屋として読み込む
-    use obj_screen_pos_obj(read_room("loadfile2/room1/objectA"),222,700)
-    use obj_screen_pos_obj(read_room("loadfile2/room1/objectB"),884,700)
-    use obj_screen_pos_obj(read_room("loadfile2/room1/objectC"),1560,700)
+    use obj_screen_pos_obj(read_room("loadfile2/room1/objectA"), pos=(1.0, 0.0), offset=(222,700))
+    use obj_screen_pos_obj(read_room("loadfile2/room1/objectB"), pos=(1.0, 0.0), offset=(884,700))
+    use obj_screen_pos_obj(read_room("loadfile2/room1/objectC"), pos=(1.0, 0.0), offset=(1560,700))
 
     if f2r1_exist_flag:
         imagebutton:
-            xanchor 0.5
-            yanchor 1.0
-            xpos 0.5
-            ypos 1.0
-            idle "f2r1/box.png"
-            hover "f2r1/box.png"
+            anchor (0.5, 1.0)
+            pos (1.5, 1.0)
+            idle "box"
+            hover "box"

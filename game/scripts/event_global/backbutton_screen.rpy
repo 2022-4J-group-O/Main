@@ -1,9 +1,11 @@
+init python:
+    def can_show_backbutton():
+        return room_prefix in previous_room and get_current_map() == 0
+
 screen backbutton_screen:
-    if enable_event and room_prefix in previous_room:
+    if enable_event and can_show_backbutton():
         imagebutton:
-            idle "backbutton_idle"
-            hover "backbutton_hover"
-            # auto "backbutton %s"
+            auto "backbutton_%s"
             action Event("room_back")
             xcenter 0.5
             yanchor 1.0
