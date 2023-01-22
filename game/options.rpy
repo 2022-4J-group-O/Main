@@ -257,7 +257,7 @@ define default_obj_prop = {
     "Cupboard"       : {"index": 1, "anchor": (0.0, 0.0), "pos": (  35,   78)},
     "document.docx"  : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.7, 0.6)},
     "document.zip"   : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.8, 0.6)},
-    "Door B"         : {"index": 0, "anchor": (0.0, 0.0), "pos": (1539,  106)},
+    "Door B.png"     : {"index": 0, "anchor": (0.0, 0.0), "pos": (1539,  106)},
     "fridge.7z"      : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.3, 0.6)},
     "fridge.zip"     : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.2, 0.6)},
     "fridge_pass.7z" : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.4, 0.6)},
