@@ -11,7 +11,7 @@ screen obj_screen(current, obj_prop={}):
         ]
         # indexの値でソート
         prop = dict(sorted(prop, key=lambda x: x[1]["index"]))
-    
+
     draggroup:
         for i, item in enumerate(prop.keys()):
             $ imagetag = item.lower().replace(".", " ")
@@ -43,5 +43,5 @@ screen obj_screen_pos_obj(current,x_pos,y_pos):
                 droppable False
                 if enable_event:
                     clicked Event("obj_clicked", objname=item)
-                anchor (0.5,0.5)
+                anchor (0.0,1.0)
                 pos (x_pos,y_pos)
