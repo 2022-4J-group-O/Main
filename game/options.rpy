@@ -253,7 +253,7 @@ define default_obj_prop = {
     "Vase"           : {"index": 1, "anchor": (0.0, 0.0), "pos": (1124,  491)},
 
     # f1r3
-    "archive.tar.gz" : {"index": 1, "anchor": (0.5, 0.5), "pos": (0.6, 0.6)},
+    "archive.tar.gz" : {"index": 2, "anchor": (0.0, 0.0), "pos": (1600,  790)},
     "Cupboard"       : {"index": 1, "anchor": (0.0, 0.0), "pos": (  35,   78)},
     "document.docx"  : {"index": 2, "anchor": (0.0, 0.0), "pos": (1650,  820)},
     "document.zip"   : {"index": 2, "anchor": (0.0, 0.0), "pos": (1650,  820)},
