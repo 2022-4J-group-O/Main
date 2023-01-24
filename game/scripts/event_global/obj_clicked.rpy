@@ -40,6 +40,34 @@ label vase_clicked:
 
 # label box_clicked: (box_clicked.rpyに定義)
 
+label archive_tar_gz_clicked:
+    show girl at right with dissolve
+    g "封筒だね"
+    show girl look away at right with dissolve
+    g "これ、冷蔵庫から出てきたのかな"
+    hide girl with dissolve
+    $ event_end(loop_label())
+
+label document_docx:
+    show girl at right with dissolve
+    g "封筒だね"
+    show girl look away at right with dissolve
+    g "これ、冷蔵庫から出てきたのかな"
+    g "これも中身を見れるかな"
+    g "もしかしたら、いままでの冷蔵庫と同じ方法で中身を確認出来たり？"
+    hide girl with dissolve
+    $ event_end(loop_label())
+
+label document_zip:
+    show girl at right with dissolve
+    g "封筒だね"
+    show girl look away at right with dissolve
+    g "これ、冷蔵庫から出てきたのかな"
+    g "これも中身を見れるかな"
+    g "もしかしたら、いままでの冷蔵庫と同じ方法で中身を確認出来たり？"
+    hide girl with dissolve
+    $ event_end(loop_label())
+
 label config_clicked:
     python:
 

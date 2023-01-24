@@ -24,6 +24,10 @@ label fridge_clicked:
 
         g "壮観だね"
 
+        hide girl with dissolve
+
+        $ event_end()
+
     if fridge_count == 1:
 
         g "ずいぶん大きな冷蔵庫だね"
