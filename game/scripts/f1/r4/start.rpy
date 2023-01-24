@@ -22,6 +22,10 @@ label f1r4:
 
         g "......"
 
+        # menuで、f2直前イベントを起こす
+        $ menu2_evflg_opening_f2 = True
+        # menuで、f2を解放
+        $ menu2_evflg_canjump_f2 = True
         jump menu2
     
     else:
