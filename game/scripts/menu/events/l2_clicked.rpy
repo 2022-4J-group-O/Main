@@ -7,11 +7,13 @@ label menu2_ev_l2_clicked:
 
     # このラベルへの訪問が初めてで、f2にジャンプ可能な時
     if not jumped_menu2_ev_l2_clicked and menu2_evflg_canjump_f2:
+        $ jumped_menu2_ev_l2_clicked = True
         $ menu2_jumplabel = "f2r1"
 
-        show girl at right with dissolve
+        show girl look away at right with dissolve
 
-        g "2番目のセーブデータへGo!"
+        g "......気を取り直して、ステージ2だよ"
+
         $ menu2_jumplabel = "f2r1"
 
         hide girl with dissolve
