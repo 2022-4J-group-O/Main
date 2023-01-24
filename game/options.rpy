@@ -275,7 +275,12 @@ define default_obj_prop = {
     
 
     # f3r1
-    "Anywhere Door"  : {"index": 0, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
+    "Anywhere Door"  : {"index": 0, "anchor": (0.0, 0.0), "pos": ( 450,  150)},
+    "Desk A"         : {"index": 2, "anchor": (0.0, 0.0), "pos": (   0,  680)},
+    "Desk B"         : {"index": 2, "anchor": (0.0, 0.0), "pos": (1256,  808)},
+    "Machines"       : {"index": 1, "anchor": (0.0, 0.0), "pos": (   0,  105)},
+    "Monitor"        : {"index": 2, "anchor": (0.0, 0.0), "pos": (1636,    0)},
+    "Glass"          : {"index": 1, "anchor": (0.0, 0.0), "pos": (1549,  134)},
 }
 
 define previous_room = {
