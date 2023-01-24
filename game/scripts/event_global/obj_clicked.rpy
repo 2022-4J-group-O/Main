@@ -48,7 +48,7 @@ label archive_tar_gz_clicked:
     hide girl with dissolve
     $ event_end(loop_label())
 
-label document_docx:
+label document_docx_clicked:
     show girl at right with dissolve
     g "封筒だね"
     show girl look away at right with dissolve
@@ -58,7 +58,7 @@ label document_docx:
     hide girl with dissolve
     $ event_end(loop_label())
 
-label document_zip:
+label document_zip_clicked:
     show girl at right with dissolve
     g "封筒だね"
     show girl look away at right with dissolve
