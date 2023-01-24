@@ -6,23 +6,11 @@ label obj_clicked(objname):
             jump expression pref_lb
         elif renpy.has_label(lb):
             jump expression lb
-    $ event_end(loop_label())
+    $ event_end()
 
 label table_clicked:
     show girl at right with dissolve
     g "机がクリックされたよ"
-    hide girl with dissolve
-    $ event_end(loop_label())
-
-label drawer_clicked:
-    show girl at right with dissolve
-    g "引き出しがクリックされたよ"
-    hide girl with dissolve
-    $ event_end(loop_label())
-
-label chair_clicked:
-    show girl at right with dissolve
-    g "椅子がクリックされたよ"
     hide girl with dissolve
     $ event_end(loop_label())
 
@@ -45,4 +33,4 @@ label config_clicked:
 
         ShowMenu("preferences")() # 設定画面を呼び出す
 
-        event_end(loop_label())
+        event_end()

@@ -4,7 +4,20 @@ label title:
     if title_evflg_opening:  # タイトル画面初回起動時
         $ init_room("title")
     $ move_room('title')
-    scene bg title with dissolve
+    scene bg title
+
+    show screen title_screen(read_room()) with dissolve
+
+    pause
+    pause
+    pause
+    pause
+    pause
+    pause
+    pause
+    pause
+    pause
+    pause
 
 label .scloop:
     window hide
