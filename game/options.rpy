@@ -38,7 +38,7 @@ define gui.about = _p("""
 ## 名。簡易名は ASCII 文字（半角英数字）のみで構成され、スペース・コロン・セミコ
 ## ロンなどを含んでは行けません。
 
-define build.name = "Prologue"
+define build.name = "Main"
 
 # ロールバックを無効化
 define config.rollback_enabled = False
