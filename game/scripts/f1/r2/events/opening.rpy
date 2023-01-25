@@ -3,10 +3,9 @@ label f1r2_ev_opening:
     show screen f1r2_screen(read_room(), rob=False) with dissolve
     
     show girl at right with dissolve
+    show robot1 at left with dissolve
 
     g "ずいぶん殺風景な部屋だね......真っ白"
-
-    show robot1 at left with dissolve
 
     ro1_unknown "......む、なんだね君たちは"
 

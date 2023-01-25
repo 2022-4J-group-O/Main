@@ -2,22 +2,20 @@ default f1r2_jumped_door_clicked = False  # このラベルに訪問済みか
 
 label f1r2_door_a_clicked:
     # このラベルを初めて訪れた時
+    hide screen f1r2_screen
+    show screen f1r2_screen(read_room(), rob=False) with dissolve
+
     if not f1r2_jumped_door_clicked:
         $ f1r2_jumped_door_clicked = True
 
         show girl smile at right with dissolve
+        show robot1 at left with dissolve
 
         g "やった！これで次の部屋に行けるね"
 
         g "ばれないようにドアを設置するなんて。まさに完全犯罪だ"
 
         show girl at right with dissolve
-
-        hide screen f1r2_screen
-        show screen f1r2_screen(read_room(), rob=False) with dissolve
-
-        show girl smile at right with dissolve
-        show robot1 at left with dissolve
         
         ro1 "何を隠れて話しているのだね、君たち"
 
