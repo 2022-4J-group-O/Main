@@ -2,7 +2,9 @@
 default f1r2_jumped_robot_clicked = False
 
 label f1r2_ev_robot_clicked:
-    show screen f1r2_screen(read_room(), False)  # ロボットを不可視に
+    hide screen f1r2_screen
+    show screen f1r2_screen(read_room(), rob=False) with dissolve
+
     show robot1 at left with dissolve
     show girl at right with dissolve
 
@@ -50,5 +52,7 @@ label f1r2_ev_robot_clicked:
 
         hide girl with dissolve
         hide robot1
+
+    hide screen f1r2_screen
 
     $ event_end("f1r2.scloop")

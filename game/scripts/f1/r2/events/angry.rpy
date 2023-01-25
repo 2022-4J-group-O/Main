@@ -2,6 +2,9 @@
 default f1r2_jumped_ev_angry = False  # このラベルに訪問済みか
 
 label f1r2_ev_angry:
+    hide screen f1r2_screen
+    show screen f1r2_screen(read_room(), rob=False) with dissolve
+
     show robot1 angry at left with dissolve
 
     ro1 "この部屋に、"
@@ -11,7 +14,7 @@ label f1r2_ev_angry:
     ro1 "持ち込むなー！！！！"
 
     $ move_obj(nhidden)
-    show screen f1r2_screen(read_room())
+    show screen f1r2_screen(read_room(), rob=False)
     with dissolve
 
     # このラベルを初めて訪れた時
@@ -42,5 +45,7 @@ label f1r2_ev_angry:
     hide girl with dissolve
 
     hide robot1 angry with dissolve
+
+    hide screen f1r2_screen
 
     $ event_end("f1r2.scloop")

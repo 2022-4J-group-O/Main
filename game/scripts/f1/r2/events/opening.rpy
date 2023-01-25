@@ -1,4 +1,7 @@
 label f1r2_ev_opening:
+    hide screen f1r2_screen
+    show screen f1r2_screen(read_room(), rob=False) with dissolve
+    
     show girl at right with dissolve
 
     g "ずいぶん殺風景な部屋だね......真っ白"
@@ -101,4 +104,6 @@ label f1r2_ev_opening:
 
     hide girl with dissolve
     
+    hide screen f1r2_screen
+
     $ event_end("f1r2.scloop")

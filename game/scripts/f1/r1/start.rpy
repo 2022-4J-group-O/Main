@@ -13,7 +13,7 @@ label .scloop:
 
     if f1r1_evflg_opening:  # f1r1初回起動時
         $ f1r1_evflg_opening = False
-        $ Event("f1r1_ev_opening")()
+        # $ Event("f1r1_ev_opening")()
     
     pause
     

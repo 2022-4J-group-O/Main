@@ -13,6 +13,10 @@ label f1r2_door_a_clicked:
 
         show girl at right with dissolve
 
+        hide screen f1r2_screen
+        show screen f1r2_screen(read_room(), rob=False) with dissolve
+
+        show girl smile at right with dissolve
         show robot1 at left with dissolve
         
         ro1 "何を隠れて話しているのだね、君たち"
@@ -42,6 +46,8 @@ label f1r2_door_a_clicked:
         ro1 "いったい何が起こっているんだ？理解不能だ！"
 
         hide robot1
+
+        hide screen f1r2_screen
 
         $ event_end("f1r3")
 

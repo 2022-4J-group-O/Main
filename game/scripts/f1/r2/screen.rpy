@@ -31,14 +31,14 @@ screen f1r2_screen(current, rob=True):
                 droppable False
                 clicked Event("f1r2_ev_robot_clicked")
                 pos (671, 601)
-    else:
-        draggroup:
-            drag:
-                drag_name "Robot Angry"
-                if renpy.can_show("robot angry"):
-                    add "robot angry"
-                else:
-                    add SampleImage("robot angry", 150, 150, "#FF0000")
-                draggable False
-                droppable False
-                pos (673, 597)
+    # else:
+    #     draggroup:
+    #         drag:
+    #             drag_name "Robot Angry"
+    #             if renpy.can_show("robot angry"):
+    #                 add "robot angry"
+    #             else:
+    #                 add SampleImage("robot angry", 150, 150, "#FF0000")
+    #             draggable False
+    #             droppable False
+    #             pos (673, 597)
