@@ -27,5 +27,5 @@ label f1r1_table_clicked:
 
         $ event_end()
     
-    call table_clicked from _call_table_clicked
+    call table_clicked
     
