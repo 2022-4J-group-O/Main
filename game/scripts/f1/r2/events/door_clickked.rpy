@@ -11,8 +11,9 @@ label f1r2_door_a_clicked:
 
         g "ばれないようにドアを設置するなんて。まさに完全犯罪だ"
 
-        show girl at right with dissolve
+        show screen f1r2_screen(read_room(), visible=False) with dissolve
 
+        show girl at right with dissolve
         show robot1 at left with dissolve
         
         ro1 "何を隠れて話しているのだね、君たち"
