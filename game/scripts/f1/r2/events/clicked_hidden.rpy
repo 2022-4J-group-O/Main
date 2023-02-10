@@ -10,6 +10,8 @@ label f1r2_ev_hidden_clicked:
 
     hide girl with dissolve
 
+    show screen f1r2_screen(read_room(), visible=False) with dissolve
+
     show girl at right with dissolve
     show robot1 at left with dissolve
 
