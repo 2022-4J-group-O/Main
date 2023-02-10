@@ -1,6 +1,10 @@
 default f3r1_evflg_opening = True
 
 label f3r1:
+    if f3r1_evflg_opening:  # f3r1初回起動時
+        $ init_room("loadfile3/room1")
+        # room2も生成しておく(どこでもドアのヒント)
+        $ init_room("loadfile3/room2")
     $ move_room("loadfile3/room1")
     scene bg f3r1
 
