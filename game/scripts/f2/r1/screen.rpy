@@ -2,30 +2,7 @@ screen f2r1_screen(current):
     layer "master"
     #固定表示のやつ
 
-    fixed:
-        add "bg f2r1"
-        xpos 1.0
-
-    imagebutton:
-        anchor (0.0, 0.0)
-        pos (1.0, 0.0)
-        offset (68, 178)
-        idle "frame_a"
-        hover "frame_a"
-
-    imagebutton:
-        anchor (0.0, 0.0)
-        pos (1.0, 0.0)
-        offset (735, 178)
-        idle "frame_b"
-        hover "frame_b"
-
-    imagebutton:
-        anchor (0.0, 0.0)
-        pos (1.0, 0.0)
-        offset (1399, 178)
-        idle "frame_c"
-        hover "frame_c"
+    add "bg f2r1" xpos 1.0
 
     imagebutton:
         anchor (0.0, 0.0)
@@ -51,6 +28,27 @@ screen f2r1_screen(current):
     imagebutton:
         anchor (0.0, 0.0)
         pos (1.0, 0.0)
+        offset (68, 178)
+        idle "frame 1"
+        hover "frame 1"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (735, 178)
+        idle "frame 1"
+        hover "frame 1"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (1399, 178)
+        idle "frame 1"
+        hover "frame 1"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
         offset (127, 700)
         idle "stand_c"
         hover "stand_c"
@@ -68,8 +66,6 @@ screen f2r1_screen(current):
         offset (1460, 700)
         idle "stand_a"
         hover "stand_a"
-
-
 
 
     use obj_screen(current)
