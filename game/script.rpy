@@ -21,7 +21,7 @@ label start:
 
     show screen backbutton_screen
     show screen move_map_ui
-    jump title
+    jump f1r4
     
     return
 
