@@ -10,17 +10,7 @@ label f1r4:
         pause
         pause
 
-        g "......あー"
-
-        g "これは......その......"
-
-        g "バグってやつだね"
-
-        g "これより先に進むのは難しそうだよ"
-
-        g "少し待ってね"
-
-        g "......"
+        $ Event("f1r4_dialogue")()
 
         # menuで、f2直前イベントを起こす
         $ menu2_evflg_opening_f2 = True
@@ -30,3 +20,22 @@ label f1r4:
     
     else:
         jump menu2
+
+label f1r4_dialogue:
+    show girl look away with dissolve
+    
+    g "......あー"
+
+    g "これは......その......"
+
+    g "バグってやつだね"
+
+    g "これより先に進むのは難しそうだよ"
+
+    g "少し待ってね"
+
+    g "......"
+
+    hide girl with dissolve
+
+    $ event_end()
