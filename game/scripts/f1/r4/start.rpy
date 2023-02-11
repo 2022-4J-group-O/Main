@@ -1,10 +1,27 @@
 default f1r4_evflg_opening = True
 
+image bg f1r4:
+    choice:
+        "bg f1r4 1"
+    choice:
+        "bg f1r4 2"
+    choice:
+        "bg f1r4 3"
+    choice:
+        "bg f1r4 4"
+    choice:
+        "bg f1r4 5"
+    choice:
+        "bg f1r4 6"
+    pause 0.1
+    repeat
+
 label f1r4:
+    $ move_room("f1r4")
+
     scene bg f1r4
 
     if f1r4_evflg_opening:
-        $ f1r4_evflg_opening = False
 
         pause
         pause
