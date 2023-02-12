@@ -88,7 +88,7 @@ init python:
             os.makedirs(room_path)
             os.chdir(room_path)
             # picture frameのみでOK
-            for p in ["picture frame1", "picture frame2", "picture frame3"]:
+            for p in ["picture frame1", "picture frame2"]:
                 global_data.default_dir_data.make(p, os.path.join(room_path, p))
         else:
             global_data.default_dir_data.make(room_path, room_path)

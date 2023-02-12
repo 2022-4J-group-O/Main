@@ -272,7 +272,7 @@ define default_obj_prop = {
     "Apple"          : {"index": 2, "anchor": (0.0, 1.0), "pos": (0,0)},
     "Dog"            : {"index": 2, "anchor": (0.0, 1.0)},
     "Cup"            : {"index": 2, "pos":(0,0)}, #f1r3ができるまでの仮
-    
+    # "Door C"         : {"index": 0, "pos": (0.2, 915), "anchor": (0.5, 1.0)}, 
 
     # f3r1
     "Anywhere Door"  : {"index": 0, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
@@ -295,8 +295,10 @@ define previous_room = {
     "f1r1": "menu2",
     "f1r2": "f1r1",
     "f1r3": "f1r2",
+    "f1r4": "f1r3",
     "f2r1": "menu2",
     "f2r2": "f2r1",
+    "f2r3": "f2r2",
     "f3r1": "menu2",
     "f3r2": "f3r1",
     "f3r3": "f3r2",

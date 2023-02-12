@@ -3,7 +3,8 @@ define f1r2_obj_prop = {
     "Door A": {"index": 0, "anchor": (0.0, 0.0), "pos": (1404, 179)},
 }
 
-screen f1r2_screen(current, rob=True):
+# visible: Trueのときロボットを表示
+screen f1r2_screen(current, visible=True, rob=True):
     layer "master"
 
     drag:
@@ -19,26 +20,27 @@ screen f1r2_screen(current, rob=True):
 
     use obj_screen(current, f1r2_obj_prop)
 
-    if rob:
-        draggroup:
-            drag:
-                drag_name "Robot"
-                if renpy.can_show("robot"):
-                    add "robot"
-                else:
-                    add SampleImage("robot", 150, 150, "#FF0000")
-                draggable False
-                droppable False
-                clicked Event("f1r2_ev_robot_clicked")
-                pos (671, 601)
-    else:
-        draggroup:
-            drag:
-                drag_name "Robot Angry"
-                if renpy.can_show("robot angry"):
-                    add "robot angry"
-                else:
-                    add SampleImage("robot angry", 150, 150, "#FF0000")
-                draggable False
-                droppable False
-                pos (673, 597)
+    if visible:
+        if rob:
+            draggroup:
+                drag:
+                    drag_name "Robot"
+                    if renpy.can_show("robot"):
+                        add "robot"
+                    else:
+                        add SampleImage("robot", 150, 150, "#FF0000")
+                    draggable False
+                    droppable False
+                    clicked Event("f1r2_ev_robot_clicked")
+                    pos (671, 601)
+        else:
+            draggroup:
+                drag:
+                    drag_name "Robot Angry"
+                    if renpy.can_show("robot angry"):
+                        add "robot angry"
+                    else:
+                        add SampleImage("robot angry", 150, 150, "#FF0000")
+                    draggable False
+                    droppable False
+                    pos (673, 597)

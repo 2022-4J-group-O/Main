@@ -43,7 +43,7 @@ init python:
             return []
 
 
-screen f2r2_pictures_screen(pictures, position):
+screen f2r2_pictures_screen(pictures, **properties):
     draggroup:
         if len(pictures) == 1:
             $ pic = pictures[0]
@@ -63,17 +63,17 @@ screen f2r2_pictures_screen(pictures, position):
             draggable False
             droppable False
             anchor (0.5, 0.5)
-            pos position
+            properties properties
 
 screen f2r2_screen(current):
     layer "master"
     use obj_screen(current)
     if os.path.isdir(f2r2_picture_frame1):
-        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame1), position=(0.25, 0.3))
+        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame1), pos=(770, 420))
     if os.path.isdir(f2r2_picture_frame2):
-        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame2), position=(0.5, 0.3))
+        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame2), pos=(1255, 420))
     if os.path.isdir(f2r2_picture_frame3):
-        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame3), position=(0.75, 0.3))
+        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame3), pos=(1720, 420))
     imagebutton:
         idle SampleImage("足し算ボタン", 100, 100, "#0080ff")
         hover SampleImage("足し算ボタン", 100, 100, "#0070e0")
