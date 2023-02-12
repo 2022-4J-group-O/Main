@@ -15,6 +15,7 @@ screen f3r2_screen(current, visible=True, smile=False):
                 droppable False
                 anchor (0.0, 0.0)
                 pos (537, 79)
+                clicked Event("f3r2_robot2_clicked")
         else:
             drag:
                 drag_name "robot2"
@@ -26,5 +27,6 @@ screen f3r2_screen(current, visible=True, smile=False):
                 droppable False
                 anchor (0.0, 0.0)
                 pos (553, 83)
+                clicked Event("f3r2_robot2_clicked")
 
     use obj_screen(current)
