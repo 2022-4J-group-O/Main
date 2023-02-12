@@ -26,7 +26,7 @@ label .scloop:
 
     if menu2_evflg_opening_f3:
         $ menu2_evflg_opening_f3 = False
-        $ Event("menu2_ev_opening_f3")
+        $ Event("menu2_ev_opening_f3")()
     
     if menu2_jumplabel == "f1r1":
         $ menu2_jumplabel = None

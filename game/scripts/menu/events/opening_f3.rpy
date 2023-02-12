@@ -6,7 +6,7 @@ label menu2_ev_opening_f3:
     g "......これは、白状するしかないかな......"
 
     show girl at right with dissolve
-	
+    
     g "......今まで黙ってたんだけど......"
 
     g "実はこのゲーム、まだ未完成なんだ"
@@ -26,7 +26,7 @@ label menu2_ev_opening_f3:
     g "......製作者もそれを望んでいるだろうし"
 
     show girl smile at right with dissolve
-	
+    
     g "私自身も、ものすごーく暇だったからね"
 
     g "湿っぽい話終わり！"
