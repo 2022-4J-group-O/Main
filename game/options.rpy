@@ -312,7 +312,7 @@ define default_user_dirdata_path = "game/data/default"
 ## デバッグ用               ########################################
 
 # 自動ロード
-define auto_load = True
+define auto_load = False
 
 # プレイヤー用のディレクトリの初期状態を示すディレクトリ
 define default_user_dir = "default_game_data"
