@@ -1,5 +1,5 @@
 define ldissolve = Dissolve(1.0)
-define box_path = "loadfile2/room1/box"
+define box_path = "box"
 define f2r1_path = "loadfile2/room1"
 define picture_paths = ("picture frame A/pic_A.png", "picture frame B/pic_B.png", "picture frame C/pic_C.png")
 
@@ -11,8 +11,9 @@ default f2r1_first = True
 init python:
     # boxを出現させる
     def f2r1_gen_box():
-        check_folder_new(config.basedir, user_directory, box_path)
-        global_data.default_dir_data.make(os.path.join(config.basedir, user_directory, box_path), box_path)
+        p = os.path.join(user_directory, f2r1_path, box_path)
+        check_folder_new(config.basedir, p)
+        global_data.default_dir_data.make(os.path.join(config.basedir, p), os.path.join(f2r1_path, box_path))
     
     def f2r1_exist_box():
         return os.path.isdir(os.path.join(config.basedir, user_directory, box_path))
@@ -46,7 +47,7 @@ label .scloop:
         # import os
         # import shutil
 
-        f2r1_exist_path = os.path.join(current_room, "objectC")
+        f2r1_exist_path = os.path.join(f2r1_path, "object C")
 
         if f2r1_first and check_obj("Cup", f2r1_exist_path):
             f2r1_first = False
