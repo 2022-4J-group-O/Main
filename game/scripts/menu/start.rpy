@@ -12,7 +12,7 @@ label menu2:
 
 
 label .scloop:
-    hide window
+    window hide
     show screen menu2_screen(True)
     with dissolve
 
