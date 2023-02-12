@@ -71,6 +71,27 @@ screen f2r1_screen(current, exist_box, exist_picture):
     imagebutton:
         anchor (0.0, 0.0)
         pos (1.0, 0.0)
+        offset (68, 178)
+        idle "frame 1"
+        hover "frame 1"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (735, 178)
+        idle "frame 1"
+        hover "frame 1"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
+        offset (1399, 178)
+        idle "frame 1"
+        hover "frame 1"
+
+    imagebutton:
+        anchor (0.0, 0.0)
+        pos (1.0, 0.0)
         offset (127, 700)
         idle "stand"
         hover "stand"
