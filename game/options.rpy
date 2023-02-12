@@ -298,6 +298,7 @@ define previous_room = {
     "f1r4": "f1r3",
     "f2r1": "menu2",
     "f2r2": "f2r1",
+    "f2r3": "f2r2",
     "f3r1": "menu2",
     "f3r2": "f3r1",
     "f3r3": "f3r2",
