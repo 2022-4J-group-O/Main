@@ -6,18 +6,13 @@ label title:
     $ move_room('title')
     scene bg title
 
+    $ loop_count = 0
+label .pause_loop:
     show screen title_screen(read_room()) with dissolve
-
     pause
-    pause
-    pause
-    pause
-    pause
-    pause
-    pause
-    pause
-    pause
-    pause
+    $ loop_count += 1
+    if loop_count < 10:
+        jump .pause_loop
 
 label .scloop:
     window hide
