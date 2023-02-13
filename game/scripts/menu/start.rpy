@@ -6,9 +6,11 @@ default menu2_evflg_canjump_f2 = False  # 現在はf2にジャンプ可能(f2の
 default menu2_evflg_canjump_f3 = False  # 現在はf3にジャンプ可能
 default menu2_jumplabel = None  # ジャンプするラベル
 
+image bg loadfile = "bg title"
+
 label menu2:
     $ move_room('menu2')
-    scene bg loadfile with fade
+    scene bg loadfile
 
 
 label .scloop:
