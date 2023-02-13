@@ -30,9 +30,9 @@ define f2r2_pictures_rev = {v: k for k, v in f2r2_pictures.items()}
 
 define f2r2_path = os.path.join(config.basedir, user_directory, "loadfile2/room2")
 
-define f2r2_picture_frame1 = os.path.join(f2r2_path, "picture frame1")
-define f2r2_picture_frame2 = os.path.join(f2r2_path, "picture frame2")
-define f2r2_picture_frame3 = os.path.join(f2r2_path, "picture frame3")
+define f2r2_picture_frame1 = os.path.join(f2r2_path, "picture frame 1")
+define f2r2_picture_frame2 = os.path.join(f2r2_path, "picture frame 2")
+define f2r2_picture_frame3 = os.path.join(f2r2_path, "picture frame 3")
 
 init python:
     def f2r2_read(folder):
@@ -65,7 +65,7 @@ screen f2r2_pictures_screen(pictures, **properties):
             anchor (0.5, 0.5)
             properties properties
 
-screen f2r2_screen(current):
+screen f2r2_screen(current, safe_visible):
     layer "master"
     use obj_screen(current)
     if os.path.isdir(f2r2_picture_frame1):
@@ -80,3 +80,10 @@ screen f2r2_screen(current):
         pos (0.7, 0.5)
         anchor (0.5, 0.5)
         action Event("f2r2_ev_add_button_clicked")
+    
+    if safe_visible:
+        imagebutton:
+            idle "safe"
+            hover "safe"
+            pos (0.0, 0.0)
+            action Event("f2r2_safe_clicked")
