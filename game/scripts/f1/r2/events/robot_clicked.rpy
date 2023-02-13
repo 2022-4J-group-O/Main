@@ -2,7 +2,7 @@
 default f1r2_jumped_robot_clicked = False
 
 label f1r2_ev_robot_clicked:
-    show screen f1r2_screen(read_room(), False)  # ロボットを不可視に
+    show screen f1r2_screen(read_room(), visible=False)  # ロボットを不可視に
     show robot1 at left with dissolve
     show girl at right with dissolve
 
@@ -29,6 +29,8 @@ label f1r2_ev_robot_clicked:
 
         hide robot1
         hide girl with dissolve
+
+        show screen f1r2_screen(read_room(), visible=True)  # ロボットを不可視に
 
         show girl look away with dissolve
 

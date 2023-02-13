@@ -30,9 +30,9 @@ define f2r2_pictures_rev = {v: k for k, v in f2r2_pictures.items()}
 
 define f2r2_path = os.path.join(config.basedir, user_directory, "loadfile2/room2")
 
-define f2r2_picture_frame1 = os.path.join(f2r2_path, "picture frame1")
-define f2r2_picture_frame2 = os.path.join(f2r2_path, "picture frame2")
-define f2r2_picture_frame3 = os.path.join(f2r2_path, "picture frame3")
+define f2r2_picture_frame1 = os.path.join(f2r2_path, "picture frame 1")
+define f2r2_picture_frame2 = os.path.join(f2r2_path, "picture frame 2")
+define f2r2_picture_frame3 = os.path.join(f2r2_path, "picture frame 3")
 
 init python:
     def f2r2_read(folder):
@@ -43,7 +43,7 @@ init python:
             return []
 
 
-screen f2r2_pictures_screen(pictures, position):
+screen f2r2_pictures_screen(pictures, **properties):
     draggroup:
         if len(pictures) == 1:
             $ pic = pictures[0]
@@ -63,20 +63,27 @@ screen f2r2_pictures_screen(pictures, position):
             draggable False
             droppable False
             anchor (0.5, 0.5)
-            pos position
+            properties properties
 
-screen f2r2_screen(current):
+screen f2r2_screen(current, safe_visible):
     layer "master"
     use obj_screen(current)
     if os.path.isdir(f2r2_picture_frame1):
-        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame1), position=(0.25, 0.3))
+        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame1), pos=(770, 420))
     if os.path.isdir(f2r2_picture_frame2):
-        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame2), position=(0.5, 0.3))
+        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame2), pos=(1255, 420))
     if os.path.isdir(f2r2_picture_frame3):
-        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame3), position=(0.75, 0.3))
+        use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame3), pos=(1720, 420))
     imagebutton:
         idle SampleImage("足し算ボタン", 100, 100, "#0080ff")
         hover SampleImage("足し算ボタン", 100, 100, "#0070e0")
         pos (0.7, 0.5)
         anchor (0.5, 0.5)
         action Event("f2r2_ev_add_button_clicked")
+    
+    if safe_visible:
+        imagebutton:
+            idle "safe"
+            hover "safe"
+            pos (0.0, 0.0)
+            action Event("f2r2_safe_clicked")

@@ -87,9 +87,10 @@ init python:
         elif pathparts == ("loadfile2", "room2"):
             os.makedirs(room_path)
             os.chdir(room_path)
-            # picture frameのみでOK
-            for p in ["picture frame1", "picture frame2", "picture frame3"]:
+            # picture frameとsafeの一部
+            for p in ["picture frame 1", "picture frame 2"]:
                 global_data.default_dir_data.make(p, os.path.join(room_path, p))
+            global_data.default_dir_data.make("safe", os.path.join(room_path, "safe"))
         else:
             global_data.default_dir_data.make(room_path, room_path)
         os.chdir(cwd)
