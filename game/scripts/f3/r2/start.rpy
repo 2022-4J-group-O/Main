@@ -1,4 +1,5 @@
 default f3r2_evflg_opening = True
+default f3r2_flg_q1 = True  # 現在出題中の問題はq1か
 
 label f3r2:
     $ move_room("loadfile3/room2")
