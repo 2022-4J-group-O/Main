@@ -1,16 +1,41 @@
 define ldissolve = Dissolve(1.0)
-default f2r1_evflg_opening = True# f2r1初回起動時のイベントのフラグ
+define box_path = "box"
+define f2r1_path = "loadfile2/room1"
+define picture_paths = ("picture frame A/pic_A.png", "picture frame B/pic_B.png", "picture frame C/pic_C.png")
+
+default f2r1_evflg_opening = True # f2r1初回起動時のイベントのフラグ
 # default f2r1_jumplabel = None  # この変数にラベル名を入れるとそこへジャンプする
 default f2r1_exist_flag = False #
 default f2r1_first = True
 
+init python:
+    # boxを出現させる
+    def f2r1_gen_box():
+        p = os.path.join(user_directory, f2r1_path, box_path)
+        check_folder_new(config.basedir, p)
+        global_data.default_dir_data.make(os.path.join(config.basedir, p), os.path.join(f2r1_path, box_path))
+    
+    def f2r1_exist_box():
+        return os.path.isdir(os.path.join(config.basedir, user_directory, f2r1_path, box_path))
+    
+    def f2r1_pictures_exist():
+        base = os.path.join(config.basedir, user_directory, f2r1_path)
+        return (
+            check_hash_binary(os.path.join(base, picture_paths[0])),
+            check_hash_binary(os.path.join(base, picture_paths[1])),
+            os.path.isfile(os.path.join(base, picture_paths[2]))
+        )
+
+
 label f2r1:
+    if f2r1_evflg_opening:
+        $ init_room("loadfile2/room1")
     $ move_room("loadfile2/room1")
     scene bg f2r1 
 
 label .scloop:
     window hide
-    show screen f2r1_screen(read_room()) with dissolve
+    show screen f2r1_screen(read_room(), f2r1_exist_box(), f2r1_pictures_exist()) with dissolve
 
     if f2r1_evflg_opening:  # f2r1初回起動時
         $ f2r1_evflg_opening = False
@@ -22,17 +47,11 @@ label .scloop:
         # import os
         # import shutil
 
-        f2r1_exist_path = os.path.join(current_room, "objectC")
+        f2r1_exist_path = os.path.join(f2r1_path, "object C")
 
         if f2r1_first and check_obj("Cup", f2r1_exist_path):
             f2r1_first = False
-
-            from_path = os.path.join(config.basedir, "game/images/door_noise_img")
-            to_path_rel = os.path.join(user_directory, current_room, "box")
-            to_path = os.path.join(config.basedir, to_path_rel) # 出現する箱
-            check_folder_new(config.basedir, to_path_rel)
-            shutil.copy(os.path.join(from_path,'e.png'), os.path.join(to_path, 'e.png'))
-            shutil.copy(os.path.join(from_path,'f.png'), os.path.join(to_path, 'f.png'))
+            f2r1_gen_box()
             Event("f2r1_success")()
 
 
