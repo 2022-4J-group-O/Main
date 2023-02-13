@@ -16,7 +16,11 @@ init python:
         global_data.default_dir_data.make(os.path.join(config.basedir, p), os.path.join(f2r1_path, box_path))
     
     def f2r1_exist_box():
+<<<<<<< HEAD
         return os.path.isdir(os.path.join(config.basedir, user_directory, box_path))
+=======
+        return os.path.isdir(os.path.join(config.basedir, user_directory, f2r1_path, box_path))
+>>>>>>> main
     
     def f2r1_pictures_exist():
         base = os.path.join(config.basedir, user_directory, f2r1_path)

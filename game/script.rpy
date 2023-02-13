@@ -1,6 +1,8 @@
 define g = Character('少女', color="#c8ffc8")
 define ro1 = Character("cG9ua290c3U=", color="#cdc8ff")
 define ro1_unknown = Character("???", color="#cdc8ff")
+define ro2 = Character("cXVpeg==", color="#9eb0ec")
+define ro2_unknown = Character("???", color="#9eb0ec")
 
 default global_data = Const()
 
