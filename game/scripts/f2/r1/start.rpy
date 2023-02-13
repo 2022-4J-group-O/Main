@@ -25,6 +25,9 @@ init python:
             check_hash_binary(os.path.join(base, picture_paths[1])),
             os.path.isfile(os.path.join(base, picture_paths[2]))
         )
+    
+    def f2r1_check_objects():
+        return check_obj("Cup", os.path.join(f2r1_path, "object C")) and check_obj("Apple", os.path.join(f2r1_path, "object A")) and check_obj("Dog", os.path.join(f2r1_path, "object B"))
 
 
 label f2r1:
@@ -47,9 +50,9 @@ label .scloop:
         # import os
         # import shutil
 
-        f2r1_exist_path = os.path.join(f2r1_path, "object C")
+        
 
-        if f2r1_first and check_obj("Cup", f2r1_exist_path):
+        if f2r1_first and f2r1_check_objects():
             f2r1_first = False
             f2r1_gen_box()
             Event("f2r1_success")()

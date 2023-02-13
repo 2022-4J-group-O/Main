@@ -123,9 +123,15 @@ screen f2r1_screen(current, exist_box, exist_picture):
     use obj_screen_pos_obj(read_room("loadfile2/room1/object B"), pos=(1.0, 0.0), offset=(884, 700))
     use obj_screen_pos_obj(read_room("loadfile2/room1/object C"), pos=(1.0, 0.0), offset=(1560, 700))
 
+    imagebutton:
+        idle "stand"
+        hover "stand"
+        xanchor 0.5
+        pos (1200, 700)
+
     if exist_box:
         imagebutton:
             anchor (0.5, 1.0)
-            pos (1.5, 1.0)
-            idle "box"
-            hover "box"
+            pos (1200, 700)
+            idle "box2"
+            hover "box2"
