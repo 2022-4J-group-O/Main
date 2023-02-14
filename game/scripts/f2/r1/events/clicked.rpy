@@ -1,9 +1,9 @@
 label f2r1_cup_clicked:
     show girl at right with dissolve
 
-    g "これ、さっきはゴミ箱だと思ってたんだけど"
+    g "コップのオブジェだね"
 
-    g "コップのオブジェだったんだね"
+    g "これ、さっきも見たような？"
     
     hide girl with dissolve
     $ event_end()
