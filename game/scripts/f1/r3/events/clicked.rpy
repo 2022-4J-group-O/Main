@@ -26,3 +26,12 @@ label mat_clicked:
     hide girl with dissolve
 
     $ event_end()
+
+label f1r3_cup_clicked:
+    show girl at right with dissolve
+
+    g "これは、ゴミ箱かな？"
+
+    hide girl with dissolve
+
+    $ event_end()

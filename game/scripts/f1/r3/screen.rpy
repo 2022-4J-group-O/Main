@@ -1,3 +1,7 @@
+define f1r3_obj_prop = {
+    "Cup": {"index": 2, "anchor": (0.0, 0.0), "pos": (1160, 685)},
+}
+
 screen f1r3_screen(current):
     layer "master"
 
@@ -13,7 +17,7 @@ screen f1r3_screen(current):
         pos (1527, 91)
         clicked Event("clicked_DoorFrameType3")
 
-    use obj_screen(current)
+    use obj_screen(current, f1r3_obj_prop)
 
 label clicked_DoorFrameType3:
     show girl at right with dissolve
