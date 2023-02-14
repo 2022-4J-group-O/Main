@@ -5,7 +5,11 @@ label f2r2_opening_safe:
 
     show girl at right with dissolve
 
-    # セリフ
+    g "お、これは、金庫が開く音かな"
+
+    show girl smile at right with dissolve
+
+    g "パスワードがわかったんだね"
 
     hide girl with dissolve
 

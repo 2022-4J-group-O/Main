@@ -16,10 +16,12 @@ screen f2r1_screen(current, exist_box, exist_picture):
             # リンゴの絵画を表示
             idle "pic_a"
             hover "pic_a"
+            clicked Event("f2r1_pic_clicked")
         else:
             # エラー画像
             idle "error"
             hover "error"
+            clicked Event("f2r1_pic_error_clicked")
     
     imagebutton:
         anchor (0.0, 0.0)
@@ -29,10 +31,12 @@ screen f2r1_screen(current, exist_box, exist_picture):
             # 犬の絵画を表示
             idle "pic_b"
             hover "pic_b"
+            clicked Event("f2r1_pic_clicked")
         else:
             # エラー画像
             idle "error"
             hover "error"
+            clicked Event("f2r1_pic_error_clicked")
 
     imagebutton:
         anchor (0.0, 0.0)
@@ -42,10 +46,12 @@ screen f2r1_screen(current, exist_box, exist_picture):
             # コップの絵画を表示
             idle "pic_c"
             hover "pic_c"
+            clicked Event("f2r1_pic_clicked")
         else:
             # エラー画像
             idle "error"
             hover "error"
+            clicked Event("f2r1_pic_error_clicked")
 
     imagebutton:
         anchor (0.0, 0.0)
@@ -135,3 +141,4 @@ screen f2r1_screen(current, exist_box, exist_picture):
             pos (1200, 700)
             idle "box2"
             hover "box2"
+            clicked Event("f2r1_box2_clicked")

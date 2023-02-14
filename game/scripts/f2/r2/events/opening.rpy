@@ -2,7 +2,13 @@
 label f2r2_ev_opening:
     show girl with dissolve
     
-    g "画像を足し算するやつ"
+    g "この部屋にも、絵画が飾られてるね"
+
+    g "でも、前の部屋とは雰囲気が違うね"
+
+    g "それに、怪しいボタンもある"
+
+    g "どういうことだろう"
 
     hide girl with dissolve
 

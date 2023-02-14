@@ -6,6 +6,15 @@ label obj_clicked(objname):
             jump expression pref_lb
         elif renpy.has_label(lb):
             jump expression lb
+        $ event_end()
+    # ごり押し
+    if objname in ["Apple", "Dog", "Cup"]:
+        $ renpy.dynamic(lb=objname.lower().replace(" ", "_").replace(".", "_") + "_clicked")
+        $ renpy.dynamic(pref_lb=room_prefix + "_" + lb)
+        if renpy.has_label(pref_lb):
+            jump expression pref_lb
+        elif renpy.has_label(lb):
+            jump expression lb
     $ event_end()
 
 label table_clicked:
