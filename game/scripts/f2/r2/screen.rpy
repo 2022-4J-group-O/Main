@@ -74,16 +74,24 @@ screen f2r2_screen(current, safe_visible):
         use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame2), pos=(1255, 420))
     if os.path.isdir(f2r2_picture_frame3):
         use f2r2_pictures_screen(f2r2_read(f2r2_picture_frame3), pos=(1720, 420))
+
     imagebutton:
-        idle SampleImage("足し算ボタン", 100, 100, "#0080ff")
-        hover SampleImage("足し算ボタン", 100, 100, "#0070e0")
-        pos (0.7, 0.5)
+        if renpy.can_show("add_button"):
+            idle "add_button"
+            at transform:
+                xzoom 0.4
+                yzoom 0.4
+        else:
+            idle SampleImage("足し算ボタン", 100, 100, "#0080ff")
+
+        pos (1845, 600)
         anchor (0.5, 0.5)
         action Event("f2r2_ev_add_button_clicked")
-    
+
     if safe_visible:
         imagebutton:
             idle "safe"
             hover "safe"
-            pos (0.0, 0.0)
+            pos (1615, 950)
+            anchor (0.5, 1.0)
             action Event("f2r2_safe_clicked")
