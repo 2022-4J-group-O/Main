@@ -4,7 +4,7 @@ label title:
     if title_evflg_opening:  # タイトル画面初回起動時
         $ init_room("title")
     $ move_room('title')
-    scene bg title
+    scene bg title with Fade(2.0, 1.0, 2.0)
 
     $ loop_count = 0
 label .pause_loop:
