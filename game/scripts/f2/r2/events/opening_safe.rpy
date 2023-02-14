@@ -1,6 +1,7 @@
 label f2r2_opening_safe:
 
     # 金庫が開いた音を鳴らしたい
+    play sound se_safe_unlock
 
     show girl at right with dissolve
 

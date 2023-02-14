@@ -14,4 +14,7 @@ screen backbutton_screen:
 
 label room_back:
 
+    if previous_room[room_prefix] != "menu2":
+        play sound se_door_open
+
     $ event_end(previous_room[room_prefix])

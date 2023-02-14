@@ -15,7 +15,7 @@ label f1r2_door_a_clicked:
 
         show girl at right with dissolve
         show robot1 at left with dissolve
-        
+
         ro1 "何を隠れて話しているのだね、君たち"
 
         ro1 "見ての通り、この部屋はには何もない。君たちの望むものは絶対に見つからないぞ"
@@ -36,6 +36,8 @@ label f1r2_door_a_clicked:
 
         g "からかってなんかないよ。いつも本気。それじゃあね"
 
+        play sound se_door_open
+
         hide girl with dissolve
 
         ro1 "消えた！？"
@@ -47,4 +49,6 @@ label f1r2_door_a_clicked:
         $ event_end("f1r3")
 
     else:
+        play sound se_door_open
+
         $ event_end("f1r3")
