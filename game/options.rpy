@@ -13,7 +13,7 @@
 ##
 ## _() で囲まれた文字列は翻訳時に生成されるファイルに記載されます。
 
-define config.name = _("Prologue")
+define config.name = _("ココニタ")
 
 
 ## 上で定義したタイトルをメインメニュースクリーン（ゲーム起動後、最初に表示され
@@ -38,7 +38,7 @@ define gui.about = _p("""
 ## 名。簡易名は ASCII 文字（半角英数字）のみで構成され、スペース・コロン・セミコ
 ## ロンなどを含んでは行けません。
 
-define build.name = "Prologue"
+define build.name = "Input a"
 
 # ロールバックを無効化
 define config.rollback_enabled = False
@@ -66,6 +66,17 @@ define config.has_voice = False
 ## 続けます。
 
 # define config.main_menu_music = "main-menu-theme.ogg"
+
+init python:
+    def enter_sound_or_dummy():
+        if os.path.isfile(os.path.join(config.basedir, "game/audio/protected/se_open_setting.mp3")):
+            return "audio/protected/se_open_setting.mp3"
+        else:
+            return "audio/se_open_setting.mp3"
+
+# 設定を開くときのサウンド
+define config.enter_sound = enter_sound_or_dummy()
+define config.exit_sound = config.enter_sound
 
 
 ## トランジション #####################################################################

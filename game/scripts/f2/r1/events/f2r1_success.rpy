@@ -1,11 +1,9 @@
 label f2r1_success:
     show girl 
 
-    g "上の画像とおんなじ写真のオブジェとおけばよかったんだね"
+    play sound se_box_appear
 
-    g "なんか、なんか箱で出てきたね"
-
-    g "あとで、箱の中のディレクトリを確認してみよう"
+    g "物音がしたね的な"
 
     hide girl with dissolve
 
