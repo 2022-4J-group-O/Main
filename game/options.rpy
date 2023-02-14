@@ -282,7 +282,7 @@ define default_obj_prop = {
     # f2r1
     "Apple"          : {"index": 2, "anchor": (0.0, 1.0), "pos": (0,0)},
     "Dog"            : {"index": 2, "anchor": (0.0, 1.0)},
-    "Cup"            : {"index": 2, "pos":(0,0)}, #f1r3ができるまでの仮
+    "Cup"            : {"index": 2, "andhor": (0.5, 0.5), "pos": (700, 490)}, #f1r3ができるまでの仮
     # "Door C"         : {"index": 0, "pos": (0.2, 915), "anchor": (0.5, 1.0)}, 
 
     # f3r1

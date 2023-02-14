@@ -119,9 +119,9 @@ screen f2r1_screen(current, exist_box, exist_picture):
 
     use obj_screen(current, {"Door A": {"index": 0, "anchor": (0.5, 1.0), "pos": (0.2,  915), "yoffset": -2, "xoffset": -1},})
     #各objectを部屋として読み込む
-    use obj_screen_pos_obj(read_room("loadfile2/room1/object A"), pos=(1.0, 0.0), offset=(222, 700))
-    use obj_screen_pos_obj(read_room("loadfile2/room1/object B"), pos=(1.0, 0.0), offset=(884, 700))
-    use obj_screen_pos_obj(read_room("loadfile2/room1/object C"), pos=(1.0, 0.0), offset=(1560, 700))
+    use obj_screen_pos_obj(read_room("loadfile2/room1/object A"), pos=(1.153, 0.0), offset=(0, 700), anchor=(0.5, 1.0))
+    use obj_screen_pos_obj(read_room("loadfile2/room1/object B"), pos=(1.5, 0.0), offset=(0, 700), anchor=(0.5, 1.0))
+    use obj_screen_pos_obj(read_room("loadfile2/room1/object C"), pos=(1.847, 0.0), offset=(0, 700), anchor=(0.5, 1.0))
 
     imagebutton:
         idle "stand"
