@@ -233,6 +233,12 @@ init python:
 
 ## readonly property        ################################################
 
+# レイヤーの追加
+init python:
+    renpy.add_layer("characters", above="master")
+
+define config.tag_layer = {"girl": "characters", "robot1": "characters", "robot2": "characters"}
+
 # プレーヤーが主に操作をするディレクトリー
 define user_directory = "game_data"
 
