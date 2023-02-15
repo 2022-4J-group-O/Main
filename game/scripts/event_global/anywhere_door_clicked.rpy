@@ -1,5 +1,8 @@
 default jumped_anywhere_door_clicked = False  # このラベルへ訪問済みか
 
+# globalなjump_label
+default jump_label = None
+
 label anywhere_door_clicked:
     $ renpy.dynamic(pathd=os.path.join(user_dir_path, current_room, "Anywhere Door Destination.txt"))
     if os.path.isfile(pathd):
@@ -16,6 +19,7 @@ label anywhere_door_clicked:
                         jump .first  # ジャンプ先でこのイベントは終了
                     if renpy.get_screen(prev_pref + "_screen") != None:
                         $ renpy.hide_screen(prev_pref + "_screen")
+                    play sound se_anywhere_door
                     $ event_end(room_prefix)
                 else:
                     $ move_room(cur_room)
@@ -40,11 +44,18 @@ label .first:
 
     hide girl with dissolve
 
-    if renpy.get_screen(prev_pref + "_screen") != None:
-        $ renpy.hide_screen(prev_pref + "_screen")
+    play sound se_anywhere_door
 
-    $ renpy.show_screen(room_prefix + "_screen", current=read_room())
+    $ jump_label = "anywhere_door_clicked.dest"
 
+    $ event_end(room_prefix)
+
+    # if renpy.get_screen(prev_pref + "_screen") != None:
+    #     $ renpy.hide_screen(prev_pref + "_screen")
+
+    # $ renpy.show_screen(room_prefix + "_screen", current=read_room())
+
+label .dest:
     show girl surprise at right with dissolve
 
     g "......あれ？"
@@ -77,6 +88,6 @@ label .first:
 
     g "......なんてね"
 
-    $ renpy.hide_screen(room_prefix + "_screen")
+    hide girl with dissolve
 
     $ event_end(room_prefix)

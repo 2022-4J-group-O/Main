@@ -18,6 +18,12 @@ label .scloop:
     window hide
     show screen title_screen(read_room()) with dissolve
 
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     if title_evflg_opening:  # タイトル画面初回起動時
         $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
         $ Event("title_ev_opening")()
