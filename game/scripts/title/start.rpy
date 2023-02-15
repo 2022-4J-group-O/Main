@@ -7,12 +7,6 @@ label title:
     scene bg title with Fade(2.0, 1.0, 2.0)
 
     $ loop_count = 0
-label .pause_loop:
-    show screen title_screen(read_room()) with dissolve
-    pause
-    $ loop_count += 1
-    if loop_count < 10:
-        jump .pause_loop
 
 label .scloop:
     window hide
@@ -24,10 +18,15 @@ label .scloop:
             jump_label = None
             Event(tmp)()
 
-    if title_evflg_opening:  # タイトル画面初回起動時
+    if title_evflg_opening and loop_count >= 10:  # タイトル画面初回起動時
         $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
         $ Event("title_ev_opening")()
+    
+    if loop_count >= 10 and loop_count % 5 == 0:
+        $ Event("title_ev_hint")()
 
     pause
+
+    $ loop_count += 1
 
     jump .scloop
