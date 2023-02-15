@@ -136,7 +136,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## デフォルトの文字表示速度。数字は一秒に表示する文字数で、デフォルト値の 0 は無
 ## 限（一瞬で表示）を意味します。
 
-default preferences.text_cps = 0
+default preferences.text_cps = 30
 
 default preferences.slow_cps = 5
 ## デフォルトのオート待ち時間。0 から 30 までの数字を取り、数字が大きいほど待ち
