@@ -22,7 +22,7 @@ label .scloop:
         $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
         $ Event("title_ev_opening")()
     
-    if loop_count >= 10 and loop_count % 5 == 0:
+    if loop_count == 20:
         $ Event("title_ev_hint")()
 
     pause
