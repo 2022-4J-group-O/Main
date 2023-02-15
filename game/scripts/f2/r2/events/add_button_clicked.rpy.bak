@@ -59,7 +59,7 @@ label f2r2_ev_add_button_clicked:
                 "いいえ":
                     g "わかった、押さないでおく"
         else:
-            call .first from _call_f2r2_ev_add_button_clicked_first
+            call .first
 
     hide girl with dissolve
 
