@@ -40,30 +40,30 @@ label vase_clicked:
 label archive_tar_gz_clicked:
     show girl at right with dissolve
     g "封筒だね"
-    show girl look away at right with dissolve
     g "これ、冷蔵庫から出てきたのかな"
+    show girl look away at right with dissolve
+    g "冷蔵庫に封筒って......ますますよくわからくなってきたね"
+    show girl at right with dissolve
+    g "開封してみようよ"
+    g "何が入っているのかな"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label document_docx_clicked:
-    show girl at right with dissolve
-    g "封筒だね"
     show girl look away at right with dissolve
-    g "これ、冷蔵庫から出てきたのかな"
-    g "これも中身を見れるかな"
-    g "もしかしたら、いままでの冷蔵庫と同じ方法で中身を確認出来たり？"
+    g "今度は、封筒から封筒が出てきたね"
+    show girl at right with dissolve
+    g "この封筒、冷蔵庫で冷やされていたわけだからきっと凍り付いてるよね"
+    show girl smile at right with dissolve
+    g "......ってことは、「解凍」が必要なんじゃないかな"
+    show girl at right with dissolve
+    g "......なんてね"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label document_zip_clicked:
     show girl at right with dissolve
-    g "封筒だね"
-    show girl look away at right with dissolve
-    g "これ、冷蔵庫から出てきたのかな"
-    g "これも中身を見れるかな"
-    g "もしかしたら、いままでの冷蔵庫と同じ方法で中身を確認出来たり？"
-    hide girl with dissolve
-    $ event_end(loop_label())
+    jump document_docx_clicked
 
 label config_clicked:
     python:
