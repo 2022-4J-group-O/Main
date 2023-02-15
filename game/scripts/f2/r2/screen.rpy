@@ -55,10 +55,7 @@ screen f2r2_pictures_screen(pictures, **properties):
                     add SampleImage(f2r2_pictures[pic], 150, 150, "#000000")
                 clicked Event("f2r2_ev_picture_clicked", picture=pic)
             else:
-                if renpy.can_show("picture error"):
-                    add "picture error"
-                else:
-                    add SampleImage("picture error", 150, 150, "#000000")
+                text "ERROR" color "#f00" size 50 font "SourceHanSansLite.ttf"
                 clicked Event("f2r2_ev_picture_clicked", picture="error")
             draggable False
             droppable False
