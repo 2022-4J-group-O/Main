@@ -18,6 +18,12 @@ label .scloop:
     show screen menu2_screen(True)
     with dissolve
 
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     if menu2_evflg_opening:
         $ menu2_evflg_opening = False
         $ Event("menu2_ev_opening")()

@@ -10,6 +10,12 @@ label .scloop:
     show screen f3r2_screen(read_room())
     with dissolve
 
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     if f3r2_evflg_opening:
         $ f3r2_evflg_opening = False
         $ Event("f3r2_ev_opening")()

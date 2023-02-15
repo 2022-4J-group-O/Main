@@ -91,6 +91,7 @@ init python:
             for p in ["picture frame 1", "picture frame 2"]:
                 global_data.default_dir_data.make(p, os.path.join(room_path, p))
             global_data.default_dir_data.make("safe", os.path.join(room_path, "safe"))
+            global_data.default_dir_data.make_file(".", os.path.join(room_path, "日記(20230105).md"))
         else:
             global_data.default_dir_data.make(room_path, room_path)
         os.chdir(cwd)

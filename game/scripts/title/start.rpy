@@ -12,11 +12,17 @@ label .scloop:
     window hide
     show screen title_screen(read_room()) with dissolve
 
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     if title_evflg_opening and loop_count >= 10:  # タイトル画面初回起動時
         $ title_evflg_opening = False  # タイトル画面初回起動時のフラグ無効化
         $ Event("title_ev_opening")()
     
-    if loop_count >= 10 and loop_count % 5 == 0:
+    if loop_count == 20:
         $ Event("title_ev_hint")()
 
     pause

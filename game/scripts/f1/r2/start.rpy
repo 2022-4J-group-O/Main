@@ -13,6 +13,12 @@ label .scloop:
     window hide
     show screen f1r2_screen(read_room()) with dissolve
 
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     $ nhidden = not_hidden()
     $ f1r2_evflg_angry = len(nhidden) > 0
     

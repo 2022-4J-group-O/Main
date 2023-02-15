@@ -11,6 +11,13 @@ label .scloop:
     window hide
     show screen f1r1_screen(read_room()) with dissolve
 
+    pause
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     if f1r1_evflg_opening:  # f1r1初回起動時
         $ f1r1_evflg_opening = False
         $ Event("f1r1_ev_opening")()

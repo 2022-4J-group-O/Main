@@ -41,6 +41,12 @@ label .scloop:
     window hide
     show screen f2r2_screen(read_room(), os.path.isdir(f2r2_safe_path_abs))
 
+    python:
+        if jump_label != None:
+            tmp = jump_label
+            jump_label = None
+            Event(tmp)()
+
     if f2r2_evflg_opening:
         python:
             f2r2_evflg_opening = False

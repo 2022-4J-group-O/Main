@@ -5,12 +5,12 @@ label menu2_ev_l3_clicked:
     show screen menu2_screen(False)
 
     # このラベルへの訪問が初めてで、f3にジャンプ可能な時
-    if not jumped_menu2_ev_l3_clicked and menu2_evflg_canjump_f2:
+    if not jumped_menu2_ev_l3_clicked and menu2_evflg_canjump_f3:
         $ menu2_jumplabel = "f3r1"
         
         show girl at right with dissolve
 
-        g "f3を初めて訪れるときのセリフ"
+        g "いよいよ最後のセーブデータだね"
 
         hide girl with dissolve
 
@@ -27,12 +27,12 @@ label menu2_ev_l3_clicked:
 
         hide girl with dissolve
 
-        return
+    # f2にはジャンプできるとき
+    else:
+        show girl smile at right with dissolve
 
-    show girl smile at right with dissolve
+        g "次はセーブデータ2に行ってみよう"
 
-    g "次はセーブデータ2に行ってみよう"
-
-    hide girl with dissolve
+        hide girl with dissolve
 
     $ event_end("menu2.scloop")
