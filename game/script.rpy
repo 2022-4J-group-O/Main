@@ -9,7 +9,7 @@ default global_data = Const()
 label main_menu:
     python hide:
         if not config.developer:
-            check_folder_new(main_folder_path, main_built_flg_path)
+            check_folder_new(main_folder_path, os.path.dirname(main_built_flg_path))
             with open(os.path.join(config.basedir, main_folder_path, main_built_flg_path), "w") as f:
                 pass
         if auto_load:
