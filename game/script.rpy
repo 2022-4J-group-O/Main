@@ -23,7 +23,7 @@ label start:
 
     show screen backbutton_screen
     show screen move_map_ui
-    jump f1r3
+    jump title
 
     return
 
