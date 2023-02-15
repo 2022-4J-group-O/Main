@@ -9,7 +9,7 @@ label f2r1_door_a_clicked:
 
         g "もう次の部屋に行くの？"
 
-        g "的なセリフ"
+        g "次の部屋はどんな部屋だろう"
 
         hide girl with dissolve
 
@@ -20,6 +20,8 @@ label f2r1_door_frame_clicked:
     show girl at right with dissolve
 
     g "ここにドアをはめられそうだね"
+
+    g "今までに使ったドアを、また使えたりしないかな......"
 
     hide girl with dissolve
 
