@@ -7,7 +7,11 @@ define ro2_unknown = Character("???", color="#9eb0ec")
 default global_data = Const()
 
 label main_menu:
-    python:
+    python hide:
+        if not config.developer:
+            check_folder_new(main_folder_path, main_built_flg_path)
+            with open(os.path.join(config.basedir, main_folder_path, main_built_flg_path), "w") as f:
+                pass
         if auto_load:
             fn = renpy.newest_slot()
             if fn != None:

@@ -327,6 +327,9 @@ define objects = default_obj_prop.keys()
 # プレイヤー用のディレクトリの初期状態を保存しておくためのファイル
 define default_user_dirdata_path = "game/data/default"
 
+define main_folder_path = "../../"
+define main_built_flg_path = "game/data/main_nbuilt"
+
 ## デバッグ用               ########################################
 
 # 自動ロード
