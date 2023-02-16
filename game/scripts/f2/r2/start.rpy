@@ -40,6 +40,7 @@ label f2r2:
 label .scloop:
     window hide
     show screen f2r2_screen(read_room(), os.path.isdir(f2r2_safe_path_abs))
+    with dissolve
 
     python:
         if jump_label != None:

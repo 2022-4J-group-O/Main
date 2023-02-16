@@ -19,19 +19,19 @@ label obj_clicked(objname):
 
 label table_clicked:
     show girl at right with dissolve
-    g "机がクリックされたよ"
+    g "机があるね"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label chest_clicked:
     show girl at right with dissolve
-    g "チェストがクリックされたよ"
+    g "棚があるね"
     hide girl with dissolve
     $ event_end(loop_label())
 
 label vase_clicked:
     show girl at right with dissolve
-    g "花瓶がクリックされたよ"
+    g "花瓶があるね"
     hide girl with dissolve
     $ event_end(loop_label())
 

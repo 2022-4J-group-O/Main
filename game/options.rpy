@@ -67,15 +67,15 @@ define config.has_voice = False
 
 # define config.main_menu_music = "main-menu-theme.ogg"
 
-init python:
-    def enter_sound_or_dummy():
-        if os.path.isfile(os.path.join(config.basedir, "game/audio/protected/se_open_setting.mp3")):
-            return "audio/protected/se_open_setting.mp3"
-        else:
-            return "audio/se_open_setting.mp3"
+# init python:
+#     def enter_sound_or_dummy():
+#         if os.path.isfile(os.path.join(config.basedir, "game/audio/protected/se_open_setting.mp3")):
+#             return "audio/protected/se_open_setting.mp3"
+#         else:
+#             return "audio/se_open_setting.mp3"
 
 # 設定を開くときのサウンド
-define config.enter_sound = enter_sound_or_dummy()
+define config.enter_sound = "audio/protected/se_open_setting.mp3"
 define config.exit_sound = config.enter_sound
 
 
@@ -282,7 +282,7 @@ define default_obj_prop = {
     "fridge_pass.zip": {"index": 1, "anchor": (0.0, 0.0), "pos": (1008,  162)},
     "Kitchen table"  : {"index": 1, "anchor": (0.0, 0.0), "pos": (  35,  518)},
     "Box"            : {"index": 2, "anchor": (0.0, 0.0), "pos": (400, 340)},
-    "Box.png"        : {"index": 2, "anchor": (0.5, 0.5), "pos": (0.2, 0.1)},
+    "Box.png"        : {"index": 2, "anchor": (0.0, 0.0), "pos": (400, 340)},
     "Mat"            : {"index": 2, "anchor": (0.0, 0.0), "pos": (  46,  855)},
 
     # f2r1
@@ -290,6 +290,9 @@ define default_obj_prop = {
     "Dog"            : {"index": 2, "anchor": (0.0, 1.0)},
     "Cup"            : {"index": 2, "andhor": (0.5, 0.5), "pos": (700, 490)}, #f1r3ができるまでの仮
     # "Door C"         : {"index": 0, "pos": (0.2, 915), "anchor": (0.5, 1.0)}, 
+
+    # f2r2
+    "door.png" : {"index": 0, "pos": (70, 100)},
 
     # f3r1
     "Anywhere Door"  : {"index": 0, "anchor": (0.5, 0.5), "pos": (0.5, 0.6)},
